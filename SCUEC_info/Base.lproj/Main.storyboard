@@ -128,7 +128,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="zIa-pl-gAj">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="1JT-di-rSV"/>
-                        <barButtonItem key="rightBarButtonItem" title="登陆" id="gPp-9E-eQT">
+                        <barButtonItem key="rightBarButtonItem" title="登录" id="gPp-9E-eQT">
                             <connections>
                                 <segue destination="aSw-Hn-pKo" kind="presentation" id="fdJ-jy-EFW"/>
                             </connections>
@@ -159,7 +159,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="42" id="pyK-AN-j90"/>
                                 </constraints>
-                                <state key="normal" title="登陆">
+                                <state key="normal" title="登录">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -179,7 +179,7 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OR5-Td-0ot">
                                 <rect key="frame" x="-25" y="-15" width="51" height="31"/>
                             </switch>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入您的用户名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kIX-Be-Amg">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入您的用户名" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kIX-Be-Amg">
                                 <rect key="frame" x="108" y="90" width="346" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="346" id="2q8-Z8-eAg"/>
@@ -199,7 +199,7 @@
                                     <segment title="条码号"/>
                                 </segments>
                             </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入您的密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fll-gg-TIr">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入您的密码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Fll-gg-TIr">
                                 <rect key="frame" x="108" y="129" width="346" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -276,6 +276,16 @@
                                 <exclude reference="eDZ-Na-MG7"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="NCH-aJ-Pa8"/>
+                                <exclude reference="RaC-PX-iOJ"/>
+                                <exclude reference="XfC-GU-lTz"/>
+                                <exclude reference="5cu-yk-IdR"/>
+                                <exclude reference="RKJ-8e-0F1"/>
+                                <exclude reference="nng-c6-za3"/>
+                                <exclude reference="LGI-cH-ChS"/>
+                                <exclude reference="UVP-5u-LPR"/>
+                                <exclude reference="anB-7B-Wts"/>
+                                <exclude reference="rmA-ay-CuX"/>
                                 <exclude reference="ECt-eM-1BJ"/>
                                 <exclude reference="KsA-bA-BVi"/>
                                 <exclude reference="OXe-4O-3ve"/>
@@ -286,16 +296,6 @@
                                 <exclude reference="gqT-7m-SEM"/>
                                 <exclude reference="Dlm-yC-wgw"/>
                                 <exclude reference="uHr-Zt-OOi"/>
-                                <exclude reference="LGI-cH-ChS"/>
-                                <exclude reference="UVP-5u-LPR"/>
-                                <exclude reference="anB-7B-Wts"/>
-                                <exclude reference="rmA-ay-CuX"/>
-                                <exclude reference="NCH-aJ-Pa8"/>
-                                <exclude reference="RaC-PX-iOJ"/>
-                                <exclude reference="XfC-GU-lTz"/>
-                                <exclude reference="5cu-yk-IdR"/>
-                                <exclude reference="RKJ-8e-0F1"/>
-                                <exclude reference="nng-c6-za3"/>
                                 <exclude reference="McF-b5-nmv"/>
                                 <exclude reference="h1c-J4-lR0"/>
                             </mask>
@@ -307,6 +307,16 @@
                                 <include reference="eDZ-Na-MG7"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="NCH-aJ-Pa8"/>
+                                <include reference="RaC-PX-iOJ"/>
+                                <include reference="XfC-GU-lTz"/>
+                                <include reference="5cu-yk-IdR"/>
+                                <include reference="RKJ-8e-0F1"/>
+                                <include reference="nng-c6-za3"/>
+                                <include reference="LGI-cH-ChS"/>
+                                <include reference="UVP-5u-LPR"/>
+                                <exclude reference="anB-7B-Wts"/>
+                                <include reference="rmA-ay-CuX"/>
                                 <exclude reference="ECt-eM-1BJ"/>
                                 <include reference="KsA-bA-BVi"/>
                                 <include reference="OXe-4O-3ve"/>
@@ -317,16 +327,6 @@
                                 <include reference="gqT-7m-SEM"/>
                                 <include reference="Dlm-yC-wgw"/>
                                 <include reference="uHr-Zt-OOi"/>
-                                <include reference="LGI-cH-ChS"/>
-                                <include reference="UVP-5u-LPR"/>
-                                <exclude reference="anB-7B-Wts"/>
-                                <include reference="rmA-ay-CuX"/>
-                                <include reference="NCH-aJ-Pa8"/>
-                                <include reference="RaC-PX-iOJ"/>
-                                <include reference="XfC-GU-lTz"/>
-                                <include reference="5cu-yk-IdR"/>
-                                <include reference="RKJ-8e-0F1"/>
-                                <include reference="nng-c6-za3"/>
                                 <include reference="McF-b5-nmv"/>
                                 <include reference="h1c-J4-lR0"/>
                             </mask>

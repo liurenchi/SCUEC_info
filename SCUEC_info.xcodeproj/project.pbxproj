@@ -16,7 +16,7 @@
 		99ED88FD1AE34CB600E28BB9 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99ED88FC1AE34CB600E28BB9 /* SWRevealViewController.m */; };
 		99ED89001AE34EAF00E28BB9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ED88FF1AE34EAF00E28BB9 /* MenuViewController.swift */; };
 		99F837A41AE5027500835D33 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F837A31AE5027500835D33 /* LoginView.swift */; };
-		99F9B89C1AE526DA00DDA119 /* userData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F9B89B1AE526DA00DDA119 /* userData.swift */; };
+		99F9B89E1AE52FB900DDA119 /* libraryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F9B89D1AE52FB900DDA119 /* libraryRouter.swift */; };
 		A06CB1E91E4766A3660C7416 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 377F3103D93A57DD76CC5B5A /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -49,7 +49,7 @@
 		99ED88FF1AE34EAF00E28BB9 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		99F7397D2999F84292148B20 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		99F837A31AE5027500835D33 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		99F9B89B1AE526DA00DDA119 /* userData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userData.swift; sourceTree = "<group>"; };
+		99F9B89D1AE52FB900DDA119 /* libraryRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = libraryRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +85,7 @@
 			children = (
 				996F59561AE3B166008C514C /* LibraryView.swift */,
 				99F837A31AE5027500835D33 /* LoginView.swift */,
-				99F9B89B1AE526DA00DDA119 /* userData.swift */,
+				99F9B89D1AE52FB900DDA119 /* libraryRouter.swift */,
 			);
 			name = LibraryMC;
 			sourceTree = "<group>";
@@ -319,9 +319,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99F9B89E1AE52FB900DDA119 /* libraryRouter.swift in Sources */,
 				996F59571AE3B166008C514C /* LibraryView.swift in Sources */,
 				99ED88DB1AE34CA400E28BB9 /* AppDelegate.swift in Sources */,
-				99F9B89C1AE526DA00DDA119 /* userData.swift in Sources */,
 				99ED88FD1AE34CB600E28BB9 /* SWRevealViewController.m in Sources */,
 				99F837A41AE5027500835D33 /* LoginView.swift in Sources */,
 				99ED89001AE34EAF00E28BB9 /* MenuViewController.swift in Sources */,

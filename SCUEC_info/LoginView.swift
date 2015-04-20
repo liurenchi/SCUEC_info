@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Alamofire
 class LoginView: UIViewController
 {
 //MARK:- 数据属性
@@ -15,9 +15,9 @@ class LoginView: UIViewController
     @IBOutlet weak var Password: UITextField!
     @IBOutlet weak var remPassword: UISwitch!
     @IBOutlet weak var usernameType: UISegmentedControl!
-    var UserName: String? //用户名
-    var PassWord: String? //密码
-    var UserNameType: String? //用户名类型
+    var UserName: String! //用户名
+    var PassWord: String! //密码
+    var UserNameType: String! //用户名类型
     enum userType: String { //账号类型枚举
         case bar_code = "barcode"
         case st_number = "stnumber"
@@ -26,28 +26,8 @@ class LoginView: UIViewController
     
 //MARK:- 功能按钮实现
     @IBAction func loginButton() {
-        saveUserData()
-        //        Alamofire.request(Router.LoginUser(["number":"11084017", "passwd":"91103710", "select":"cert_no"])).responseString { (_, _, string, _) in
-//            //             println(string)
-//            }.response{ (request, response, data, error) in
-//                
-//                
-//                var mycookie = NSHTTPCookieStorage.sharedHTTPCookieStorage().cookies
-//                var cookie:NSHTTPCookie!
-//                
-//                for cookie in mycookie as! [NSHTTPCookie]{
-//                    let defaults = NSUserDefaults.standardUserDefaults()
-//                    
-//                    defaults.setObject(cookie.name, forKey: "Cookie_name")
-//                    defaults.setObject(cookie.value, forKey: "Cookie_value")
-//                    defaults.synchronize()
-//                    println("COOKIES")
-//                    println(cookie.value)
-//                    
-//                    
-//                }
-//        }
-        
+        saveUserData() //数据处理
+        userLogin() //网络请求
         
         
         self.dismissViewControllerAnimated(true, completion: nil)
@@ -93,7 +73,37 @@ class LoginView: UIViewController
     }
     
     
-    
+    func userLogin() {
+        // 登陆功能
+        var username = UserName
+        var password = PassWord
+        var type = UserNameType
+        
+        println(username)
+        println("\(username)")
+        Alamofire.request(Router.LoginUser(["number":"\(username)", "passwd":"\(password)", "select":"\(type)"])).responseString(encoding: NSUTF8StringEncoding, completionHandler:{ (_, _, string, _) in
+            // 测试            
+            //println(string)
+            }).response { (_, _, _, error) -> Void in
+            var mycookie = NSHTTPCookieStorage.sharedHTTPCookieStorage().cookies
+            var cookie:NSHTTPCookie!
+            if error != nil {
+                println("登陆错误")
+            }else{
+                //储存cookies
+                var mycookie = NSHTTPCookieStorage.sharedHTTPCookieStorage().cookies
+                var cookie:NSHTTPCookie!
+                for cookie in mycookie as! [NSHTTPCookie]{
+                let defaults = NSUserDefaults.standardUserDefaults()
+                defaults.setObject(cookie.name, forKey: "Cookie_name")
+                defaults.setObject(cookie.value, forKey: "Cookie_value")
+                defaults.synchronize()
+                println("COOKIES")
+                println(cookie.value)}
+            }
+        }
+        
+    }
     
     
     

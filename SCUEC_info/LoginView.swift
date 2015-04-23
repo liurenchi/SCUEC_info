@@ -78,12 +78,12 @@ class LoginView: UIViewController
         var username = UserName
         var password = PassWord
         var type = UserNameType
-        
-        println(username)
-        println("\(username)")
-        Alamofire.request(Router.LoginUser(["number":"\(username)", "passwd":"\(password)", "select":"\(type)"])).responseString(encoding: NSUTF8StringEncoding, completionHandler:{ (_, _, string, _) in
+        //类型转换
+//        println(password)
+//        println("\(username)")
+        Alamofire.request(Router.LoginUser(["number":"11121027", "passwd":"5201314feng", "select":"\(type)"])).responseString(encoding: NSUTF8StringEncoding, completionHandler:{ (_, _, string, _) in
             // 测试            
-            //println(string)
+           // println(string)
             }).response { (_, _, _, error) -> Void in
             var mycookie = NSHTTPCookieStorage.sharedHTTPCookieStorage().cookies
             var cookie:NSHTTPCookie!
@@ -98,11 +98,12 @@ class LoginView: UIViewController
                 defaults.setObject(cookie.name, forKey: "Cookie_name")
                 defaults.setObject(cookie.value, forKey: "Cookie_value")
                 defaults.synchronize()
-                println("COOKIES")
-                println(cookie.value)}
+                //println("COOKIES")
+                println(cookie.value)
+                }
             }
         }
-        
+
     }
     
     

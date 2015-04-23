@@ -12,28 +12,28 @@ import Alamofire
 enum Router: URLRequestConvertible {
     //用户验证
     static let libraryURLString = "http://coin.lib.scuec.edu.cn/reader/redr_verify.php"
+    //用户信息
+    static let userInfoURLString = "http://coin.lib.scuec.edu.cn/reader/redr_info.php"
     //当前借阅
-    static let readerBookURLString = "http://coin.lib.scuec.edu.cn/reader/book_lst.php"
+    static let currentBookURLString = "http://coin.lib.scuec.edu.cn/reader/book_lst.php"
     //借阅历史
     static let bookHistoryURLString = "http://coin.lib.scuec.edu.cn/reader/book_hist.php"
     
     static var OAuthToken: String?
     
     case LoginUser([String: AnyObject])
-    case GetBookInfo
+    case GetUserInfo
+    case GetCurrentBook
     case GetBookHistory
-    case DestroyUser(String)
+    
     
     var method: Alamofire.Method {
         switch self {
         case .LoginUser:
             return .POST
-        case .GetBookInfo:
+        case .GetCurrentBook, .GetUserInfo, .GetBookHistory:
             return .GET
-        case .GetBookHistory:
-            return .GET
-        case .DestroyUser:
-            return .DELETE
+
         }
     }
     
@@ -41,12 +41,12 @@ enum Router: URLRequestConvertible {
         switch self {
         case .LoginUser:
             return Router.libraryURLString
-        case .GetBookInfo:
-            return Router.readerBookURLString
+        case .GetUserInfo:
+            return Router.userInfoURLString
+        case .GetCurrentBook:
+            return Router.currentBookURLString
         case .GetBookHistory:
             return Router.bookHistoryURLString
-        case .DestroyUser(let username):
-            return "/users/\(username)"
         }
     }
     

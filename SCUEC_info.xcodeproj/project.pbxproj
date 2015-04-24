@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		990885421AE940EE00909382 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990885411AE940EE00909382 /* Book.swift */; };
+		990885441AE940EF00909382 /* Shelves.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990885431AE940EF00909382 /* Shelves.swift */; };
 		995E67CC1AE7A360006C7FD5 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E67C71AE7A35F006C7FD5 /* TFHpple.m */; };
 		995E67CD1AE7A360006C7FD5 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E67C91AE7A35F006C7FD5 /* TFHppleElement.m */; };
 		995E67CE1AE7A360006C7FD5 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E67CB1AE7A35F006C7FD5 /* XPathQuery.m */; };
@@ -41,6 +43,8 @@
 /* Begin PBXFileReference section */
 		377F3103D93A57DD76CC5B5A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46BD114A8B6FB9B4B508681D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		990885411AE940EE00909382 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		990885431AE940EF00909382 /* Shelves.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shelves.swift; sourceTree = "<group>"; };
 		995E67C61AE7A35F006C7FD5 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
 		995E67C71AE7A35F006C7FD5 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
 		995E67C81AE7A35F006C7FD5 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 		996F59581AE3BC83008C514C /* LibraryMC */ = {
 			isa = PBXGroup;
 			children = (
+				990885431AE940EF00909382 /* Shelves.swift */,
+				990885411AE940EE00909382 /* Book.swift */,
 				996F59561AE3B166008C514C /* LibraryView.swift */,
 				99F837A31AE5027500835D33 /* LoginView.swift */,
 				99F9B89D1AE52FB900DDA119 /* libraryRouter.swift */,
@@ -161,9 +167,9 @@
 			isa = PBXGroup;
 			children = (
 				99ED88FF1AE34EAF00E28BB9 /* MenuViewController.swift */,
+				99ED88DA1AE34CA400E28BB9 /* AppDelegate.swift */,
 				99ED88E11AE34CA400E28BB9 /* Images.xcassets */,
 				99ED88E31AE34CA400E28BB9 /* LaunchScreen.xib */,
-				99ED88DA1AE34CA400E28BB9 /* AppDelegate.swift */,
 				99ED88FE1AE34D0D00E28BB9 /* bridgeFile.h */,
 				99ED88D91AE34CA400E28BB9 /* Info.plist */,
 				995E67C51AE7A345006C7FD5 /* TFHpple */,
@@ -357,7 +363,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				990885421AE940EE00909382 /* Book.swift in Sources */,
 				995E67D41AE7AC57006C7FD5 /* libraryData.swift in Sources */,
+				990885441AE940EF00909382 /* Shelves.swift in Sources */,
 				995E67CD1AE7A360006C7FD5 /* TFHppleElement.m in Sources */,
 				99F9B89E1AE52FB900DDA119 /* libraryRouter.swift in Sources */,
 				9983FEBD1AE92534001053B5 /* Model.xcdatamodeld in Sources */,

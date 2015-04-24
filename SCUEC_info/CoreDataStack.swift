@@ -8,12 +8,10 @@
 
 import Foundation
 
-import Foundation
 import CoreData
-
 class CoreDataStack {
     
-    var context:NSManagedObjectContext
+    var context:NSManagedObjectContext?
     var psc:NSPersistentStoreCoordinator
     var model:NSManagedObjectModel
     var store:NSPersistentStore?
@@ -28,11 +26,11 @@ class CoreDataStack {
         psc = NSPersistentStoreCoordinator(managedObjectModel:model)
         
         context = NSManagedObjectContext()
-        context.persistentStoreCoordinator = psc
+        context!.persistentStoreCoordinator = psc
         
         let documentsURL = applicationDocumentsDirectory()
         let storeURL =
-        documentsURL.URLByAppendingPathComponent("SCUEC_info")
+        documentsURL.URLByAppendingPathComponent("Bubble_Tea_Finder")
         
         let options =
         [NSMigratePersistentStoresAutomaticallyOption: true]
@@ -54,7 +52,7 @@ class CoreDataStack {
     func saveContext() {
         
         var error: NSError? = nil
-        if context.hasChanges && !context.save(&error) {
+        if context!.hasChanges && !context!.save(&error) {
             println("Could not save: \(error), \(error?.userInfo)")
         }
         

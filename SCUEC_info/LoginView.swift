@@ -83,7 +83,7 @@ class LoginView: UIViewController
 //        println("\(username)")
         Alamofire.request(Router.LoginUser(["number":"11121027", "passwd":"5201314feng", "select":"\(type)"])).responseString(encoding: NSUTF8StringEncoding, completionHandler:{ (_, _, string, _) in
             // 测试            
-           // println(string)
+            println(string)
             }).response { (_, _, _, error) -> Void in
             var mycookie = NSHTTPCookieStorage.sharedHTTPCookieStorage().cookies
             var cookie:NSHTTPCookie!

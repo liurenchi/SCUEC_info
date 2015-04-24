@@ -8,11 +8,19 @@
 
 import UIKit
 import Alamofire
-class currentBookView: UITableViewController {
+import CoreData
+class currentBookView: UITableViewController
+{
+    var book: Book!
+    var shelve: Shelves!
+    var bookss: [Shelves]!
+    var fetchRequest: NSFetchRequest!
+    var coreDataStack: CoreDataStack = CoreDataStack()
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         Alamofire.request(Router.GetCurrentBook).responseString (encoding: NSUTF8StringEncoding, completionHandler:{ (_, _, string, _) in
             // println(string)
         }).response({ (_, _, data, _) in
@@ -21,9 +29,25 @@ class currentBookView: UITableViewController {
                 self.parseData(parsedata)
             }
         })
+        
+        fetchRequest = coreDataStack.model.fetchRequestTemplateForName("FetchRequest")
+       
+
     }
 
-    
+    func fetchAndReload(){
+        var error: NSError?
+        let results = coreDataStack.context!.executeFetchRequest(fetchRequest,error: &error) as! [Shelves]?
+        if let fetchedResults = results {
+           bookss = fetchedResults
+            //store the fetched results in the venues property you defined earlier
+        } else {
+            println("Could not fetch \(error), \(error!.userInfo)")
+        }
+        
+        println(bookss[0].bookname.codenum)
+    }
+
     func parseData(data:NSData){
         
         var doc:TFHpple = TFHpple(HTMLData: data, encoding: "UTF8")
@@ -47,25 +71,61 @@ class currentBookView: UITableViewController {
                     //println(usefulindex)
                     break
                 }
-                
             }
             //删除无用数据
             var loop = usefulindex - 1
             for (var i = loop ; i >= 0; i--){
                 strArray.removeObjectAtIndex(i)
             }
-           // for array in strArray{println(array)}
-            
+           //存入本地
+            self.savetoCoredata(strArray)
         }else{
             println("nil")
         }
         
     }
-       /*Dividing Strings
-    componentsSeparatedByString(_:)
-    componentsSeparatedByCharactersInSet(_:)
-    stringByTrimmingCharactersInSet(_:)
-    */
-
+    //存入coredata
+    func savetoCoredata(array: NSMutableArray){
+       
+        
+        if let managedObjectContext = coreDataStack.context {
+            
+            book = NSEntityDescription.insertNewObjectForEntityForName("Book", inManagedObjectContext: managedObjectContext) as! Book
+            
+           book.codenum = array[0] as! String
+            shelve = NSEntityDescription.insertNewObjectForEntityForName("Shelves", inManagedObjectContext: managedObjectContext) as! Shelves
+            
+            shelve.bookname = book
+            
+            
+            var e: NSError?
+            if managedObjectContext.save(&e) != true {
+                println("insert error: \(e!.localizedDescription)")
+                return
+            }
+            
+          
+        }
+    
+         fetchAndReload()
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 }

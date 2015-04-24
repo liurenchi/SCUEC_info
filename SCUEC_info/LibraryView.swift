@@ -11,6 +11,9 @@ import UIKit
 class LibraryView: UITableViewController {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    @IBOutlet weak var loginButton: UIBarButtonItem!
+    var is_login:Bool = false
+    var login:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,8 +26,8 @@ class LibraryView: UITableViewController {
         
     }
 
-        
     
+   
    
     
     

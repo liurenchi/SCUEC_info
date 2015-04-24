@@ -13,14 +13,14 @@ class currentBookView: UITableViewController
 {
     var book: Book!
     var shelve: Shelves!
-    var bookss: [Shelves]!
+    var books: [Shelves]!
     var fetchRequest: NSFetchRequest!
     var coreDataStack: CoreDataStack = CoreDataStack()
-
+    var managedObjectContext:NSManagedObjectContext!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+         managedObjectContext = coreDataStack.context
         Alamofire.request(Router.GetCurrentBook).responseString (encoding: NSUTF8StringEncoding, completionHandler:{ (_, _, string, _) in
             // println(string)
         }).response({ (_, _, data, _) in
@@ -31,21 +31,24 @@ class currentBookView: UITableViewController
         })
         
         fetchRequest = coreDataStack.model.fetchRequestTemplateForName("FetchRequest")
-       
-
+      
     }
 
     func fetchAndReload(){
         var error: NSError?
-        let results = coreDataStack.context!.executeFetchRequest(fetchRequest,error: &error) as! [Shelves]?
+        let results = coreDataStack.context.executeFetchRequest(fetchRequest,error: &error) as! [Shelves]?
         if let fetchedResults = results {
-           bookss = fetchedResults
+           books = fetchedResults
             //store the fetched results in the venues property you defined earlier
         } else {
             println("Could not fetch \(error), \(error!.userInfo)")
         }
-        
-        println(bookss[0].bookname.codenum)
+
+//        for(var i = 0;i < books.count; i++){
+//                println(books[i].bookname.codenum)
+//                println("--------")
+//        }
+      
     }
 
     func parseData(data:NSData){
@@ -61,22 +64,26 @@ class currentBookView: UITableViewController
             //字符串存入数组并转化为可变
             var nsArray: NSArray = string2.componentsSeparatedByString("|")
             var strArray = nsArray.mutableCopy() as! NSMutableArray
-            //有用数据开始的元素索引
-            var usefulindex: Int!
-            //找到有用数据的下标
-            for array in strArray{
-                
-                if isPureNumandCharacters(array as! String){
-                    usefulindex = strArray.indexOfObject(array)
-                    //println(usefulindex)
-                    break
-                }
+//            //有用数据开始的元素索引
+//            var usefulindex: Int!
+//            //找到有用数据的下标
+//            for array in strArray{
+//                
+//                if isPureNumandCharacters(array as! String){
+//                    usefulindex = strArray.indexOfObject(array)
+//                    //println(usefulindex)
+//                    break
+//                }
+//            }
+//            //删除无用数据
+//            var loop = usefulindex - 1
+//            for (var i = loop ; i >= 0; i--){
+//                strArray.removeObjectAtIndex(i)
+//            }
+            for arry in strArray{
+                println(arry)
             }
-            //删除无用数据
-            var loop = usefulindex - 1
-            for (var i = loop ; i >= 0; i--){
-                strArray.removeObjectAtIndex(i)
-            }
+            
            //存入本地
             self.savetoCoredata(strArray)
         }else{
@@ -85,24 +92,51 @@ class currentBookView: UITableViewController
         
     }
     //存入coredata
-    func savetoCoredata(array: NSMutableArray){
+    func savetoCoredata(saveArray: NSMutableArray){
        
         
-        if let managedObjectContext = coreDataStack.context {
+        
+        
+            //将数组的数据存入entity
+        var usefulindex: Int = 0
+        var keep_do:Bool = true
+        do{
             
+            for array in saveArray {
+                if isPureNumandCharacters(array as! String){
+                    usefulindex = saveArray.indexOfObject(array)
+                    keep_do = true
+                    break
+                }
+                keep_do = false
+            }
+        if(keep_do){
             book = NSEntityDescription.insertNewObjectForEntityForName("Book", inManagedObjectContext: managedObjectContext) as! Book
-            
-           book.codenum = array[0] as! String
             shelve = NSEntityDescription.insertNewObjectForEntityForName("Shelves", inManagedObjectContext: managedObjectContext) as! Shelves
-            
-            shelve.bookname = book
-            
-            
+
+            book.codenum = saveArray[usefulindex] as! String
+            var name_author = (saveArray[usefulindex+1] as! String).componentsSeparatedByString("/")
+            book.name = name_author[0]
+            book.author = name_author[1]
+            book.borrowdate = saveArray[usefulindex+2] as! String
+            book.duedate = saveArray[usefulindex+3] as! String
+            book.location = saveArray[usefulindex+5] as! String
+            var range:NSRange = NSRange(location:usefulindex, length:7)
+            saveArray.removeObjectsInRange(range)}
+        }while(keep_do)
+        
+        
+        
+        
+        println("end_save")
+        
+        
+        
             var e: NSError?
             if managedObjectContext.save(&e) != true {
                 println("insert error: \(e!.localizedDescription)")
                 return
-            }
+            
             
           
         }

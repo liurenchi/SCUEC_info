@@ -239,6 +239,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="loginButton" destination="gPp-9E-eQT" id="1sj-0r-wD4"/>
                         <outlet property="menuButton" destination="1JT-di-rSV" id="fZL-PO-C9r"/>
                     </connections>
                 </tableViewController>

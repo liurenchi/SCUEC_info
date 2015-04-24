@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		990885421AE940EE00909382 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990885411AE940EE00909382 /* Book.swift */; };
-		990885441AE940EF00909382 /* Shelves.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990885431AE940EF00909382 /* Shelves.swift */; };
 		995E67CC1AE7A360006C7FD5 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E67C71AE7A35F006C7FD5 /* TFHpple.m */; };
 		995E67CD1AE7A360006C7FD5 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E67C91AE7A35F006C7FD5 /* TFHppleElement.m */; };
 		995E67CE1AE7A360006C7FD5 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E67CB1AE7A35F006C7FD5 /* XPathQuery.m */; };
-		995E67D41AE7AC57006C7FD5 /* libraryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995E67D31AE7AC57006C7FD5 /* libraryData.swift */; };
+		995E67D41AE7AC57006C7FD5 /* libraryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995E67D31AE7AC57006C7FD5 /* libraryExtension.swift */; };
 		996F59571AE3B166008C514C /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996F59561AE3B166008C514C /* LibraryView.swift */; };
+		997A5B7E1AEA7FAC006D9B02 /* Shelves.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997A5B7D1AEA7FAC006D9B02 /* Shelves.swift */; };
+		997A5B801AEA7FAD006D9B02 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997A5B7F1AEA7FAD006D9B02 /* Book.swift */; };
 		9983FEB61AE8AEA8001053B5 /* userInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9983FEB51AE8AEA8001053B5 /* userInfoView.swift */; };
 		9983FEB81AE8E7B4001053B5 /* currentBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9983FEB71AE8E7B4001053B5 /* currentBookView.swift */; };
 		9983FEBA1AE924F7001053B5 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9983FEB91AE924F7001053B5 /* CoreDataStack.swift */; };
@@ -43,16 +43,16 @@
 /* Begin PBXFileReference section */
 		377F3103D93A57DD76CC5B5A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46BD114A8B6FB9B4B508681D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		990885411AE940EE00909382 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
-		990885431AE940EF00909382 /* Shelves.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shelves.swift; sourceTree = "<group>"; };
 		995E67C61AE7A35F006C7FD5 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
 		995E67C71AE7A35F006C7FD5 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
 		995E67C81AE7A35F006C7FD5 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
 		995E67C91AE7A35F006C7FD5 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
 		995E67CA1AE7A35F006C7FD5 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		995E67CB1AE7A35F006C7FD5 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
-		995E67D31AE7AC57006C7FD5 /* libraryData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = libraryData.swift; sourceTree = "<group>"; };
+		995E67D31AE7AC57006C7FD5 /* libraryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = libraryExtension.swift; sourceTree = "<group>"; };
 		996F59561AE3B166008C514C /* LibraryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		997A5B7D1AEA7FAC006D9B02 /* Shelves.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shelves.swift; sourceTree = "<group>"; };
+		997A5B7F1AEA7FAD006D9B02 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		9983FEB51AE8AEA8001053B5 /* userInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userInfoView.swift; sourceTree = "<group>"; };
 		9983FEB71AE8E7B4001053B5 /* currentBookView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = currentBookView.swift; sourceTree = "<group>"; };
 		9983FEB91AE924F7001053B5 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -119,12 +119,12 @@
 		996F59581AE3BC83008C514C /* LibraryMC */ = {
 			isa = PBXGroup;
 			children = (
-				990885431AE940EF00909382 /* Shelves.swift */,
-				990885411AE940EE00909382 /* Book.swift */,
+				997A5B7F1AEA7FAD006D9B02 /* Book.swift */,
+				997A5B7D1AEA7FAC006D9B02 /* Shelves.swift */,
 				996F59561AE3B166008C514C /* LibraryView.swift */,
 				99F837A31AE5027500835D33 /* LoginView.swift */,
 				99F9B89D1AE52FB900DDA119 /* libraryRouter.swift */,
-				995E67D31AE7AC57006C7FD5 /* libraryData.swift */,
+				995E67D31AE7AC57006C7FD5 /* libraryExtension.swift */,
 				9983FEB51AE8AEA8001053B5 /* userInfoView.swift */,
 				9983FEB71AE8E7B4001053B5 /* currentBookView.swift */,
 			);
@@ -363,9 +363,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				990885421AE940EE00909382 /* Book.swift in Sources */,
-				995E67D41AE7AC57006C7FD5 /* libraryData.swift in Sources */,
-				990885441AE940EF00909382 /* Shelves.swift in Sources */,
+				997A5B801AEA7FAD006D9B02 /* Book.swift in Sources */,
+				995E67D41AE7AC57006C7FD5 /* libraryExtension.swift in Sources */,
+				997A5B7E1AEA7FAC006D9B02 /* Shelves.swift in Sources */,
 				995E67CD1AE7A360006C7FD5 /* TFHppleElement.m in Sources */,
 				99F9B89E1AE52FB900DDA119 /* libraryRouter.swift in Sources */,
 				9983FEBD1AE92534001053B5 /* Model.xcdatamodeld in Sources */,

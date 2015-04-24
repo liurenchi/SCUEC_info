@@ -22,6 +22,7 @@ class LoginView: UIViewController
         case bar_code = "barcode"
         case st_number = "stnumber"
     }
+   
     
     
 //MARK:- 功能按钮实现
@@ -83,12 +84,12 @@ class LoginView: UIViewController
 //        println("\(username)")
         Alamofire.request(Router.LoginUser(["number":"11121027", "passwd":"5201314feng", "select":"\(type)"])).responseString(encoding: NSUTF8StringEncoding, completionHandler:{ (_, _, string, _) in
             // 测试            
-            println(string)
+            //println(string)
             }).response { (_, _, _, error) -> Void in
             var mycookie = NSHTTPCookieStorage.sharedHTTPCookieStorage().cookies
             var cookie:NSHTTPCookie!
             if error != nil {
-                println("登陆错误")
+                println("登录请求错误")
             }else{
                 //储存cookies
                 var mycookie = NSHTTPCookieStorage.sharedHTTPCookieStorage().cookies

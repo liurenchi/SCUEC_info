@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SCUEC_info/LoginView.swift"
-            timestampString = "451471968.860412"
+            timestampString = "451579610.129624"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "userLogin()"
             landmarkType = "5">
          </BreakpointContent>

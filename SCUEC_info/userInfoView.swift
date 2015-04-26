@@ -5,7 +5,9 @@
 //  Created by  Lrcray on 15/4/23.
 //  Copyright (c) 2015年  Lrcray. All rights reserved.
 //
-
+/*———————————————————————————————————————
+用户基本信息的请求，当前的借阅情况的简单返回
+———————————————————————————————————————*/
 import UIKit
 import Alamofire
 class userInfoView: UIViewController
@@ -16,15 +18,14 @@ class userInfoView: UIViewController
         super.viewDidLoad()
 
         Alamofire.request(Router.GetUserInfo).responseString (encoding: NSUTF8StringEncoding, completionHandler:{ (_, _, string, _) in
-                   // println(string)
+             //测试      // println(string)
             }).response({ (_, _, data, _) in
             if data != nil {
                 var parsedata = data as! NSData
                  self.parseData(parsedata)
                }
             })
-        
-        
+
     }
 
   
@@ -33,47 +34,11 @@ class userInfoView: UIViewController
         var doc:TFHpple = TFHpple(HTMLData: data, encoding: "UTF8")
         println("begin parse!")
         if var output:TFHppleElement = doc.peekAtSearchWithXPathQuery("//*[@id='mylib_content']/div[1]") {
-//            println(city)
-//             println("------raw----")
-//             println(city.raw)
-//            println("-----content-----")
-//            println(city.content)
-//             println("-----tagname-----")
-//            println(city.tagName)
-//             println("-----attributes-----")
-//             println(city.attributes)
-//            println("------children----")
-//            println(city.children)
-//             println("-----firstchild-----")
-//             println(city.firstChild)
-//             println("----parent----")
-//             println(city.parent)
-            
             self.outputView.text = output.content
-            
             }else{
                 println("nil")
             }
  
     }
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-  
 }

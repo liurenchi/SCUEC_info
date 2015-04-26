@@ -6,6 +6,9 @@
 //  Copyright (c) 2015年  Lrcray. All rights reserved.
 //
 
+/*———————————————————————————————————————
+CoreData的类定义
+———————————————————————————————————————*/
 import Foundation
 
 import CoreData

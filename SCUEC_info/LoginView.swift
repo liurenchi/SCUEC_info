@@ -5,7 +5,10 @@
 //  Created by  Lrcray on 15/4/20.
 //  Copyright (c) 2015年  Lrcray. All rights reserved.
 //
-
+/*———————————————————————————————————————
+登陆view的实现方式，里面通过输入用户名密码和其他配置，通过Alamofire请求数据
+同时操作储存cookies用于context中请求用
+———————————————————————————————————————*/
 import UIKit
 import Alamofire
 class LoginView: UIViewController

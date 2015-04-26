@@ -4,7 +4,13 @@
 //
 //  Created by  Lrcray on 15/4/22.
 //  Copyright (c) 2015年  Lrcray. All rights reserved.
-//
+
+
+
+/*———————————————————————————————————————
+lib的一个通用的方法定义
+-string类的一个拓展
+———————————————————————————————————————*/
 
 import Foundation
 

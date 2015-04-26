@@ -4,8 +4,10 @@
 //
 //  Created by  Lrcray on 15/4/20.
 //  Copyright (c) 2015年  Lrcray. All rights reserved.
-//
 
+/*———————————————————————————————————————
+Alamofire请求的路由，里面定义了不同的请求方式
+———————————————————————————————————————*/
 import Foundation
 import Alamofire
 

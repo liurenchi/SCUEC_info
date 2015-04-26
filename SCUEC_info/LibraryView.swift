@@ -5,7 +5,9 @@
 //  Created by  Lrcray on 15/4/19.
 //  Copyright (c) 2015年  Lrcray. All rights reserved.
 //
-
+/*———————————————————————————————————————
+Lib的主界面，界面ui在storyboard中实现
+———————————————————————————————————————*/
 import UIKit
 
 class LibraryView: UITableViewController {

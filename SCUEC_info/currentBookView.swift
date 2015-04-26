@@ -5,7 +5,9 @@
 //  Created by  Lrcray on 15/4/23.
 //  Copyright (c) 2015年  Lrcray. All rights reserved.
 //
-
+/*———————————————————————————————————————
+当前借阅书籍的数据展示，其中数据获取等操作方法见libconfig/curbook_request.swift
+———————————————————————————————————————*/
 import UIKit
 import Alamofire
 import CoreData
@@ -20,7 +22,7 @@ class currentBookView: UITableViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         managedObjectContext = coreDataStack.context
+        managedObjectContext = coreDataStack.context
         Alamofire.request(Router.GetCurrentBook).responseString (encoding: NSUTF8StringEncoding, completionHandler:{ (_, _, string, _) in
             // println(string)
         }).response({ (_, _, data, _) in
@@ -100,8 +102,9 @@ class currentBookView: UITableViewController
             //将数组的数据存入entity
         var usefulindex: Int = 0
         var keep_do:Bool = true
+        //存储数据进入coredata
         do{
-            
+            //找到书号即为第一个有效数据
             for array in saveArray {
                 if isPureNumandCharacters(array as! String){
                     usefulindex = saveArray.indexOfObject(array)
@@ -111,6 +114,7 @@ class currentBookView: UITableViewController
                 keep_do = false
             }
         if(keep_do){
+            //通过分析返回的数据，然后按照格式存入coredata
             book = NSEntityDescription.insertNewObjectForEntityForName("Book", inManagedObjectContext: managedObjectContext) as! Book
             shelve = NSEntityDescription.insertNewObjectForEntityForName("Shelves", inManagedObjectContext: managedObjectContext) as! Shelves
 

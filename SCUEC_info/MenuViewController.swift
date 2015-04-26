@@ -5,7 +5,9 @@
 //  Created by  Lrcray on 15/4/19.
 //  Copyright (c) 2015年  Lrcray. All rights reserved.
 //
-
+/*———————————————————————————————————————
+侧边栏的实现，使用SWRevealViewController类
+———————————————————————————————————————*/
 import UIKit
 
 class MenuViewController: UITableViewController {

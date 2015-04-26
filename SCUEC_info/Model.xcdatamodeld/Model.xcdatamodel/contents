@@ -12,6 +12,7 @@
     <entity name="Shelves" representedClassName="SCUEC_info.Shelves" syncable="YES">
         <relationship name="bookname" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Book" inverseName="shelves" inverseEntity="Book" syncable="YES"/>
     </entity>
+    <fetchRequest name="book_FetchRequest" entity="Book"/>
     <fetchRequest name="FetchRequest" entity="Shelves"/>
     <elements>
         <element name="Book" positionX="-63" positionY="-18" width="128" height="150"/>

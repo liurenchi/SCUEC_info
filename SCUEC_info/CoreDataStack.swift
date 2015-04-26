@@ -34,8 +34,7 @@ class CoreDataStack {
         let documentsURL = applicationDocumentsDirectory()
         let storeURL =
         documentsURL.URLByAppendingPathComponent("SCUEC_info")
-        // 打印出sqlite地址 ://
-        println(storeURL)
+        // 打印出sqlite地址 ://println(storeURL)
         let options =
         [NSMigratePersistentStoresAutomaticallyOption: true]
         

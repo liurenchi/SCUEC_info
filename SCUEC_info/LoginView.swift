@@ -102,8 +102,8 @@ class LoginView: UIViewController
                 defaults.setObject(cookie.name, forKey: "Cookie_name")
                 defaults.setObject(cookie.value, forKey: "Cookie_value")
                 defaults.synchronize()
-                //println("COOKIES")
-                println(cookie.value)
+                //println(cookie.value)
+                println("cookie存储成功")
                 }
             }
         }

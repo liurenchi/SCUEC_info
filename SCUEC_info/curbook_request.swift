@@ -27,16 +27,18 @@ var shelve: Shelves!
 
 //MARK:- Alamofire的请求 (同时连锁执行解析，储存方法)
 func AlamofireRequest(){
-    Alamofire.request(Router.GetCurrentBook).responseString (encoding: NSUTF8StringEncoding, completionHandler:{ (_, _, string, _) in
-        // println(string)
-    }).response({ (_, _, data, _) in
-        if data != nil {
-            var parsedata = data as! NSData
-            //开始解析数据
-            parseData(parsedata)
-            
-        }
-    })
+    if updataCoreData(){
+        Alamofire.request(Router.GetCurrentBook).responseString (encoding: NSUTF8StringEncoding, completionHandler:{ (_, _, string, _) in
+            // println(string)
+        }).response({ (_, _, data, _) in
+            if data != nil {
+                var parsedata = data as! NSData
+                //开始解析数据
+                parseData(parsedata)
+                
+            }
+        })
+    }else{println("更新数据错误的请求错误")}
 
 }
 //MARK:- TFHpple解析方法

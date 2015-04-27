@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9928A7C11AECE3C20061ECFA /* curbook_request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9928A7C01AECE3C20061ECFA /* curbook_request.swift */; };
+		9929B2C91AEDED9C00695327 /* curBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9929B2C81AEDED9C00695327 /* curBookCell.swift */; };
 		995E67CC1AE7A360006C7FD5 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E67C71AE7A35F006C7FD5 /* TFHpple.m */; };
 		995E67CD1AE7A360006C7FD5 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E67C91AE7A35F006C7FD5 /* TFHppleElement.m */; };
 		995E67CE1AE7A360006C7FD5 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E67CB1AE7A35F006C7FD5 /* XPathQuery.m */; };
@@ -45,6 +46,7 @@
 		377F3103D93A57DD76CC5B5A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46BD114A8B6FB9B4B508681D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9928A7C01AECE3C20061ECFA /* curbook_request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = curbook_request.swift; sourceTree = "<group>"; };
+		9929B2C81AEDED9C00695327 /* curBookCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = curBookCell.swift; sourceTree = "<group>"; };
 		995E67C61AE7A35F006C7FD5 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
 		995E67C71AE7A35F006C7FD5 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
 		995E67C81AE7A35F006C7FD5 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				99F9B89D1AE52FB900DDA119 /* libraryRouter.swift */,
 				995E67D31AE7AC57006C7FD5 /* libraryExtension.swift */,
 				9928A7C01AECE3C20061ECFA /* curbook_request.swift */,
+				9929B2C81AEDED9C00695327 /* curBookCell.swift */,
 			);
 			name = libconfig;
 			sourceTree = "<group>";
@@ -173,9 +176,9 @@
 		99ED88D71AE34CA400E28BB9 /* SCUEC_info */ = {
 			isa = PBXGroup;
 			children = (
-				99ED88DE1AE34CA400E28BB9 /* Main.storyboard */,
 				9983FEB91AE924F7001053B5 /* CoreDataStack.swift */,
 				9983FEBB1AE92534001053B5 /* Model.xcdatamodeld */,
+				99ED88DE1AE34CA400E28BB9 /* Main.storyboard */,
 				996F59581AE3BC83008C514C /* LibraryMC */,
 				99ED88D81AE34CA400E28BB9 /* Supporting Files */,
 			);
@@ -395,6 +398,7 @@
 				9983FEBA1AE924F7001053B5 /* CoreDataStack.swift in Sources */,
 				995E67CE1AE7A360006C7FD5 /* XPathQuery.m in Sources */,
 				995E67CC1AE7A360006C7FD5 /* TFHpple.m in Sources */,
+				9929B2C91AEDED9C00695327 /* curBookCell.swift in Sources */,
 				99ED88FD1AE34CB600E28BB9 /* SWRevealViewController.m in Sources */,
 				99F837A41AE5027500835D33 /* LoginView.swift in Sources */,
 				99ED89001AE34EAF00E28BB9 /* MenuViewController.swift in Sources */,

@@ -3,6 +3,7 @@
     <entity name="Book" representedClassName="SCUEC_info.Book" syncable="YES">
         <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="borrowdate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="checknumber" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="codenum" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="duedate" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
@@ -15,7 +16,7 @@
     <fetchRequest name="book_FetchRequest" entity="Book"/>
     <fetchRequest name="FetchRequest" entity="Shelves"/>
     <elements>
-        <element name="Book" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="Book" positionX="-63" positionY="-18" width="128" height="165"/>
         <element name="Shelves" positionX="-396" positionY="-45" width="128" height="60"/>
     </elements>
 </model>

@@ -18,22 +18,25 @@ enum Router: URLRequestConvertible {
     static let userInfoURLString = "http://coin.lib.scuec.edu.cn/reader/redr_info.php"
     //当前借阅
     static let currentBookURLString = "http://coin.lib.scuec.edu.cn/reader/book_lst.php"
+    //续借请求地址
+    static let renewBookURLString = "http://coin.lib.scuec.edu.cn/reader/ajax_renew.php"
     //借阅历史
     static let bookHistoryURLString = "http://coin.lib.scuec.edu.cn/reader/book_hist.php"
     
     static var OAuthToken: String?
-    
+    //请求模式
     case LoginUser([String: AnyObject])
     case GetUserInfo
     case GetCurrentBook
+    case RenewBook([String: AnyObject])
     case GetBookHistory
     
-    
+    //请求的方法
     var method: Alamofire.Method {
         switch self {
         case .LoginUser:
             return .POST
-        case .GetCurrentBook, .GetUserInfo, .GetBookHistory:
+        case .GetCurrentBook, .GetUserInfo, .GetBookHistory, .RenewBook:
             return .GET
 
         }
@@ -47,6 +50,8 @@ enum Router: URLRequestConvertible {
             return Router.userInfoURLString
         case .GetCurrentBook:
             return Router.currentBookURLString
+        case .RenewBook:
+            return Router.renewBookURLString
         case .GetBookHistory:
             return Router.bookHistoryURLString
         }
@@ -70,6 +75,8 @@ enum Router: URLRequestConvertible {
         
         switch self {
         case .LoginUser(let parameters):
+            return Alamofire.ParameterEncoding.URL.encode(mutableURLRequest, parameters: parameters).0
+        case  .RenewBook(let parameters):
             return Alamofire.ParameterEncoding.URL.encode(mutableURLRequest, parameters: parameters).0
         default:
             return mutableURLRequest

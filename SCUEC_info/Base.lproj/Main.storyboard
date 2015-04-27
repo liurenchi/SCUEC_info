@@ -371,11 +371,11 @@
                                             <exclude reference="8Z5-5f-pfV"/>
                                             <exclude reference="FaK-kx-v2O"/>
                                             <exclude reference="rvD-bl-gjd"/>
+                                            <exclude reference="QRQ-W4-PuP"/>
+                                            <exclude reference="sxV-re-Qjo"/>
                                             <exclude reference="Jda-Nb-lgL"/>
                                             <exclude reference="Wt9-BO-kXU"/>
                                             <exclude reference="bob-nr-zbx"/>
-                                            <exclude reference="QRQ-W4-PuP"/>
-                                            <exclude reference="sxV-re-Qjo"/>
                                             <exclude reference="IzC-4u-qip"/>
                                             <exclude reference="Kjg-1k-thM"/>
                                             <exclude reference="rl1-ed-Zo0"/>
@@ -392,11 +392,11 @@
                                             <include reference="8Z5-5f-pfV"/>
                                             <include reference="FaK-kx-v2O"/>
                                             <include reference="rvD-bl-gjd"/>
+                                            <include reference="QRQ-W4-PuP"/>
+                                            <include reference="sxV-re-Qjo"/>
                                             <include reference="Jda-Nb-lgL"/>
                                             <include reference="Wt9-BO-kXU"/>
                                             <include reference="bob-nr-zbx"/>
-                                            <include reference="QRQ-W4-PuP"/>
-                                            <include reference="sxV-re-Qjo"/>
                                             <include reference="IzC-4u-qip"/>
                                             <include reference="Kjg-1k-thM"/>
                                             <include reference="rl1-ed-Zo0"/>

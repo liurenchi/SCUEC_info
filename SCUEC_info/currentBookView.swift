@@ -15,8 +15,6 @@ import MBProgressHUD
 class currentBookView: UITableViewController
 {
     var book:[Book]!
-    
-   
     override func viewDidLoad() {
         super.viewDidLoad()
         // Self Sizing Cells
@@ -24,10 +22,19 @@ class currentBookView: UITableViewController
         //AlamofireRequest()
         
         book = fetchCoreData("book_FetchRequest") as! [Book]
-        
        
         
-            
+//        var time = "2015-05-12 15:07:02"
+//       var dateFormatter = NSDateFormatter()
+//        
+//       
+//        dateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ss"
+//        var date = dateFormatter.dateFromString(time)!
+        
+        
+        
+     
+     
     }
 
    
@@ -71,6 +78,7 @@ class currentBookView: UITableViewController
         var renewAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default,
             title: "续借",handler: { (action:UITableViewRowAction!, indexPath:NSIndexPath!) -> Void in
             //续借功能
+            self.renewBook(indexPath.row)
             })
         
         pinbookAction.backgroundColor = UIColor(red: 255/255, green: 97/255, blue: 0, alpha: 1)
@@ -85,7 +93,22 @@ class currentBookView: UITableViewController
     
 
 
-    
+    func renewBook(renewId: Int){
+        var get1970_time: NSTimeInterval = NSDate().timeIntervalSince1970 * 1000
+        Alamofire.request(Router.RenewBook(["bar_code":"2018245","check":"4EDC91F1","time":"\(get1970_time)"])).responseString(encoding: NSUTF8StringEncoding, completionHandler:{ (_, _, string, _) in
+            // 测试
+            println(string)
+        }).response { (request, response, _, error) -> Void in
+            println(request)
+            
+        }
+        
+        
+        
+        
+        
+        
+    }
    
     
     

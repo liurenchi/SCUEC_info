@@ -47,7 +47,6 @@ func parseData(data:NSData){
     var doc:TFHpple = TFHpple(HTMLData: data, encoding: "UTF8")
     println("begin parse!")
     if var output:TFHppleElement = doc.peekAtSearchWithXPathQuery("//*[@id='mylib_content']/table") {
-        
         //字符串筛选
         var string = output.content.stringByReplacingOccurrencesOfString("\t", withString: "")
         var string1 = string.stringByReplacingOccurrencesOfString("\n", withString: "")
@@ -59,8 +58,19 @@ func parseData(data:NSData){
         for arry in strArray{
             println(arry)
           }*/
+        //获取续借按钮的参数
+        var loopnumber: Int = 1
+        var btnArray: NSMutableArray = []
+        do{
+        if var input:TFHppleElement = doc.peekAtSearchWithXPathQuery("//*[@id='\(loopnumber)']/input"){
+        var temp = input.attributes["onclick"] as! String
+        var temparray: NSArray = temp.componentsSeparatedByString("'")
+        btnArray.addObject(temparray[3])
+            loopnumber++}else{println("获取续借按钮的参数出错")}
+        }while(loopnumber < 8   )
+       
         //存入本地
-        savetoCoredata(strArray)
+        savetoCoredata(strArray, btnArray)
         }else{
         println("nil")
         
@@ -71,14 +81,15 @@ func parseData(data:NSData){
 //MARK: 存储
 
 
-func savetoCoredata(saveArray: NSMutableArray){
+func savetoCoredata(saveArray: NSMutableArray, btnarray: NSMutableArray){
     //将数组的数据存入entity
     //赋值Context
      managedObjectContext = coreDataStack.context
 
-    //两个标志信号量
-    var usefulindex: Int = 0
-    var keep_do:Bool = true
+    //3个标志信号量
+    var usefulindex: Int = 0//找到有效数据（即全数字开头）
+    var keep_do:Bool = true//流程控制
+    var btndataindex: Int = 0//续借按钮中的参数存在btnarray中的索引
     //存储数据进入coredata
     do{
         //找到书号即为第一个有效数据
@@ -94,7 +105,9 @@ func savetoCoredata(saveArray: NSMutableArray){
             //通过分析返回的数据，然后按照格式存入coredata
             book = NSEntityDescription.insertNewObjectForEntityForName("Book", inManagedObjectContext: managedObjectContext) as! Book
             shelve = NSEntityDescription.insertNewObjectForEntityForName("Shelves", inManagedObjectContext: managedObjectContext) as! Shelves
-
+            
+            book.checknumber = btnarray[btndataindex] as! String
+            btndataindex++
             book.codenum = saveArray[usefulindex] as! String
             var name_author = (saveArray[usefulindex+1] as! String).componentsSeparatedByString("/")
             book.name = name_author[0]

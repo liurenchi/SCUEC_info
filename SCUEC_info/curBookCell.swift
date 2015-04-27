@@ -6,7 +6,11 @@
 //  Copyright (c) 2015年  Lrcray. All rights reserved.
 //
 
+/*———————————————————————————————————————
+custom cell
+———————————————————————————————————————*/
 import UIKit
+
 
 class curBookCell: UITableViewCell {
 
@@ -19,10 +23,5 @@ class curBookCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    
 }

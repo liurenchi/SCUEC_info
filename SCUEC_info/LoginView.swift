@@ -11,6 +11,7 @@
 ———————————————————————————————————————*/
 import UIKit
 import Alamofire
+import MBProgressHUD
 class LoginView: UIViewController
 {
 //MARK:- 数据属性
@@ -25,17 +26,17 @@ class LoginView: UIViewController
         case bar_code = "barcode"
         case st_number = "stnumber"
     }
-   
     
     
 //MARK:- 功能按钮实现
     @IBAction func loginButton() {
+        
+        
         saveUserData() //数据处理
         userLogin() //网络请求
-        
-        
-        self.dismissViewControllerAnimated(true, completion: nil)
-        
+    }
+    func netrequest(){
+    
     }
     @IBAction func cancelButton() {
         self.dismissViewControllerAnimated(true, completion: nil)
@@ -85,6 +86,13 @@ class LoginView: UIViewController
         //类型转换
 //        println(password)
 //        println("\(username)")
+        
+        //进度提示
+        var HUD = MBProgressHUD()
+        HUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
+        HUD.labelText = "正在登录···"
+        self.view.addSubview(HUD)
+        HUD.show(true)
         Alamofire.request(Router.LoginUser(["number":"11121027", "passwd":"5201314feng", "select":"\(type)"])).responseString(encoding: NSUTF8StringEncoding, completionHandler:{ (_, _, string, _) in
             // 测试            
             //println(string)
@@ -93,6 +101,7 @@ class LoginView: UIViewController
             var cookie:NSHTTPCookie!
             if error != nil {
                 println("登录请求错误")
+                HUD.hide(true)
             }else{
                 //储存cookies
                 var mycookie = NSHTTPCookieStorage.sharedHTTPCookieStorage().cookies
@@ -104,6 +113,10 @@ class LoginView: UIViewController
                 defaults.synchronize()
                 //println(cookie.value)
                 println("cookie存储成功")
+                HUD.hide(true)
+                self.dismissViewControllerAnimated(true, completion: nil)
+
+                
                 }
             }
         }

@@ -11,12 +11,13 @@
 import UIKit
 import Alamofire
 import CoreData
+import MBProgressHUD
 class currentBookView: UITableViewController
 {
     var book:[Book]!
     
    
-        override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         // Self Sizing Cells
         
@@ -24,17 +25,12 @@ class currentBookView: UITableViewController
         
         book = fetchCoreData("book_FetchRequest") as! [Book]
         
-        for obj in book{
-            println(obj.codenum)
-        }
-            func viewDidAppear(animated: Bool) {
-                
-                self.tableView.reloadData()
-                
-            }
+       
+        
+            
     }
 
-
+   
 
     
     
@@ -48,7 +44,7 @@ class currentBookView: UITableViewController
     }
     
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) ->UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! curBookCell
         
     //配置cell数据
@@ -56,7 +52,8 @@ class currentBookView: UITableViewController
         cell.bookauthor.text = book[indexPath.row].author
         cell.borrowdate.text = "借阅日期:\(book[indexPath.row].borrowdate)"
         cell.duedate.text = "到期日期:\(book[indexPath.row].duedate)"
-    
+
+        
     return cell
     }
    
@@ -68,11 +65,16 @@ class currentBookView: UITableViewController
         var pinbookAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "添加到书架", handler: { (action:UITableViewRowAction!, indexPath:NSIndexPath!) -> Void in
             // 添加书籍到书架
             
+            
+            
             })
         var renewAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default,
             title: "续借",handler: { (action:UITableViewRowAction!, indexPath:NSIndexPath!) -> Void in
             //续借功能
             })
+        
+        pinbookAction.backgroundColor = UIColor(red: 255/255, green: 97/255, blue: 0, alpha: 1)
+        renewAction.backgroundColor = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
     return [pinbookAction,renewAction]
     }
 
@@ -81,12 +83,10 @@ class currentBookView: UITableViewController
                 
     }
     
-    
+
 
     
-    
-    
-    
+   
     
     
     

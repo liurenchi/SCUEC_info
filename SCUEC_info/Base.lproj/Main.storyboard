@@ -321,52 +321,26 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="书名：                                          " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="877-aM-Mdt">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="20"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="借阅日期：                                           " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjC-7B-Rtx">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="应还日期" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tbd-Qs-yd9">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="应还日期" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tbd-Qs-yd9">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="172" id="h3Y-mE-dSs"/>
-                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="h3Y-mE-dSs"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=regular-widthClass=compact">
-                                                <mask key="constraints">
-                                                    <include reference="h3Y-mE-dSs"/>
-                                                </mask>
-                                            </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="作者：" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="UOf-LW-PzR">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="Ij1-ho-65e"/>
-                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="Ij1-ho-65e"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=regular-widthClass=compact">
-                                                <mask key="constraints">
-                                                    <exclude reference="Ij1-ho-65e"/>
-                                                </mask>
-                                            </variation>
                                         </label>
                                     </subviews>
                                     <constraints>
@@ -378,9 +352,13 @@
                                         <constraint firstItem="Tbd-Qs-yd9" firstAttribute="bottom" secondItem="etZ-Nd-i20" secondAttribute="bottomMargin" id="QRQ-W4-PuP"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="UOf-LW-PzR" secondAttribute="trailing" constant="-5" id="Wt9-BO-kXU"/>
                                         <constraint firstItem="UOf-LW-PzR" firstAttribute="top" secondItem="877-aM-Mdt" secondAttribute="bottom" constant="18" id="bob-nr-zbx"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="kjC-7B-Rtx" secondAttribute="trailing" constant="-35" id="kFd-dT-d0c"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="kjC-7B-Rtx" secondAttribute="trailing" constant="-35" id="rl1-ed-Zo0">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                                        </constraint>
                                         <constraint firstItem="877-aM-Mdt" firstAttribute="top" secondItem="etZ-Nd-i20" secondAttribute="topMargin" constant="5" id="rvD-bl-gjd"/>
-                                        <constraint firstItem="Tbd-Qs-yd9" firstAttribute="leading" secondItem="etZ-Nd-i20" secondAttribute="leadingMargin" constant="-5" id="sxV-re-Qjo"/>
+                                        <constraint firstItem="Tbd-Qs-yd9" firstAttribute="leading" secondItem="etZ-Nd-i20" secondAttribute="leadingMargin" constant="-5" id="sxV-re-Qjo">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                                        </constraint>
                                     </constraints>
                                     <variation key="default">
                                         <mask key="subviews">
@@ -400,7 +378,7 @@
                                             <exclude reference="sxV-re-Qjo"/>
                                             <exclude reference="IzC-4u-qip"/>
                                             <exclude reference="Kjg-1k-thM"/>
-                                            <exclude reference="kFd-dT-d0c"/>
+                                            <exclude reference="rl1-ed-Zo0"/>
                                         </mask>
                                     </variation>
                                     <variation key="heightClass=regular-widthClass=compact">
@@ -421,7 +399,7 @@
                                             <include reference="sxV-re-Qjo"/>
                                             <include reference="IzC-4u-qip"/>
                                             <include reference="Kjg-1k-thM"/>
-                                            <include reference="kFd-dT-d0c"/>
+                                            <include reference="rl1-ed-Zo0"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>

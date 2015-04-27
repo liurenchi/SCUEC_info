@@ -20,6 +20,9 @@
 		9983FEB81AE8E7B4001053B5 /* currentBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9983FEB71AE8E7B4001053B5 /* currentBookView.swift */; };
 		9983FEBA1AE924F7001053B5 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9983FEB91AE924F7001053B5 /* CoreDataStack.swift */; };
 		9983FEBD1AE92534001053B5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9983FEBB1AE92534001053B5 /* Model.xcdatamodeld */; };
+		99E2C5E01AEE284300C2E77A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E2C5DF1AEE284300C2E77A /* CoreGraphics.framework */; };
+		99E2C5E21AEE284D00C2E77A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E2C5E11AEE284D00C2E77A /* UIKit.framework */; };
+		99E2C5E41AEE37CD00C2E77A /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E2C5E31AEE37CD00C2E77A /* Template.swift */; };
 		99ED88DB1AE34CA400E28BB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ED88DA1AE34CA400E28BB9 /* AppDelegate.swift */; };
 		99ED88E01AE34CA400E28BB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99ED88DE1AE34CA400E28BB9 /* Main.storyboard */; };
 		99ED88E21AE34CA400E28BB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99ED88E11AE34CA400E28BB9 /* Images.xcassets */; };
@@ -61,6 +64,9 @@
 		9983FEB71AE8E7B4001053B5 /* currentBookView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = currentBookView.swift; sourceTree = "<group>"; };
 		9983FEB91AE924F7001053B5 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		9983FEBC1AE92534001053B5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		99E2C5DF1AEE284300C2E77A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		99E2C5E11AEE284D00C2E77A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		99E2C5E31AEE37CD00C2E77A /* Template.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
 		99ED88D51AE34CA400E28BB9 /* SCUEC_info.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCUEC_info.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99ED88D91AE34CA400E28BB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99ED88DA1AE34CA400E28BB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +90,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99E2C5E21AEE284D00C2E77A /* UIKit.framework in Frameworks */,
+				99E2C5E01AEE284300C2E77A /* CoreGraphics.framework in Frameworks */,
 				A06CB1E91E4766A3660C7416 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,6 +131,7 @@
 				995E67D31AE7AC57006C7FD5 /* libraryExtension.swift */,
 				9928A7C01AECE3C20061ECFA /* curbook_request.swift */,
 				9929B2C81AEDED9C00695327 /* curBookCell.swift */,
+				99E2C5E31AEE37CD00C2E77A /* Template.swift */,
 			);
 			name = libconfig;
 			sourceTree = "<group>";
@@ -229,6 +238,8 @@
 		CA430A7B412D5EDA4F7FE4E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				99E2C5E11AEE284D00C2E77A /* UIKit.framework */,
+				99E2C5DF1AEE284300C2E77A /* CoreGraphics.framework */,
 				377F3103D93A57DD76CC5B5A /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -388,6 +399,7 @@
 				9928A7C11AECE3C20061ECFA /* curbook_request.swift in Sources */,
 				997A5B801AEA7FAD006D9B02 /* Book.swift in Sources */,
 				995E67D41AE7AC57006C7FD5 /* libraryExtension.swift in Sources */,
+				99E2C5E41AEE37CD00C2E77A /* Template.swift in Sources */,
 				997A5B7E1AEA7FAC006D9B02 /* Shelves.swift in Sources */,
 				995E67CD1AE7A360006C7FD5 /* TFHppleElement.m in Sources */,
 				99F9B89E1AE52FB900DDA119 /* libraryRouter.swift in Sources */,
@@ -484,6 +496,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -521,6 +534,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

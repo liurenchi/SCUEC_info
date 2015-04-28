@@ -32,9 +32,10 @@ class userInfoView: UIViewController
     func parseData(data:NSData){
         //解析获取的数据
         var doc:TFHpple = TFHpple(HTMLData: data, encoding: "UTF8")
-        println("begin parse!")
+        println("begin parse用户信息!")
         if var output:TFHppleElement = doc.peekAtSearchWithXPathQuery("//*[@id='mylib_content']/div[1]") {
             self.outputView.text = output.content
+            println("用户信息parse end")
             }else{
                 println("userinfo数据解析为nil")
             }

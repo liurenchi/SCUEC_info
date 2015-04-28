@@ -22,8 +22,12 @@ self.view.addSubview(HUD)
 
 
 
+//NSDate的格式转化
 
-
+    var time = "2015-05-12 15:07:02"
+    var dateFormatter = NSDateFormatter()
+    dateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ss"
+    var date = dateFormatter.dateFromString(time)!
 
 
 

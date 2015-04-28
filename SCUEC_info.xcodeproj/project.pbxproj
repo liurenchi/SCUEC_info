@@ -131,7 +131,6 @@
 				995E67D31AE7AC57006C7FD5 /* libraryExtension.swift */,
 				9928A7C01AECE3C20061ECFA /* curbook_request.swift */,
 				9929B2C81AEDED9C00695327 /* curBookCell.swift */,
-				99E2C5E31AEE37CD00C2E77A /* Template.swift */,
 			);
 			name = libconfig;
 			sourceTree = "<group>";
@@ -188,6 +187,7 @@
 				9983FEB91AE924F7001053B5 /* CoreDataStack.swift */,
 				9983FEBB1AE92534001053B5 /* Model.xcdatamodeld */,
 				99ED88DE1AE34CA400E28BB9 /* Main.storyboard */,
+				99E2C5E31AEE37CD00C2E77A /* Template.swift */,
 				996F59581AE3BC83008C514C /* LibraryMC */,
 				99ED88D81AE34CA400E28BB9 /* Supporting Files */,
 			);

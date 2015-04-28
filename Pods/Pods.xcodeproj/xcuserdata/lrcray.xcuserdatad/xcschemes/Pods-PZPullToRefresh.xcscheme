@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8FA20A454AA7E74286BAEDB4"
-               BuildableName = "MBProgressHUD.framework"
-               BlueprintName = "Pods-MBProgressHUD"
+               BlueprintIdentifier = "CB967D098711A6D5439DC34F"
+               BuildableName = "PZPullToRefresh.framework"
+               BlueprintName = "Pods-PZPullToRefresh"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

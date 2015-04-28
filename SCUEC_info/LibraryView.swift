@@ -18,7 +18,7 @@ class LibraryView: UITableViewController {
     var login:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"

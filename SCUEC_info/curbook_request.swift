@@ -15,37 +15,19 @@ import Foundation
 import Alamofire
 import CoreData
 
-//获取方法初始化
-var fetchRequest: NSFetchRequest!
+
 //coreDataStack实例
 var coreDataStack: CoreDataStack = CoreDataStack()
 //NSManagedObjectContext实例赋值在了savecoredata方法中
 var managedObjectContext: NSManagedObjectContext!
-//定义NSManagedObject
-var book: Book!
-var shelve: Shelves!
 
-//MARK:- Alamofire的请求 (同时连锁执行解析，储存方法)
-func AlamofireRequest(){
-    if updataCoreData(){
-        Alamofire.request(Router.GetCurrentBook).responseString (encoding: NSUTF8StringEncoding, completionHandler:{ (_, _, string, _) in
-            // println(string)
-        }).response({ (_, _, data, _) in
-            if data != nil {
-                var parsedata = data as! NSData
-                //开始解析数据
-                parseData(parsedata)
-                
-            }
-        })
-    }else{println("更新数据错误的请求错误")}
 
-}
+
 //MARK:- TFHpple解析方法
-func parseData(data:NSData){
+func parseTableData(data:NSData) -> (NSMutableArray){
     
     var doc:TFHpple = TFHpple(HTMLData: data, encoding: "UTF8")
-    println("begin parse!")
+    println("begin tableparse!")
     if var output:TFHppleElement = doc.peekAtSearchWithXPathQuery("//*[@id='mylib_content']/table") {
         //字符串筛选
         var string = output.content.stringByReplacingOccurrencesOfString("\t", withString: "")
@@ -58,34 +40,43 @@ func parseData(data:NSData){
         for arry in strArray{
             println(arry)
           }*/
-        //获取续借按钮的参数
-        var loopnumber: Int = 1
-        var btnArray: NSMutableArray = []
-        do{
-        if var input:TFHppleElement = doc.peekAtSearchWithXPathQuery("//*[@id='\(loopnumber)']/input"){
-        var temp = input.attributes["onclick"] as! String
-        var temparray: NSArray = temp.componentsSeparatedByString("'")
-        btnArray.addObject(temparray[3])
-            loopnumber++}else{println("获取续借按钮的参数出错")}
-        }while(loopnumber < 8   )
+        
        
         //存入本地
-        savetoCoredata(strArray, btnArray)
+        return (strArray)
         }else{
         println("nil")
+        return ([])
         
     }
     
+}
+func parseBtnData(data:NSData) -> (NSMutableArray){
+    var doc:TFHpple = TFHpple(HTMLData: data, encoding: "UTF8")
+    println("begin btnparse!")
+    //获取续借按钮的参数
+    var loopnumber: Int = 1
+    var btnArray: NSMutableArray = []
+    do{
+        if var input:TFHppleElement = doc.peekAtSearchWithXPathQuery("//*[@id='\(loopnumber)']/input"){
+            var temp = input.attributes["onclick"] as! String
+            var temparray: NSArray = temp.componentsSeparatedByString("'")
+            btnArray.addObject(temparray[3])
+            loopnumber++}else{println("获取续借按钮的参数出错")}
+    }while(loopnumber < 8   )
+    return(btnArray)
 }
 //MARK:- CoreData操作
 //MARK: 存储
 
 
-func savetoCoredata(saveArray: NSMutableArray, btnarray: NSMutableArray){
+func savetoCoredata(saveArray: NSMutableArray, btnarray: NSMutableArray) {
     //将数组的数据存入entity
     //赋值Context
      managedObjectContext = coreDataStack.context
-
+    //定义NSManagedObject
+    var book: Book!
+    var shelve: Shelves!
     //3个标志信号量
     var usefulindex: Int = 0//找到有效数据（即全数字开头）
     var keep_do:Bool = true//流程控制
@@ -121,12 +112,12 @@ func savetoCoredata(saveArray: NSMutableArray, btnarray: NSMutableArray){
         
     }while(keep_do)
     println("end_save")
+    
     //错误处理
     var e: NSError?
     if managedObjectContext.save(&e) != true {
         println("curbook中存储coredata出错insert error: \(e!.localizedDescription)")
-        return}
-    
+    }
 }
 //MARK:更新
 func updataCoreData() -> Bool{
@@ -155,6 +146,8 @@ func updataCoreData() -> Bool{
 
 //MARK:获取
 func fetchCoreData(TemplateForName: String) -> [NSManagedObject]?{
+    //获取方法初始化
+    var fetchRequest: NSFetchRequest!
     fetchRequest = coreDataStack.model.fetchRequestTemplateForName(TemplateForName)
     var error: NSError?
     let results = coreDataStack.context.executeFetchRequest(fetchRequest,error: &error) as! [Book]?

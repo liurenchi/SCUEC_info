@@ -231,8 +231,11 @@
                         </sections>
                     </tableView>
                     <navigationItem key="navigationItem" id="zIa-pl-gAj">
-                        <barButtonItem key="leftBarButtonItem" image="menu" id="1JT-di-rSV"/>
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="1JT-di-rSV">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="登录" id="gPp-9E-eQT">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="aSw-Hn-pKo" kind="presentation" identifier="" id="fdJ-jy-EFW"/>
                             </connections>

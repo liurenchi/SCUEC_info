@@ -31,7 +31,8 @@ self.view.addSubview(HUD)
 
 
 
-
+//导航栏的返回按钮
+    self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
 
 
 

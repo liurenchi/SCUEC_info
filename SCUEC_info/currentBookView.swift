@@ -20,7 +20,6 @@ class currentBookView: UITableViewController, PZPullToRefreshDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         book = fetchCoreData("book_FetchRequest") as! [Book]
        self.edgesForExtendedLayout = UIRectEdge.None
    
@@ -120,10 +119,8 @@ class currentBookView: UITableViewController, PZPullToRefreshDelegate
     func pullToRefreshDidTrigger(view: PZPullToRefreshView) -> () {
         refreshHeaderView?.isLoading = true
         println("fuck!")
-        if updataCoreData(){
-            Alamofire.request(Router.GetCurrentBook).responseString (encoding: NSUTF8StringEncoding, completionHandler:{ (_, _, string, _) in
-                println(string)
-            }).response({ (_, _, data, error) in
+        
+            Alamofire.request(Router.GetCurrentBook).response({ (_, _, data, error) in
                 if error != nil {
                     println("当前借阅请求错误")
                 }else{
@@ -131,15 +128,19 @@ class currentBookView: UITableViewController, PZPullToRefreshDelegate
                         var parsedata = data as! NSData
                         var tableData = parseTableData(parsedata)
                         var btnData = parseBtnData(parsedata)
-                        savetoCoredata(tableData, btnData)
+                        if updataCoreData(){
+                            savetoCoredata(tableData, btnData)}
                         self.book = fetchCoreData("book_FetchRequest") as! [Book]
-                        
+                        println(self.book[0].codenum)
                         println("Complete loading!")
                         self.refreshHeaderView?.isLoading = false
                         self.refreshHeaderView?.refreshScrollViewDataSourceDidFinishedLoading(self.tableView)
+                        println("reload!!!!!")
+                        self.tableView.reloadData()
+                        
                     }}
             })
-        }
+        
         
         
     }

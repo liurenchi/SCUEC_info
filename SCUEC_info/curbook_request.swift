@@ -45,7 +45,7 @@ func parseTableData(data:NSData) -> (NSMutableArray){
         //存入本地
         return (strArray)
         }else{
-        println("nil")
+        println("获取表格数据出错")
         return ([])
         
     }
@@ -62,7 +62,11 @@ func parseBtnData(data:NSData) -> (NSMutableArray){
             var temp = input.attributes["onclick"] as! String
             var temparray: NSArray = temp.componentsSeparatedByString("'")
             btnArray.addObject(temparray[3])
-            loopnumber++}else{println("获取续借按钮的参数出错")}
+            loopnumber++}
+        else{
+            println("获取续借按钮的参数出错")
+            loopnumber = 1000
+        }
     }while(loopnumber < 8   )
     return(btnArray)
 }
@@ -70,7 +74,7 @@ func parseBtnData(data:NSData) -> (NSMutableArray){
 //MARK: 存储
 
 
-func savetoCoredata(saveArray: NSMutableArray, btnarray: NSMutableArray) {
+func savetoCoredata(saveArray: NSMutableArray, btnArray: NSMutableArray) {
     //将数组的数据存入entity
     //赋值Context
      managedObjectContext = coreDataStack.context
@@ -82,37 +86,38 @@ func savetoCoredata(saveArray: NSMutableArray, btnarray: NSMutableArray) {
     var keep_do:Bool = true//流程控制
     var btndataindex: Int = 0//续借按钮中的参数存在btnarray中的索引
     //存储数据进入coredata
+    if saveArray != [] && btnArray != []{
     do{
-        //找到书号即为第一个有效数据
-        for array in saveArray {
-            if isPureNumandCharacters(array as! String){
-                usefulindex = saveArray.indexOfObject(array)
-                keep_do = true
-                break
+            //找到书号即为第一个有效数据
+            for array in saveArray {
+                if isPureNumandCharacters(array as! String){
+                    usefulindex = saveArray.indexOfObject(array)
+                    keep_do = true
+                    break
+                }
+                keep_do = false
             }
-            keep_do = false
-        }
-        if(keep_do){
-            //通过分析返回的数据，然后按照格式存入coredata
-            book = NSEntityDescription.insertNewObjectForEntityForName("Book", inManagedObjectContext: managedObjectContext) as! Book
-            shelve = NSEntityDescription.insertNewObjectForEntityForName("Shelves", inManagedObjectContext: managedObjectContext) as! Shelves
+            if(keep_do){
+                //通过分析返回的数据，然后按照格式存入coredata
+                book = NSEntityDescription.insertNewObjectForEntityForName("Book", inManagedObjectContext: managedObjectContext) as! Book
+                shelve = NSEntityDescription.insertNewObjectForEntityForName("Shelves", inManagedObjectContext: managedObjectContext) as! Shelves
+                
+                book.checknumber = btnArray[btndataindex] as! String
+                btndataindex++
+                book.codenum = saveArray[usefulindex] as! String
+                var name_author = (saveArray[usefulindex+1] as! String).componentsSeparatedByString("/")
+                book.name = name_author[0]
+                book.author = name_author[1]
+                book.borrowdate = saveArray[usefulindex+2] as! String
+                book.duedate = saveArray[usefulindex+3] as! String
+                book.location = saveArray[usefulindex+5] as! String
+                shelve.bookname = book // relationships
+                var range:NSRange = NSRange(location:usefulindex, length:7)
+                saveArray.removeObjectsInRange(range)}
             
-            book.checknumber = btnarray[btndataindex] as! String
-            btndataindex++
-            book.codenum = saveArray[usefulindex] as! String
-            var name_author = (saveArray[usefulindex+1] as! String).componentsSeparatedByString("/")
-            book.name = name_author[0]
-            book.author = name_author[1]
-            book.borrowdate = saveArray[usefulindex+2] as! String
-            book.duedate = saveArray[usefulindex+3] as! String
-            book.location = saveArray[usefulindex+5] as! String
-            shelve.bookname = book // relationships
-            var range:NSRange = NSRange(location:usefulindex, length:7)
-            saveArray.removeObjectsInRange(range)}
-        
-    }while(keep_do)
-    println("end_save")
-    
+        }while(keep_do)
+        println("end_save")
+    }else{println("接受的解析数据为空值")}
     //错误处理
     var e: NSError?
     if managedObjectContext.save(&e) != true {

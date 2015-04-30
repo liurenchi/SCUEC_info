@@ -68,13 +68,14 @@ class currentBookView: UITableViewController, PZPullToRefreshDelegate
         var pinbookAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "添加到书架", handler: { (action:UITableViewRowAction!, indexPath:NSIndexPath!) -> Void in
             // 添加书籍到书架
             
-            
+             tableView.editing = false
             
             })
         var renewAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default,
             title: "续借",handler: { (action:UITableViewRowAction!, indexPath:NSIndexPath!) -> Void in
             //续借功能
             self.renewBook(indexPath.row)
+             tableView.editing = false
             })
         
         pinbookAction.backgroundColor = UIColor(red: 255/255, green: 97/255, blue: 0, alpha: 1)
@@ -123,6 +124,9 @@ class currentBookView: UITableViewController, PZPullToRefreshDelegate
             Alamofire.request(Router.GetCurrentBook).response({ (_, _, data, error) in
                 if error != nil {
                     println("当前借阅请求错误")
+                    self.refreshHeaderView?.isLoading = false
+                    self.refreshHeaderView?.refreshScrollViewDataSourceDidFinishedLoading(self.tableView)
+
                 }else{
                     if data != nil {
                         var parsedata = data as! NSData

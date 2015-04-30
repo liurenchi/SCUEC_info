@@ -33,7 +33,10 @@ class LoginView: UIViewController
         
         
         saveUserData() //数据处理
-        userLogin() //网络请求
+        UserName = "11121027"
+        PassWord = "2"
+        UserNameType = "cert_no"
+        userLogin(UserName,password: PassWord,type: UserNameType) //网络请求
     }
     func netrequest(){
     
@@ -58,6 +61,8 @@ class LoginView: UIViewController
             }else { //不记住密码
                 UserName = Username.text
                 PassWord = Password.text
+                 defaults.setObject("", forKey: "auto_login")
+                
             }
         }else{
             println("错误的用户名或密码输入")
@@ -70,6 +75,8 @@ class LoginView: UIViewController
             UserNameType = "bar_no"
         }
         
+        defaults.setObject(UserNameType, forKey: "UsernameType")
+
        // 清空之前的cookies，马上保存
         defaults.setObject(nil, forKey: "Cookie_name")
         defaults.setObject(nil, forKey: "Cookie_value")
@@ -78,11 +85,8 @@ class LoginView: UIViewController
     }
     
     
-    func userLogin() {
-        // 登陆功能
-        var username = UserName
-        var password = PassWord
-        var type = UserNameType
+    func userLogin(username:String, password:String, type:String) {
+ 
         //类型转换
 //        println(password)
 //        println("\(username)")
@@ -93,7 +97,7 @@ class LoginView: UIViewController
         HUD.labelText = "正在登录···"
         self.view.addSubview(HUD)
         HUD.show(true)
-        Alamofire.request(Router.LoginUser(["number":"11121027", "passwd":"5201314feng", "select":"\(type)"])).responseString(encoding: NSUTF8StringEncoding, completionHandler:{ (_, _, string, _) in
+        Alamofire.request(Router.LoginUser(["number":"\(username)", "passwd":"\(password)", "select":"\(type)"])).responseString(encoding: NSUTF8StringEncoding, completionHandler:{ (_, _, string, _) in
             // 测试            
             //println(string)
             }).response { (_, _, _, error) -> Void in

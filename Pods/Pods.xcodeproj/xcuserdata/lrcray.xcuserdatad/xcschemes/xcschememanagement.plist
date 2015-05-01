@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-HanekeSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3931E54BD1F18F82F0992302</key>
+		<key>088BFE4C4CBD4923793832D9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8FA20A454AA7E74286BAEDB4</key>
+		<key>1CC01929D6191DB3B5D60193</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A1F24BD3DB40EA057873F5CC</key>
+		<key>43E62654826C83A80EE808CB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CB967D098711A6D5439DC34F</key>
+		<key>4C31A5F8672996EE273BF674</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CF2A7AF33C72CFCED15A6660</key>
+		<key>9D2E7223BED3F1421376A1F4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FED2DE18A2DADC8611FE1C9F</key>
+		<key>CFAC1D1C6662073465A75006</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F56CC974FBCB2FC7640F5B7B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

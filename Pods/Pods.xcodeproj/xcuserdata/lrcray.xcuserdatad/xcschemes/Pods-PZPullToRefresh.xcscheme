@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CB967D098711A6D5439DC34F"
+               BlueprintIdentifier = "7F16408829542D14BC393C18"
                BuildableName = "PZPullToRefresh.framework"
                BlueprintName = "Pods-PZPullToRefresh"
                ReferencedContainer = "container:Pods.xcodeproj">

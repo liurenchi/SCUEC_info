@@ -51,11 +51,13 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Alamofire.framework'
   install_framework 'MBProgressHUD.framework'
   install_framework 'PZPullToRefresh.framework'
+  install_framework 'SWTableViewCell.framework'
   install_framework 'SwiftyJSON.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Alamofire.framework'
   install_framework 'MBProgressHUD.framework'
   install_framework 'PZPullToRefresh.framework'
+  install_framework 'SWTableViewCell.framework'
   install_framework 'SwiftyJSON.framework'
 fi

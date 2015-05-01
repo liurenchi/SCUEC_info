@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8FA20A454AA7E74286BAEDB4"
-               BuildableName = "MBProgressHUD.framework"
-               BlueprintName = "Pods-MBProgressHUD"
+               BlueprintIdentifier = "FED2DE18A2DADC8611FE1C9F"
+               BuildableName = "SWTableViewCell.framework"
+               BlueprintName = "Pods-SWTableViewCell"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

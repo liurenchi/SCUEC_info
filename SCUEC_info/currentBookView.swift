@@ -7,6 +7,8 @@
 //
 /*———————————————————————————————————————
 当前借阅书籍的数据展示，其中数据获取等操作方法见libconfig/curbook_request.swift
+-续借功能，通过http请求进行续借
+-添加到书架功能，添加到favorites的coredata中储存
 ———————————————————————————————————————*/
 import UIKit
 import Alamofire
@@ -15,12 +17,20 @@ import MBProgressHUD
 import PZPullToRefresh
 class currentBookView: UITableViewController, PZPullToRefreshDelegate
 {
-    var book:[Book]!
+    var book: [Book]!
+    var favbook: Favorites!
+    //coreDataStack实例
+    var coreDataStack: CoreDataStack = CoreDataStack()
+    //NSManagedObjectContext实例赋值在了savecoredata方法中
+    var managedObjectContext: NSManagedObjectContext!
+
     var refreshHeaderView: PZPullToRefreshView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         book = fetchCoreData("book_FetchRequest") as! [Book]
+        managedObjectContext = coreDataStack.context
+
        self.edgesForExtendedLayout = UIRectEdge.None
    
     }
@@ -62,18 +72,26 @@ class currentBookView: UITableViewController, PZPullToRefreshDelegate
    
     
 //MARK: - tableviewcell的操作
+//-添加书籍到书架
+//- 续借功能
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath:NSIndexPath) -> [AnyObject] {
         
         var pinbookAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "添加到书架", handler: { (action:UITableViewRowAction!, indexPath:NSIndexPath!) -> Void in
-            // 添加书籍到书架
-            
+           
+             self.favbook = NSEntityDescription.insertNewObjectForEntityForName("Favorites", inManagedObjectContext: self.managedObjectContext) as! Favorites
+             self.favbook.name = self.book[indexPath.row].name
+             self.favbook.author = self.book[indexPath.row].author
+             var e: NSError?
+             if self.managedObjectContext.save(&e) != true {
+                println("curbook中存储coredata出错insert error: \(e!.localizedDescription)")
+             }
              tableView.editing = false
-            
             })
+        
         var renewAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default,
             title: "续借",handler: { (action:UITableViewRowAction!, indexPath:NSIndexPath!) -> Void in
-            //续借功能
+            
             self.renewBook(indexPath.row)
              tableView.editing = false
             })

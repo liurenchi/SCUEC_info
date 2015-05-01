@@ -71,7 +71,11 @@ class LibraryView: UITableViewController {
         Alamofire.request(Router.LoginUser(["number":"\(username)", "passwd":"\(password)", "select":"\(type)"])).responseString(encoding: NSUTF8StringEncoding, completionHandler:{ (_, _, string, _) in
             // 测试
             //println(string)
-        }).response { (_, _, _, error) -> Void in
+        }).response { (_, _, data, error) -> Void in
+            if data != nil { //测试登录情况
+                var parsedata = data as! NSData
+                self.parseData(parsedata)
+            }
             var mycookie = NSHTTPCookieStorage.sharedHTTPCookieStorage().cookies
             var cookie:NSHTTPCookie!
             if error != nil {
@@ -93,7 +97,18 @@ class LibraryView: UITableViewController {
                 }
             }
         }
-        
+    }
+    //测试登录情况
+    func parseData(data:NSData){
+        //解析获取的数据
+        var doc:TFHpple = TFHpple(HTMLData: data, encoding: "UTF8")
+        println("begin parse用户信息!")
+        if var output:TFHppleElement = doc.peekAtSearchWithXPathQuery("//*[@id='mylib_content']/div[1]") {
+            println("用户登录成功！！！")
+          
+        }else{
+            println("用户登录失败！！！")
+        }
     }
 
     

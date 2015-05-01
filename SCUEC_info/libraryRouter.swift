@@ -12,6 +12,7 @@ import Foundation
 import Alamofire
 
 enum Router: URLRequestConvertible {
+//-----图书馆地址
     //用户验证
     static let libraryURLString = "http://coin.lib.scuec.edu.cn/reader/redr_verify.php"
     //用户信息
@@ -23,13 +24,18 @@ enum Router: URLRequestConvertible {
     //借阅历史
     static let bookHistoryURLString = "http://coin.lib.scuec.edu.cn/reader/book_hist.php"
     
-    static var OAuthToken: String?
+//-----豆瓣api
+    static let searchBookApi = "https://api.douban.com/v2/book/search"
+
+    
+    
     //请求模式
     case LoginUser([String: AnyObject])
     case GetUserInfo
     case GetCurrentBook
     case RenewBook([String: AnyObject])
     case GetBookHistory
+
     
     //请求的方法
     var method: Alamofire.Method {
@@ -54,6 +60,7 @@ enum Router: URLRequestConvertible {
             return Router.renewBookURLString
         case .GetBookHistory:
             return Router.bookHistoryURLString
+
         }
     }
     

@@ -19,11 +19,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-SWTableViewCell.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3931E54BD1F18F82F0992302</key>
+		<key>26B2FAB7DF53BC10AF9AF79A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8FA20A454AA7E74286BAEDB4</key>
+		<key>29F5F02FB45BF911D0B14079</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A1F24BD3DB40EA057873F5CC</key>
+		<key>38663557D7D901F63F83F4FD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CB967D098711A6D5439DC34F</key>
+		<key>70100D69019FF391FB54717A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CF2A7AF33C72CFCED15A6660</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FED2DE18A2DADC8611FE1C9F</key>
+		<key>93E79BD8A384FD3B2AB9D2BD</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -3,20 +3,17 @@ PODS:
   - MBProgressHUD (0.9.1)
   - PZPullToRefresh (0.0.6)
   - SwiftyJSON (2.2.0)
-  - SWTableViewCell (0.3.7)
 
 DEPENDENCIES:
   - Alamofire (~> 1.2)
   - MBProgressHUD (~> 0.9.1)
   - PZPullToRefresh
   - SwiftyJSON (>= 2.2)
-  - SWTableViewCell (~> 0.3.7)
 
 SPEC CHECKSUMS:
   Alamofire: 1acfdf179aff68b41a48dff70c1ac7fa263e2bcb
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   PZPullToRefresh: d77db8cb3075278bf7f266f58fb95d4b3ea2378f
   SwiftyJSON: 0b3e6c07af17ff745e77e8e9984097b55c956e5c
-  SWTableViewCell: 2a94aadc9d47b2b611fa064566bf57948b95b579
 
 COCOAPODS: 0.36.1

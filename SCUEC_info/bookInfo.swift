@@ -18,7 +18,6 @@ class bookInfo: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var bookdetail :NSMutableDictionary = ["":""]
     var itemname:NSArray = ["书名:","作者:","译者:","出版社:","出版年:","页数:","定价:","装帧: ","ISBN: ","作者简介:","内容简介:"]
     var enitemname:NSArray = ["title","author","translator","publisher","pubdate","pages","price","binding","isbn13","author_intro","summary"]
-    var bookimgURL: NSMutableArray = []
     
     override func viewDidLoad() {
     super.viewDidLoad()
@@ -47,11 +46,13 @@ class bookInfo: UIViewController, UITableViewDataSource, UITableViewDelegate {
             }
         }
         //解析json 获取图片地址
+        var bookimgURL: NSMutableArray = []
+
         if var data = jsondata["books"][0]["images"]["large"].string{
-            self.bookimgURL.addObject(data)
+            bookimgURL.addObject(data)
         }
         if var data = jsondata["books"][0]["images"]["medium"].string{
-            self.bookimgURL.addObject(data)
+            bookimgURL.addObject(data)
         }
 
         

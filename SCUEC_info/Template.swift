@@ -15,12 +15,12 @@ var HUD = MBProgressHUD()
 HUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
 HUD.labelText = "正在登录···"
 self.view.addSubview(HUD)
+HUD.show(true)
+HUD.hide(true)
 
 
-
-
-
-
+"书名:","作者:","出版社:",
+"title","author","publisher",
 
 //NSDate的格式转化
 

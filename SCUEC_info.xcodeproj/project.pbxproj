@@ -15,6 +15,9 @@
 		995E67CD1AE7A360006C7FD5 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E67C91AE7A35F006C7FD5 /* TFHppleElement.m */; };
 		995E67CE1AE7A360006C7FD5 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E67CB1AE7A35F006C7FD5 /* XPathQuery.m */; };
 		995E67D41AE7AC57006C7FD5 /* libraryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995E67D31AE7AC57006C7FD5 /* libraryExtension.swift */; };
+		996E05421AF3B36100EFC93A /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996E05411AF3B36100EFC93A /* ImageIO.framework */; };
+		996E05461AF3B72100EFC93A /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996E05451AF3B72100EFC93A /* SDWebImage.framework */; };
+		996E05481AF3B7DD00EFC93A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 996E05471AF3B7DD00EFC93A /* libxml2.dylib */; };
 		996F59571AE3B166008C514C /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996F59561AE3B166008C514C /* LibraryView.swift */; };
 		9983FEB61AE8AEA8001053B5 /* userInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9983FEB51AE8AEA8001053B5 /* userInfoView.swift */; };
 		9983FEB81AE8E7B4001053B5 /* currentBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9983FEB71AE8E7B4001053B5 /* currentBookView.swift */; };
@@ -23,9 +26,9 @@
 		99B4C0B01AF3190800783CB0 /* favoriteBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B4C0AF1AF3190800783CB0 /* favoriteBookView.swift */; };
 		99B4C0B21AF31CDA00783CB0 /* douRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B4C0B11AF31CDA00783CB0 /* douRouter.swift */; };
 		99B4C0B61AF320FC00783CB0 /* Shelves.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B4C0B51AF320FC00783CB0 /* Shelves.swift */; };
-		99B4C0B81AF320FC00783CB0 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B4C0B71AF320FC00783CB0 /* Book.swift */; };
 		99B4C0BA1AF3218A00783CB0 /* bookInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B4C0B91AF3218A00783CB0 /* bookInfo.swift */; };
 		99B4C0BC1AF32BB600783CB0 /* bookInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B4C0BB1AF32BB600783CB0 /* bookInfoCell.swift */; };
+		99C569701AF3D98E00E21BC4 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C5696F1AF3D98E00E21BC4 /* Book.swift */; };
 		99E2C5E01AEE284300C2E77A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E2C5DF1AEE284300C2E77A /* CoreGraphics.framework */; };
 		99E2C5E21AEE284D00C2E77A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E2C5E11AEE284D00C2E77A /* UIKit.framework */; };
 		99E2C5E41AEE37CD00C2E77A /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E2C5E31AEE37CD00C2E77A /* Template.swift */; };
@@ -65,6 +68,10 @@
 		995E67CA1AE7A35F006C7FD5 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		995E67CB1AE7A35F006C7FD5 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 		995E67D31AE7AC57006C7FD5 /* libraryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = libraryExtension.swift; sourceTree = "<group>"; };
+		996E05411AF3B36100EFC93A /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		996E05431AF3B6BC00EFC93A /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = "Pods/../build/Debug-iphoneos/Pods/SDWebImage.framework"; sourceTree = "<group>"; };
+		996E05451AF3B72100EFC93A /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = "Pods/../build/Debug-iphoneos/Pods/SDWebImage.framework"; sourceTree = "<group>"; };
+		996E05471AF3B7DD00EFC93A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		996F59561AE3B166008C514C /* LibraryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		9983FEB51AE8AEA8001053B5 /* userInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userInfoView.swift; sourceTree = "<group>"; };
 		9983FEB71AE8E7B4001053B5 /* currentBookView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = currentBookView.swift; sourceTree = "<group>"; };
@@ -73,9 +80,9 @@
 		99B4C0AF1AF3190800783CB0 /* favoriteBookView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = favoriteBookView.swift; sourceTree = "<group>"; };
 		99B4C0B11AF31CDA00783CB0 /* douRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = douRouter.swift; sourceTree = "<group>"; };
 		99B4C0B51AF320FC00783CB0 /* Shelves.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shelves.swift; sourceTree = "<group>"; };
-		99B4C0B71AF320FC00783CB0 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		99B4C0B91AF3218A00783CB0 /* bookInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bookInfo.swift; sourceTree = "<group>"; };
 		99B4C0BB1AF32BB600783CB0 /* bookInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bookInfoCell.swift; sourceTree = "<group>"; };
+		99C5696F1AF3D98E00E21BC4 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		99E2C5DF1AEE284300C2E77A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		99E2C5E11AEE284D00C2E77A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		99E2C5E31AEE37CD00C2E77A /* Template.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
@@ -102,6 +109,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				996E05481AF3B7DD00EFC93A /* libxml2.dylib in Frameworks */,
+				996E05461AF3B72100EFC93A /* SDWebImage.framework in Frameworks */,
+				996E05421AF3B36100EFC93A /* ImageIO.framework in Frameworks */,
 				99E2C5E21AEE284D00C2E77A /* UIKit.framework in Frameworks */,
 				99E2C5E01AEE284300C2E77A /* CoreGraphics.framework in Frameworks */,
 				A06CB1E91E4766A3660C7416 /* Pods.framework in Frameworks */,
@@ -130,8 +140,8 @@
 		9928A7BE1AECE3370061ECFA /* coredata */ = {
 			isa = PBXGroup;
 			children = (
+				99C5696F1AF3D98E00E21BC4 /* Book.swift */,
 				9938F71A1AF33FDB00D2F329 /* Favorites.swift */,
-				99B4C0B71AF320FC00783CB0 /* Book.swift */,
 				99B4C0B51AF320FC00783CB0 /* Shelves.swift */,
 			);
 			name = coredata;
@@ -256,6 +266,10 @@
 		CA430A7B412D5EDA4F7FE4E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				996E05471AF3B7DD00EFC93A /* libxml2.dylib */,
+				996E05451AF3B72100EFC93A /* SDWebImage.framework */,
+				996E05431AF3B6BC00EFC93A /* SDWebImage.framework */,
+				996E05411AF3B36100EFC93A /* ImageIO.framework */,
 				99E2C5E11AEE284D00C2E77A /* UIKit.framework */,
 				99E2C5DF1AEE284300C2E77A /* CoreGraphics.framework */,
 				377F3103D93A57DD76CC5B5A /* Pods.framework */,
@@ -428,11 +442,11 @@
 				9983FEB81AE8E7B4001053B5 /* currentBookView.swift in Sources */,
 				9983FEBA1AE924F7001053B5 /* CoreDataStack.swift in Sources */,
 				995E67CE1AE7A360006C7FD5 /* XPathQuery.m in Sources */,
-				99B4C0B81AF320FC00783CB0 /* Book.swift in Sources */,
 				995E67CC1AE7A360006C7FD5 /* TFHpple.m in Sources */,
 				9938F71D1AF3417800D2F329 /* bookdetailCell.swift in Sources */,
 				9929B2C91AEDED9C00695327 /* curBookCell.swift in Sources */,
 				99ED88FD1AE34CB600E28BB9 /* SWRevealViewController.m in Sources */,
+				99C569701AF3D98E00E21BC4 /* Book.swift in Sources */,
 				99B4C0B61AF320FC00783CB0 /* Shelves.swift in Sources */,
 				99B4C0BC1AF32BB600783CB0 /* bookInfoCell.swift in Sources */,
 				99F837A41AE5027500835D33 /* LoginView.swift in Sources */,
@@ -568,9 +582,14 @@
 			baseConfigurationReference = 99F7397D2999F84292148B20 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				"HEADER_SEARCH_PATHS[arch=*]" = "${SDK_DIR}/usr/include/libxml2";
 				INFOPLIST_FILE = SCUEC_info/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(TARGET_BUILD_DIR)/libPods.a",
+				);
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = SCUEC_info/bridgeFile.h;
@@ -582,9 +601,14 @@
 			baseConfigurationReference = 46BD114A8B6FB9B4B508681D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				"HEADER_SEARCH_PATHS[arch=*]" = "${SDK_DIR}/usr/include/libxml2";
 				INFOPLIST_FILE = SCUEC_info/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(TARGET_BUILD_DIR)/libPods.a",
+				);
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = SCUEC_info/bridgeFile.h;

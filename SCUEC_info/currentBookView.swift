@@ -30,8 +30,9 @@ class currentBookView: UITableViewController, PZPullToRefreshDelegate
         super.viewDidLoad()
         book = fetchCoreData("book_FetchRequest") as! [Book]
         managedObjectContext = coreDataStack.context
-
        self.edgesForExtendedLayout = UIRectEdge.None
+        
+        
    
     }
 

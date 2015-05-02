@@ -35,9 +35,38 @@ HUD.hide(true)
     self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
 
 
+// MARK: - prepareForSegue
+
+
+override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+if segue.identifier == "showbookInfo" {
+if let row = tableView.indexPathForSelectedRow()?.row {
+let destinationController = segue.destinationViewController as! bookInfo
+destinationController.booksname = self.favbook[row].name
+
+}
+}
+}
+
+//MARK:- TFHpple解析方法
+func parseNewsDetail(data:NSData){
+
+var doc:TFHpple = TFHpple(HTMLData: data, encoding: "UTF8")
+println("begin newstableparse!")
+var loop:Int = 1
+
+if var output:TFHppleElement = doc.peekAtSearchWithXPathQuery("//*[@id='container']/section/article/div[3]") {
+
+
+
+}else{
+println("获取新闻列表数据出错")}
+
+self.tableView.reloadData()
+}
 
 
 
 
 
-*/
+*/*/

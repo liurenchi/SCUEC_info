@@ -55,11 +55,8 @@ class LibraryView: UITableViewController {
             UserName = defaults.stringForKey("Username")
             PassWord = defaults.stringForKey("Password")
             UserNameType =  defaults.stringForKey("UsernameType")
-
-            // 清空之前的cookies，马上保存
-            defaults.setObject(nil, forKey: "Cookie_name")
-            defaults.setObject(nil, forKey: "Cookie_value")
-            defaults.synchronize()
+        
+            
 
         
         
@@ -76,28 +73,15 @@ class LibraryView: UITableViewController {
                 var parsedata = data as! NSData
                 self.parseData(parsedata)
             }
-            var mycookie = NSHTTPCookieStorage.sharedHTTPCookieStorage().cookies
-            var cookie:NSHTTPCookie!
+
             if error != nil {
                 println("登录请求错误")
-                }else{
-                //储存cookies
-                var mycookie = NSHTTPCookieStorage.sharedHTTPCookieStorage().cookies
-                var cookie:NSHTTPCookie!
-                for cookie in mycookie as! [NSHTTPCookie]{
-                    let defaults = NSUserDefaults.standardUserDefaults()
-                    defaults.setObject(cookie.name, forKey: "Cookie_name")
-                    defaults.setObject(cookie.value, forKey: "Cookie_value")
-                    defaults.synchronize()
-                    //println(cookie.value)
-                    println("cookie存储成功")
-                    self.dismissViewControllerAnimated(true, completion: nil)
-                    
-                    
                 }
+            self.dismissViewControllerAnimated(true, completion: nil)
+
             }
         }
-    }
+    
     //测试登录情况
     func parseData(data:NSData){
         //解析获取的数据

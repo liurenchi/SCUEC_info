@@ -7,7 +7,7 @@
 //
 /*———————————————————————————————————————
 登陆view的实现方式，里面通过输入用户名密码和其他配置，通过Alamofire请求数据
-同时操作储存cookies用于context中请求用
+
 ———————————————————————————————————————*/
 import UIKit
 import Alamofire
@@ -79,10 +79,7 @@ class LoginView: UIViewController
         
         defaults.setObject(UserNameType, forKey: "UsernameType")
 
-       // 清空之前的cookies，马上保存
-        defaults.setObject(nil, forKey: "Cookie_name")
-        defaults.setObject(nil, forKey: "Cookie_value")
-        defaults.synchronize()
+
 
     }
     
@@ -108,31 +105,18 @@ class LoginView: UIViewController
                 var parsedata = data as! NSData
                 self.parseData(parsedata)
             }
-            var mycookie = NSHTTPCookieStorage.sharedHTTPCookieStorage().cookies
-            var cookie:NSHTTPCookie!
             if error != nil {
                 println("登录请求错误")
                 HUD.hide(true)
-            }else{
-                //储存cookies
-                var mycookie = NSHTTPCookieStorage.sharedHTTPCookieStorage().cookies
-                var cookie:NSHTTPCookie!
-                for cookie in mycookie as! [NSHTTPCookie]{
-                let defaults = NSUserDefaults.standardUserDefaults()
-                defaults.setObject(cookie.name, forKey: "Cookie_name")
-                defaults.setObject(cookie.value, forKey: "Cookie_value")
-                defaults.synchronize()
-                //println(cookie.value)
-                println("cookie存储成功")
-                HUD.hide(true)
-                self.dismissViewControllerAnimated(true, completion: nil)
-
-                
-                }
             }
         }
+        HUD.hide(true)
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
 
     }
+
+    
     
     //测试登录情况
     func parseData(data:NSData){

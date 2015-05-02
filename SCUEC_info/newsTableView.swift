@@ -153,9 +153,23 @@ class newsTableView: UITableViewController, PZPullToRefreshDelegate
     func pullToRefreshDidTrigger(view: PZPullToRefreshView) -> () {
         refreshHeaderView?.isLoading = true
         println("fuck!")
-        self.tableView.reloadData()
-        self.refreshHeaderView?.isLoading = false
-        self.refreshHeaderView?.refreshScrollViewDataSourceDidFinishedLoading(self.tableView)
+        Alamofire.request(.GET, "http://news.scuec.edu.cn/xww/?class-focusNews.htm").response { (_, _, data, error) in
+            
+            if error != nil {
+                println("新闻信息请求错误")
+                self.refreshHeaderView?.isLoading = false
+                self.refreshHeaderView?.refreshScrollViewDataSourceDidFinishedLoading(self.tableView)
+            }else{
+                if data != nil {
+                    var parsedata = data as! NSData
+                    self.parseNewsTable(parsedata)
+                    self.refreshHeaderView?.isLoading = false
+                    self.refreshHeaderView?.refreshScrollViewDataSourceDidFinishedLoading(self.tableView)
+                    
+                }}
+        }
+        
+        
 
         
     }
@@ -167,3 +181,4 @@ class newsTableView: UITableViewController, PZPullToRefreshDelegate
     
 
 }
+

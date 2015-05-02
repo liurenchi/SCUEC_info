@@ -15,6 +15,9 @@
 		995CC08E1AF4CD2A00D2C1D7 /* newsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995CC08D1AF4CD2A00D2C1D7 /* newsTableCell.swift */; };
 		995CC0901AF4D4CE00D2C1D7 /* newsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995CC08F1AF4D4CE00D2C1D7 /* newsDetailView.swift */; };
 		995CC0921AF4E0C700D2C1D7 /* newsDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995CC0911AF4E0C700D2C1D7 /* newsDetailCell.swift */; };
+		995CC0951AF4F62E00D2C1D7 /* LostthingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995CC0941AF4F62E00D2C1D7 /* LostthingView.swift */; };
+		995CC0971AF4F65900D2C1D7 /* lostShowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995CC0961AF4F65900D2C1D7 /* lostShowView.swift */; };
+		995CC0991AF524FD00D2C1D7 /* postLostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995CC0981AF524FD00D2C1D7 /* postLostView.swift */; };
 		995E67CC1AE7A360006C7FD5 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E67C71AE7A35F006C7FD5 /* TFHpple.m */; };
 		995E67CD1AE7A360006C7FD5 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E67C91AE7A35F006C7FD5 /* TFHppleElement.m */; };
 		995E67CE1AE7A360006C7FD5 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E67CB1AE7A35F006C7FD5 /* XPathQuery.m */; };
@@ -69,6 +72,9 @@
 		995CC08D1AF4CD2A00D2C1D7 /* newsTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsTableCell.swift; sourceTree = "<group>"; };
 		995CC08F1AF4D4CE00D2C1D7 /* newsDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsDetailView.swift; sourceTree = "<group>"; };
 		995CC0911AF4E0C700D2C1D7 /* newsDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsDetailCell.swift; sourceTree = "<group>"; };
+		995CC0941AF4F62E00D2C1D7 /* LostthingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LostthingView.swift; sourceTree = "<group>"; };
+		995CC0961AF4F65900D2C1D7 /* lostShowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lostShowView.swift; sourceTree = "<group>"; };
+		995CC0981AF524FD00D2C1D7 /* postLostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = postLostView.swift; sourceTree = "<group>"; };
 		995E67C61AE7A35F006C7FD5 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
 		995E67C71AE7A35F006C7FD5 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
 		995E67C81AE7A35F006C7FD5 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
@@ -180,6 +186,16 @@
 			name = NewsMC;
 			sourceTree = "<group>";
 		};
+		995CC0931AF4F3FC00D2C1D7 /* LostMC */ = {
+			isa = PBXGroup;
+			children = (
+				995CC0941AF4F62E00D2C1D7 /* LostthingView.swift */,
+				995CC0961AF4F65900D2C1D7 /* lostShowView.swift */,
+				995CC0981AF524FD00D2C1D7 /* postLostView.swift */,
+			);
+			name = LostMC;
+			sourceTree = "<group>";
+		};
 		995E67C51AE7A345006C7FD5 /* TFHpple */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +253,7 @@
 				99E2C5E31AEE37CD00C2E77A /* Template.swift */,
 				996F59581AE3BC83008C514C /* LibraryMC */,
 				995CC08A1AF4B90700D2C1D7 /* NewsMC */,
+				995CC0931AF4F3FC00D2C1D7 /* LostMC */,
 				99ED88D81AE34CA400E28BB9 /* Supporting Files */,
 			);
 			path = SCUEC_info;
@@ -449,6 +466,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9928A7C11AECE3C20061ECFA /* curbook_request.swift in Sources */,
+				995CC0971AF4F65900D2C1D7 /* lostShowView.swift in Sources */,
 				995E67D41AE7AC57006C7FD5 /* libraryExtension.swift in Sources */,
 				99B4C0BA1AF3218A00783CB0 /* bookInfo.swift in Sources */,
 				99E2C5E41AEE37CD00C2E77A /* Template.swift in Sources */,
@@ -463,6 +481,8 @@
 				9983FEB81AE8E7B4001053B5 /* currentBookView.swift in Sources */,
 				9983FEBA1AE924F7001053B5 /* CoreDataStack.swift in Sources */,
 				995CC08E1AF4CD2A00D2C1D7 /* newsTableCell.swift in Sources */,
+				995CC0991AF524FD00D2C1D7 /* postLostView.swift in Sources */,
+				995CC0951AF4F62E00D2C1D7 /* LostthingView.swift in Sources */,
 				995E67CE1AE7A360006C7FD5 /* XPathQuery.m in Sources */,
 				995CC0921AF4E0C700D2C1D7 /* newsDetailCell.swift in Sources */,
 				995E67CC1AE7A360006C7FD5 /* TFHpple.m in Sources */,

@@ -73,12 +73,12 @@ enum Router: URLRequestConvertible {
         let mutableURLRequest = NSMutableURLRequest(URL: URL)
         mutableURLRequest.HTTPMethod = method.rawValue
         
-        let defaults = NSUserDefaults.standardUserDefaults()
-        if let cookie_name = defaults.stringForKey("Cookie_name"){
-            if let cookie_value = defaults.stringForKey("Cookie_value"){
-                mutableURLRequest.setValue("\(cookie_name)=\(cookie_value)", forHTTPHeaderField: "Cookie")
-                println("router:\(cookie_value)")
-            }}
+//        let defaults = NSUserDefaults.standardUserDefaults()
+//        if let cookie_name = defaults.stringForKey("Cookie_name"){
+//            if let cookie_value = defaults.stringForKey("Cookie_value"){
+//                mutableURLRequest.setValue("\(cookie_name)=\(cookie_value)", forHTTPHeaderField: "Cookie")
+//                println("router:\(cookie_value)")
+//            }}
         
         switch self {
         case .LoginUser(let parameters):

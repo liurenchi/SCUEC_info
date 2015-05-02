@@ -154,7 +154,7 @@ class currentBookView: UITableViewController, PZPullToRefreshDelegate
                         if updataCoreData(){
                             savetoCoredata(tableData, btnData)}
                         self.book = fetchCoreData("book_FetchRequest") as! [Book]
-                        println(self.book[0].codenum)
+                       // println(self.book[0].codenum)
                         println("Complete loading!")
                         self.refreshHeaderView?.isLoading = false
                         self.refreshHeaderView?.refreshScrollViewDataSourceDidFinishedLoading(self.tableView)

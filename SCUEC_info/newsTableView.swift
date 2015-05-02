@@ -11,29 +11,48 @@
 import UIKit
 import PZPullToRefresh
 import Alamofire
+import MBProgressHUD
 class newsTableView: UITableViewController, PZPullToRefreshDelegate
 {
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+    
     var refreshHeaderView: PZPullToRefreshView?
     var newsTableData: NSMutableArray = []
     var newsUrlData: NSMutableArray = []
     var newsTimeData: NSMutableArray = []
-    
+    //进度提示
+    var HUD = MBProgressHUD()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+
+        
         self.edgesForExtendedLayout = UIRectEdge.None
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
 
+
+        HUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
+        HUD.labelText = "正在获取新闻···"
+        self.tableView.addSubview(HUD)
+        HUD.show(true)
+        
         Alamofire.request(.GET, "http://news.scuec.edu.cn/xww/?class-focusNews.htm").response { (_, _, data, error) in
             
             if error != nil {
                 println("新闻信息请求错误")
+                self.HUD.hide(true)
             }else{
                 if data != nil {
                     var parsedata = data as! NSData
                     self.parseNewsTable(parsedata)
-                    
+                   
                     
                 }}
         }
@@ -71,6 +90,7 @@ class newsTableView: UITableViewController, PZPullToRefreshDelegate
             }else{
                 println("获取新闻列表数据出错")}
         }
+        HUD.hide(true)
         self.tableView.reloadData()
     }
 
@@ -110,6 +130,8 @@ class newsTableView: UITableViewController, PZPullToRefreshDelegate
             if let row = tableView.indexPathForSelectedRow()?.row {
                 let destinationController = segue.destinationViewController as! newsDetailView
                 destinationController.newsurl = newsUrlData[row] as! String
+                destinationController.newstitle = newsTableData[row] as! String
+
                 
             }
         }

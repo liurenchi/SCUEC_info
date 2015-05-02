@@ -1281,7 +1281,16 @@
                             <outlet property="delegate" destination="9OE-gP-nbl" id="hUx-iO-KTO"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="校内要闻" id="23c-m8-FjQ"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="校内要闻" id="23c-m8-FjQ">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="wVy-Ve-kPM">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="menuButton" destination="wVy-Ve-kPM" id="Xl2-Eb-5Tx"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7o-8x-fQF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1291,17 +1300,81 @@
         <scene sceneID="C3a-22-eDg">
             <objects>
                 <tableViewController id="iyP-Ia-ouD" customClass="newsDetailView" customModule="SCUEC_info" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="vMp-e9-CM8">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="vMp-e9-CM8">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="ttU-Xv-iSj">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="134" id="ttU-Xv-iSj" customClass="newsDetailCell" customModule="SCUEC_info" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ttU-Xv-iSj" id="eio-gw-7Ql">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AON-aC-bLz">
+                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="f4B-j5-bC8">
+                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="AON-aC-bLz" firstAttribute="top" secondItem="f4B-j5-bC8" secondAttribute="bottom" constant="18" id="19o-dI-BYL"/>
+                                        <constraint firstItem="f4B-j5-bC8" firstAttribute="top" secondItem="eio-gw-7Ql" secondAttribute="topMargin" constant="6" id="3Zl-xi-FKk"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="AON-aC-bLz" secondAttribute="trailing" constant="7" id="ZEs-Sl-CK2"/>
+                                        <constraint firstItem="f4B-j5-bC8" firstAttribute="leading" secondItem="eio-gw-7Ql" secondAttribute="leadingMargin" constant="64" id="ZOu-aX-YEB">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="18"/>
+                                        </constraint>
+                                        <constraint firstItem="AON-aC-bLz" firstAttribute="bottom" secondItem="eio-gw-7Ql" secondAttribute="bottomMargin" id="lpd-TZ-AuC">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="5"/>
+                                        </constraint>
+                                        <constraint firstAttribute="trailingMargin" secondItem="f4B-j5-bC8" secondAttribute="trailing" constant="64" id="lvM-U0-AQu">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="18"/>
+                                        </constraint>
+                                        <constraint firstItem="AON-aC-bLz" firstAttribute="leading" secondItem="eio-gw-7Ql" secondAttribute="leadingMargin" constant="8" id="vyR-fL-9y6"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="AON-aC-bLz"/>
+                                            <exclude reference="f4B-j5-bC8"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <exclude reference="19o-dI-BYL"/>
+                                            <exclude reference="ZEs-Sl-CK2"/>
+                                            <exclude reference="lpd-TZ-AuC"/>
+                                            <exclude reference="vyR-fL-9y6"/>
+                                            <exclude reference="3Zl-xi-FKk"/>
+                                            <exclude reference="ZOu-aX-YEB"/>
+                                            <exclude reference="lvM-U0-AQu"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=regular-widthClass=compact">
+                                        <mask key="subviews">
+                                            <include reference="AON-aC-bLz"/>
+                                            <include reference="f4B-j5-bC8"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <include reference="19o-dI-BYL"/>
+                                            <include reference="ZEs-Sl-CK2"/>
+                                            <include reference="lpd-TZ-AuC"/>
+                                            <include reference="vyR-fL-9y6"/>
+                                            <include reference="3Zl-xi-FKk"/>
+                                            <include reference="ZOu-aX-YEB"/>
+                                            <include reference="lvM-U0-AQu"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="newsdetail" destination="AON-aC-bLz" id="aYT-ST-stf"/>
+                                    <outlet property="title" destination="f4B-j5-bC8" id="CIv-Yb-aCf"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="iyP-Ia-ouD" id="duz-v4-xDN"/>
                             <outlet property="delegate" destination="iyP-Ia-ouD" id="hT4-S8-7RM"/>

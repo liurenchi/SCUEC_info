@@ -13,9 +13,14 @@ class newsDetailView: UITableViewController
 {
 
     var newsurl:String!
+    var newstitle:String!
+    var newsdetail:String!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //self sizing cell
+        tableView.estimatedRowHeight = 40
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
         var range = NSRange(location: 0, length: 1)
 //        var requestUrl = self.newsurl.stringByReplacingCharactersInRange(range, withString: "http://news.scuec.edu.cn/xww")
         var requestUrl = newsurl.stringByReplacingOccurrencesOfString("./", withString: "http://news.scuec.edu.cn/xww/")
@@ -41,13 +46,14 @@ class newsDetailView: UITableViewController
     func parseNewsDetail(data:NSData){
         
         var doc:TFHpple = TFHpple(HTMLData: data, encoding: "UTF8")
-        println("begin newstableparse!")
+        println("begin newsdetailparse!")
         var loop:Int = 1
         
             if var output:TFHppleElement = doc.peekAtSearchWithXPathQuery("//*[@id='container']/section/article/div[3]") {
                 
-               println(output.content)
-                
+                newsdetail = output.content.stringByReplacingOccurrencesOfString("分享到：", withString: "")
+               
+            
             }else{
                 println("获取新闻列表数据出错")}
         
@@ -61,20 +67,29 @@ class newsDetailView: UITableViewController
     // MARK: - Table view data source
 
    
-//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // #warning Incomplete method implementation.
-//        // Return the number of rows in the section.
-//        return 1
-//    }
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete method implementation.
+        // Return the number of rows in the section.
+        return 2
+    }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! newsDetailCell
 
-         Configure the cell...
+        switch indexPath.row {
+        case 0:
+            cell.title.text = "\(self.newstitle)"
+            cell.newsdetail.text = "\(self.newsdetail)"
+        default:
+            cell.title.text = ""
+            cell.newsdetail.text = ""
+        }
 
+        
+        
         return cell
     }
-    */
+
 
    }

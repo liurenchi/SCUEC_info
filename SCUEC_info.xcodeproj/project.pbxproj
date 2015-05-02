@@ -14,6 +14,7 @@
 		995CC08C1AF4B93F00D2C1D7 /* newsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995CC08B1AF4B93F00D2C1D7 /* newsTableView.swift */; };
 		995CC08E1AF4CD2A00D2C1D7 /* newsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995CC08D1AF4CD2A00D2C1D7 /* newsTableCell.swift */; };
 		995CC0901AF4D4CE00D2C1D7 /* newsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995CC08F1AF4D4CE00D2C1D7 /* newsDetailView.swift */; };
+		995CC0921AF4E0C700D2C1D7 /* newsDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995CC0911AF4E0C700D2C1D7 /* newsDetailCell.swift */; };
 		995E67CC1AE7A360006C7FD5 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E67C71AE7A35F006C7FD5 /* TFHpple.m */; };
 		995E67CD1AE7A360006C7FD5 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E67C91AE7A35F006C7FD5 /* TFHppleElement.m */; };
 		995E67CE1AE7A360006C7FD5 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E67CB1AE7A35F006C7FD5 /* XPathQuery.m */; };
@@ -67,6 +68,7 @@
 		995CC08B1AF4B93F00D2C1D7 /* newsTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsTableView.swift; sourceTree = "<group>"; };
 		995CC08D1AF4CD2A00D2C1D7 /* newsTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsTableCell.swift; sourceTree = "<group>"; };
 		995CC08F1AF4D4CE00D2C1D7 /* newsDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsDetailView.swift; sourceTree = "<group>"; };
+		995CC0911AF4E0C700D2C1D7 /* newsDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsDetailCell.swift; sourceTree = "<group>"; };
 		995E67C61AE7A35F006C7FD5 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
 		995E67C71AE7A35F006C7FD5 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
 		995E67C81AE7A35F006C7FD5 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				995CC08D1AF4CD2A00D2C1D7 /* newsTableCell.swift */,
+				995CC0911AF4E0C700D2C1D7 /* newsDetailCell.swift */,
 				995CC08B1AF4B93F00D2C1D7 /* newsTableView.swift */,
 				995CC08F1AF4D4CE00D2C1D7 /* newsDetailView.swift */,
 			);
@@ -461,6 +464,7 @@
 				9983FEBA1AE924F7001053B5 /* CoreDataStack.swift in Sources */,
 				995CC08E1AF4CD2A00D2C1D7 /* newsTableCell.swift in Sources */,
 				995E67CE1AE7A360006C7FD5 /* XPathQuery.m in Sources */,
+				995CC0921AF4E0C700D2C1D7 /* newsDetailCell.swift in Sources */,
 				995E67CC1AE7A360006C7FD5 /* TFHpple.m in Sources */,
 				9938F71D1AF3417800D2F329 /* bookdetailCell.swift in Sources */,
 				9929B2C91AEDED9C00695327 /* curBookCell.swift in Sources */,

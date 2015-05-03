@@ -154,6 +154,7 @@
 		9928A7BE1AECE3370061ECFA /* coredata */ = {
 			isa = PBXGroup;
 			children = (
+				9983FEB91AE924F7001053B5 /* CoreDataStack.swift */,
 				99C5696F1AF3D98E00E21BC4 /* Book.swift */,
 				9938F71A1AF33FDB00D2F329 /* Favorites.swift */,
 				99B4C0B51AF320FC00783CB0 /* Shelves.swift */,
@@ -247,7 +248,6 @@
 		99ED88D71AE34CA400E28BB9 /* SCUEC_info */ = {
 			isa = PBXGroup;
 			children = (
-				9983FEB91AE924F7001053B5 /* CoreDataStack.swift */,
 				9983FEBB1AE92534001053B5 /* Model.xcdatamodeld */,
 				99ED88DE1AE34CA400E28BB9 /* Main.storyboard */,
 				99E2C5E31AEE37CD00C2E77A /* Template.swift */,

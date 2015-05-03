@@ -46,6 +46,7 @@ class bookInfo: UIViewController, UITableViewDataSource, UITableViewDelegate {
     HUD.show(true)
     //网络请求
     Alamofire.request(doubanRouter.searchBook(["q":"\(booksname)", "apikey":"021ee6fe92aee6a4065cb4fbb80cb3ec"])).responseJSON { (_, _, json, _)  in
+        if json != nil{
         var jsondata = JSON(json!)
    
         //解析json 获取基本书籍信息
@@ -64,7 +65,7 @@ class bookInfo: UIViewController, UITableViewDataSource, UITableViewDelegate {
             }
         }
         //解析json 获取图片地址
-       
+        
 
         if var imgL = jsondata["books"][0]["images"]["large"].string{
             var imgurl = NSURL(string: imgL)
@@ -88,6 +89,7 @@ class bookInfo: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         //刷新数据
         self.TableView.reloadData()
+        }else{println("书籍详情没有数据")}
         HUD.hide(true)
         
         }

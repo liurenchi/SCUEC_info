@@ -33,9 +33,6 @@ class LoginView: UIViewController
         
         
         saveUserData() //数据处理
-//        UserName = "11121027"
-//        PassWord = "5201314feng"
-//        UserNameType = "cert_no"
         userLogin(UserName,password: PassWord,type: UserNameType) //网络请求
     }
     func netrequest(){
@@ -68,6 +65,9 @@ class LoginView: UIViewController
             }
         }else{
             println("错误的用户名或密码输入")
+            //保证不为空值
+                    UserName = "888888"
+                    PassWord = "888888"
         }
         
         // 设置用户名类型

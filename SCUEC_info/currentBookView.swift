@@ -58,11 +58,11 @@ class currentBookView: UITableViewController, PZPullToRefreshDelegate
     return book.count
     }
     
-    
+  // MARK: - 配置cell数据
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) ->UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! curBookCell
         
-    //配置cell数据
+   
         cell.bookname.text = "《\(book[indexPath.row].name)》"
         cell.bookauthor.text = book[indexPath.row].author
         cell.borrowdate.text = "借阅日期:\(book[indexPath.row].borrowdate)"
@@ -73,7 +73,7 @@ class currentBookView: UITableViewController, PZPullToRefreshDelegate
     }
    
     
-//MARK: - tableviewcell的操作
+//MARK: - tableviewcell的操作(续借+添加到书架)
 //-添加书籍到书架
 //- 续借功能
     // Override to support conditional editing of the table view.
@@ -81,13 +81,19 @@ class currentBookView: UITableViewController, PZPullToRefreshDelegate
         
         var pinbookAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "添加到书架", handler: { (action:UITableViewRowAction!, indexPath:NSIndexPath!) -> Void in
            
-             self.favbook = NSEntityDescription.insertNewObjectForEntityForName("Favorites", inManagedObjectContext: self.managedObjectContext) as! Favorites
-             self.favbook.name = self.book[indexPath.row].name
-             self.favbook.author = self.book[indexPath.row].author
-             var e: NSError?
-             if self.managedObjectContext.save(&e) != true {
-                println("curbook中存储coredata出错insert error: \(e!.localizedDescription)")
-             }
+            if self.book[indexPath.row].isfav.boolValue == true{
+                 println("已经储存！")
+            }else{
+                 self.favbook = NSEntityDescription.insertNewObjectForEntityForName("Favorites", inManagedObjectContext: self.managedObjectContext) as! Favorites
+                 self.favbook.name = self.book[indexPath.row].name
+                 self.favbook.author = self.book[indexPath.row].author
+                 // 标记已经添加
+                 self.book[indexPath.row].isfav = true
+                 var e: NSError?
+                 if self.managedObjectContext.save(&e) != true {
+                    println("curbook中存储coredata出错insert error: \(e!.localizedDescription)")
+                 }
+            }
              tableView.editing = false
             })
         

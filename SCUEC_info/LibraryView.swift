@@ -21,7 +21,7 @@ class LibraryView: UITableViewController {
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var loginButton: UIBarButtonItem!
  
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
@@ -34,8 +34,9 @@ class LibraryView: UITableViewController {
         }
         self.revealViewController().rearViewRevealWidth = 240
         
+// MARK: -
         
-        //自动登录
+// MARK: -  自动登录
         
         if autologinnumeber {
             var logintype = defaults.stringForKey("auto_login")
@@ -63,7 +64,7 @@ class LibraryView: UITableViewController {
         
     }
 
-   
+// MARK: - 登录请求
     func userLogin(username:String, password:String, type:String) {
         Alamofire.request(Router.LoginUser(["number":"\(username)", "passwd":"\(password)", "select":"\(type)"])).responseString(encoding: NSUTF8StringEncoding, completionHandler:{ (_, _, string, _) in
             // 测试
@@ -82,7 +83,7 @@ class LibraryView: UITableViewController {
             }
         }
     
-    //测试登录情况
+   // MARK: - 测试登录情况
     func parseData(data:NSData){
         //解析获取的数据
         var doc:TFHpple = TFHpple(HTMLData: data, encoding: "UTF8")

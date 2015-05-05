@@ -31,9 +31,9 @@ class userInfoView: UIViewController, UITableViewDataSource, UITableViewDelegate
 
     }
 
-  
+  // MARK: - 解析获取的数据
     func parseData(data:NSData){
-        //解析获取的数据
+        
         var doc:TFHpple = TFHpple(HTMLData: data, encoding: "UTF8")
         println("begin parse用户信息!")
         if var output:TFHppleElement = doc.peekAtSearchWithXPathQuery("//*[@id='mylib_content']/div[1]") {

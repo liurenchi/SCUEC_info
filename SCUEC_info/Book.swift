@@ -2,7 +2,7 @@
 //  Book.swift
 //  SCUEC_info
 //
-//  Created by  Lrcray on 15/5/1.
+//  Created by  Lrcray on 15/5/5.
 //  Copyright (c) 2015年  Lrcray. All rights reserved.
 //
 
@@ -18,6 +18,7 @@ class Book: NSManagedObject {
     @NSManaged var duedate: String
     @NSManaged var location: String
     @NSManaged var name: String
+    @NSManaged var isfav: NSNumber
     @NSManaged var shelves: Shelves
 
 }

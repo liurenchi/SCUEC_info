@@ -14,7 +14,7 @@ import SwiftyJSON
 import MBProgressHUD
 import CoreData
 class bookInfo: UIViewController, UITableViewDataSource, UITableViewDelegate {
-//UI控件配置
+ // MARK: - UI控件配置
     @IBOutlet weak var imgename: UIImageView!
     @IBOutlet weak var TableView: UITableView!
     @IBOutlet weak var bookname: UILabel!
@@ -44,7 +44,7 @@ class bookInfo: UIViewController, UITableViewDataSource, UITableViewDelegate {
     HUD.labelText = "正在获取书籍信息···"
     self.TableView.addSubview(HUD)
     HUD.show(true)
-    //网络请求
+// MARK: - 数据网络请求
     Alamofire.request(doubanRouter.searchBook(["q":"\(booksname)", "apikey":"021ee6fe92aee6a4065cb4fbb80cb3ec"])).responseJSON { (_, _, json, _)  in
         if json != nil{
         var jsondata = JSON(json!)
@@ -99,7 +99,7 @@ class bookInfo: UIViewController, UITableViewDataSource, UITableViewDelegate {
       
         
     }
-    
+// MARK: - 配置cell数据
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.

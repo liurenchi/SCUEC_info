@@ -6,6 +6,7 @@
         <attribute name="checknumber" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="codenum" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="duedate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isfav" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="shelves" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Shelves" inverseName="bookname" inverseEntity="Shelves" syncable="YES"/>
@@ -25,15 +26,22 @@
         <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="translator" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="News" representedClassName="SCUEC_info.News" syncable="YES">
+        <attribute name="passage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Shelves" representedClassName="SCUEC_info.Shelves" syncable="YES">
         <relationship name="bookname" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Book" inverseName="shelves" inverseEntity="Book" syncable="YES"/>
     </entity>
     <fetchRequest name="book_FetchRequest" entity="Book"/>
     <fetchRequest name="favor_FetchRequest" entity="Favorites"/>
     <fetchRequest name="FetchRequest" entity="Shelves"/>
+    <fetchRequest name="news_FetchRequest" entity="News"/>
     <elements>
-        <element name="Book" positionX="-63" positionY="-18" width="128" height="165"/>
-        <element name="Favorites" positionX="-225" positionY="36" width="128" height="240"/>
+        <element name="Book" positionX="-63" positionY="-18" width="128" height="180"/>
+        <element name="Favorites" positionX="-297" positionY="84" width="128" height="240"/>
         <element name="Shelves" positionX="-396" positionY="-45" width="128" height="60"/>
+        <element name="News" positionX="-497" positionY="189" width="128" height="88"/>
     </elements>
 </model>

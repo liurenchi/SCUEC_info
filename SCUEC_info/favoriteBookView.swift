@@ -16,6 +16,7 @@ class favoriteBookView: UITableViewController
 {
     var favbooks: [Favorites]!
     var favbook: Favorites!
+    
  
     //coreDataStack实例
     var coreDataStack: CoreDataStack = CoreDataStack()
@@ -28,7 +29,7 @@ class favoriteBookView: UITableViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         managedObjectContext = coreDataStack.context
-        favbooks = fetchfavebookData("favor_FetchRequest") as! [Favorites]
+        favbooks = fetchfavbookData("favor_FetchRequest") as! [Favorites]
         
         
 
@@ -109,7 +110,7 @@ class favoriteBookView: UITableViewController
     }
    
 //MARK:获取
-    func fetchfavebookData(TemplateForName: String) -> [NSManagedObject]?{
+    func fetchfavbookData(TemplateForName: String) -> [NSManagedObject]?{
         //获取方法初始化
         var fetchRequest: NSFetchRequest!
         fetchRequest = coreDataStack.model.fetchRequestTemplateForName(TemplateForName)
@@ -120,7 +121,7 @@ class favoriteBookView: UITableViewController
             return fetchedResults
             //store the fetched results in the venues property you defined earlier
         } else {
-            println("curbook数据获取失败：Could not fetch \(error), \(error!.userInfo)")
+            println("favbook数据获取失败：Could not fetch \(error), \(error!.userInfo)")
             return nil
         }
         

@@ -131,6 +131,7 @@ class newsTableView: UITableViewController, PZPullToRefreshDelegate
                 let destinationController = segue.destinationViewController as! newsDetailView
                 destinationController.newsurl = newsUrlData[row] as! String
                 destinationController.newstitle = newsTableData[row] as! String
+                destinationController.newstime = newsTimeData[row] as! String
 
                 
             }

@@ -14,6 +14,8 @@ import Alamofire
 import MBProgressHUD
 class LoginView: UIViewController
 {
+    
+    @IBOutlet weak var libbgimg: UIImageView!
 //MARK:- 数据属性
     @IBOutlet weak var Username: UITextField!
     @IBOutlet weak var Password: UITextField!
@@ -38,9 +40,7 @@ class LoginView: UIViewController
     func netrequest(){
     
     }
-    @IBAction func cancelButton() {
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
+
         
 
 //MARK:- 具体功能实现
@@ -111,8 +111,7 @@ class LoginView: UIViewController
             }
         }
         HUD.hide(true)
-        self.dismissViewControllerAnimated(true, completion: nil)
-        
+       self.navigationController?.popToRootViewControllerAnimated(true)
 
     }
 
@@ -139,8 +138,13 @@ class LoginView: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
+        // Apply blurring effect
+        var blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
+        var blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        libbgimg.addSubview(blurEffectView)
+
+        }
 
     
 

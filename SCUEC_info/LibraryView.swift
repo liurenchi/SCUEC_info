@@ -10,7 +10,7 @@ Lib的主界面，界面ui在storyboard中实现
 ———————————————————————————————————————*/
 import UIKit
 import Alamofire
-class LibraryView: UITableViewController {
+class LibraryView: UIViewController {
     var UserName: String! //用户名
     var PassWord: String! //密码
     var UserNameType: String! //用户名类型
@@ -19,11 +19,30 @@ class LibraryView: UITableViewController {
     var autologinnumeber: Bool = true //自动登录
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    @IBOutlet weak var loginButton: UIBarButtonItem!
+//    @IBOutlet weak var loginButton: UIBarButtonItem!
  
+       //功能按钮
+    @IBOutlet weak var loginBtn: UIButton!
+    @IBOutlet weak var mybookBtn: UIButton!
+    @IBOutlet weak var curbookBtn: UIButton!
+    @IBOutlet weak var infoBtn: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Move the buttons off screen (bottom)
+        let translateDown = CGAffineTransformMakeTranslation(0, 500)
+        loginBtn.transform = translateDown
+        curbookBtn.transform = translateDown
+        
+        // Move the buttons off screen (top)
+        let translateUp = CGAffineTransformMakeTranslation(0, -500)
+        infoBtn.transform = translateUp
+        mybookBtn.transform = translateUp
+
+        
+        
+        
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
 
@@ -56,13 +75,35 @@ class LibraryView: UITableViewController {
             UserName = defaults.stringForKey("Username")
             PassWord = defaults.stringForKey("Password")
             UserNameType =  defaults.stringForKey("UsernameType")
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         
+        let translate = CGAffineTransformMakeTranslation(0, 0)
+        loginBtn.hidden = false
+        infoBtn.hidden = false
+        mybookBtn.hidden = false
+        curbookBtn.hidden = false
+        
+        UIView.animateWithDuration(0.8, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: nil, animations: {
             
-
+            self.loginBtn.transform = translate
+            self.mybookBtn.transform = translate
+            
+            }, completion: nil)
         
-        
+        UIView.animateWithDuration(0.8, delay: 0.5, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: nil, animations: {
+            
+            self.infoBtn.transform = translate
+            self.curbookBtn.transform = translate
+            
+            }, completion: nil)
         
     }
+
+    
+    
+    
 
 // MARK: - 登录请求
     func userLogin(username:String, password:String, type:String) {

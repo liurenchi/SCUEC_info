@@ -159,7 +159,6 @@
 		AF03FD1544D1AA3F959AF22B /* Pods-SDWebImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SDWebImage-dummy.m"; sourceTree = "<group>"; };
 		AF17DB24C788746C2A360A2F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFFC07CE53A8FDD6C026E6E2 /* UIImageView+HighlightedWebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+HighlightedWebCache.h"; path = "SDWebImage/UIImageView+HighlightedWebCache.h"; sourceTree = "<group>"; };
-		B19224CE5329562CACDADB8F /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapSearchKit.framework; sourceTree = "<group>"; };
 		B71D81F81BFE1E6F18876F1F /* UIButton+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+WebCache.h"; path = "SDWebImage/UIButton+WebCache.h"; sourceTree = "<group>"; };
 		B844615A8626B7CC6F17109C /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImagePrefetcher.m; path = SDWebImage/SDWebImagePrefetcher.m; sourceTree = "<group>"; };
 		BEE6BE332A72CD4088BE79D9 /* Pods-PZPullToRefresh-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PZPullToRefresh-umbrella.h"; sourceTree = "<group>"; };
@@ -167,10 +166,8 @@
 		C2FB4EB4871C36464FB5B224 /* Pods-PZPullToRefresh.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PZPullToRefresh.modulemap"; sourceTree = "<group>"; };
 		C4027366C3E29C0579968B35 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4CB2A695A290853DC9B9C7F /* SDWebImageOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageOperation.h; path = SDWebImage/SDWebImageOperation.h; sourceTree = "<group>"; };
-		C6364DA1058714E2081B3335 /* AMap.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = MAMapKit.framework/Versions/2.5.0.002286d.60159/Resources/AMap.bundle; sourceTree = "<group>"; };
 		C9700357F1A39C1C85B70D62 /* Pods-MBProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MBProgressHUD-umbrella.h"; sourceTree = "<group>"; };
 		CC1683C06B626189B6EB1B02 /* SDWebImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloader.m; path = SDWebImage/SDWebImageDownloader.m; sourceTree = "<group>"; };
-		D088C52B0947181CC9908F43 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
 		D26EC83D245297DD9F9616BA /* UIImage+MultiFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MultiFormat.m"; path = "SDWebImage/UIImage+MultiFormat.m"; sourceTree = "<group>"; };
 		D30285C71DB8BBFDC0B26129 /* SDWebImageCompat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCompat.h; path = SDWebImage/SDWebImageCompat.h; sourceTree = "<group>"; };
 		D4C52540A1C58638ECD7507C /* Pods-SDWebImage-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SDWebImage-Private.xcconfig"; sourceTree = "<group>"; };
@@ -363,8 +360,6 @@
 		78EAE620EF09CDF8776B50E7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F8875C36D6BF3AABC69A3F22 /* AMap3DMap */,
-				8291747528A00F148BF766F8 /* AMapSearch */,
 				24856ACFABB5FAE4C08CCE40 /* Alamofire */,
 				17EE683ED14C55FC48569A8A /* MBProgressHUD */,
 				119212DD2E11C44260ED49B8 /* PZPullToRefresh */,
@@ -372,14 +367,6 @@
 				9307E8749D8BBBBD7375D0EC /* SwiftyJSON */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		8291747528A00F148BF766F8 /* AMapSearch */ = {
-			isa = PBXGroup;
-			children = (
-				BC3B05A1DDC78A18DB2CB80D /* Frameworks */,
-			);
-			path = AMapSearch;
 			sourceTree = "<group>";
 		};
 		9307E8749D8BBBBD7375D0EC /* SwiftyJSON */ = {
@@ -450,22 +437,6 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
-		B011A9E263F58DD59B6613D6 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D088C52B0947181CC9908F43 /* MAMapKit.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BC3B05A1DDC78A18DB2CB80D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B19224CE5329562CACDADB8F /* AMapSearchKit.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		DB232599FB2555DBD487F348 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -500,14 +471,6 @@
 			path = "Target Support Files/Pods";
 			sourceTree = "<group>";
 		};
-		EAE267BEC47FE47C6FDD4305 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				C6364DA1058714E2081B3335 /* AMap.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		F01BCEE4CAA218AE7BE0E4CB /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -521,15 +484,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-MBProgressHUD";
-			sourceTree = "<group>";
-		};
-		F8875C36D6BF3AABC69A3F22 /* AMap3DMap */ = {
-			isa = PBXGroup;
-			children = (
-				B011A9E263F58DD59B6613D6 /* Frameworks */,
-				EAE267BEC47FE47C6FDD4305 /* Resources */,
-			);
-			path = AMap3DMap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

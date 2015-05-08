@@ -11,6 +11,19 @@
 		9929B2C91AEDED9C00695327 /* curBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9929B2C81AEDED9C00695327 /* curBookCell.swift */; };
 		9938F71B1AF33FDB00D2F329 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9938F71A1AF33FDB00D2F329 /* Favorites.swift */; };
 		9938F71D1AF3417800D2F329 /* bookdetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9938F71C1AF3417800D2F329 /* bookdetailCell.swift */; };
+		9940F28E1AFD223D0055AF35 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9940F28D1AFD223D0055AF35 /* AMap.bundle */; };
+		9940F2901AFD22490055AF35 /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9940F28F1AFD22490055AF35 /* AMapSearchKit.framework */; };
+		9940F2921AFD22500055AF35 /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9940F2911AFD22500055AF35 /* MAMapKit.framework */; };
+		9940F2941AFD22BF0055AF35 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9940F2931AFD22BF0055AF35 /* libstdc++.6.0.9.dylib */; };
+		9940F2961AFD22C80055AF35 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9940F2951AFD22C80055AF35 /* Security.framework */; };
+		9940F2981AFD22CF0055AF35 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9940F2971AFD22CF0055AF35 /* CoreLocation.framework */; };
+		9940F29A1AFD22D60055AF35 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9940F2991AFD22D60055AF35 /* CoreTelephony.framework */; };
+		9940F29C1AFD22DF0055AF35 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9940F29B1AFD22DF0055AF35 /* SystemConfiguration.framework */; };
+		9940F29E1AFD22E60055AF35 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9940F29D1AFD22E60055AF35 /* libz.dylib */; };
+		9940F2A01AFD22EC0055AF35 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9940F29F1AFD22EC0055AF35 /* QuartzCore.framework */; };
+		9940F2A21AFD22F20055AF35 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9940F2A11AFD22F20055AF35 /* OpenGLES.framework */; };
+		9940F2A41AFD24510055AF35 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9940F2A31AFD24510055AF35 /* MapView.swift */; };
+		9940F2A61AFD2FEC0055AF35 /* MapTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9940F2A51AFD2FEC0055AF35 /* MapTableView.swift */; };
 		995CC08C1AF4B93F00D2C1D7 /* newsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995CC08B1AF4B93F00D2C1D7 /* newsTableView.swift */; };
 		995CC08E1AF4CD2A00D2C1D7 /* newsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995CC08D1AF4CD2A00D2C1D7 /* newsTableCell.swift */; };
 		995CC0901AF4D4CE00D2C1D7 /* newsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995CC08F1AF4D4CE00D2C1D7 /* newsDetailView.swift */; };
@@ -51,7 +64,6 @@
 		99ED89001AE34EAF00E28BB9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ED88FF1AE34EAF00E28BB9 /* MenuViewController.swift */; };
 		99F837A41AE5027500835D33 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F837A31AE5027500835D33 /* LoginView.swift */; };
 		99F9B89E1AE52FB900DDA119 /* libraryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F9B89D1AE52FB900DDA119 /* libraryRouter.swift */; };
-		A06CB1E91E4766A3660C7416 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 377F3103D93A57DD76CC5B5A /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +83,19 @@
 		9929B2C81AEDED9C00695327 /* curBookCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = curBookCell.swift; sourceTree = "<group>"; };
 		9938F71A1AF33FDB00D2F329 /* Favorites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		9938F71C1AF3417800D2F329 /* bookdetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bookdetailCell.swift; sourceTree = "<group>"; };
+		9940F28D1AFD223D0055AF35 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AMap.bundle; sourceTree = "<group>"; };
+		9940F28F1AFD22490055AF35 /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapSearchKit.framework; sourceTree = "<group>"; };
+		9940F2911AFD22500055AF35 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
+		9940F2931AFD22BF0055AF35 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		9940F2951AFD22C80055AF35 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		9940F2971AFD22CF0055AF35 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9940F2991AFD22D60055AF35 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		9940F29B1AFD22DF0055AF35 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9940F29D1AFD22E60055AF35 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		9940F29F1AFD22EC0055AF35 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9940F2A11AFD22F20055AF35 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		9940F2A31AFD24510055AF35 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		9940F2A51AFD2FEC0055AF35 /* MapTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTableView.swift; sourceTree = "<group>"; };
 		995CC08B1AF4B93F00D2C1D7 /* newsTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsTableView.swift; sourceTree = "<group>"; };
 		995CC08D1AF4CD2A00D2C1D7 /* newsTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsTableCell.swift; sourceTree = "<group>"; };
 		995CC08F1AF4D4CE00D2C1D7 /* newsDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsDetailView.swift; sourceTree = "<group>"; };
@@ -129,12 +154,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9940F2A21AFD22F20055AF35 /* OpenGLES.framework in Frameworks */,
+				9940F2A01AFD22EC0055AF35 /* QuartzCore.framework in Frameworks */,
+				9940F29E1AFD22E60055AF35 /* libz.dylib in Frameworks */,
+				9940F29C1AFD22DF0055AF35 /* SystemConfiguration.framework in Frameworks */,
+				9940F29A1AFD22D60055AF35 /* CoreTelephony.framework in Frameworks */,
+				9940F2981AFD22CF0055AF35 /* CoreLocation.framework in Frameworks */,
+				9940F2961AFD22C80055AF35 /* Security.framework in Frameworks */,
+				9940F2941AFD22BF0055AF35 /* libstdc++.6.0.9.dylib in Frameworks */,
 				996E05481AF3B7DD00EFC93A /* libxml2.dylib in Frameworks */,
 				996E05461AF3B72100EFC93A /* SDWebImage.framework in Frameworks */,
+				9940F2921AFD22500055AF35 /* MAMapKit.framework in Frameworks */,
+				9940F2901AFD22490055AF35 /* AMapSearchKit.framework in Frameworks */,
 				996E05421AF3B36100EFC93A /* ImageIO.framework in Frameworks */,
 				99E2C5E21AEE284D00C2E77A /* UIKit.framework in Frameworks */,
 				99E2C5E01AEE284300C2E77A /* CoreGraphics.framework in Frameworks */,
-				A06CB1E91E4766A3660C7416 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +220,8 @@
 		9955EBC11AFCBA98009670D1 /* MapMC */ = {
 			isa = PBXGroup;
 			children = (
+				9940F2A31AFD24510055AF35 /* MapView.swift */,
+				9940F2A51AFD2FEC0055AF35 /* MapTableView.swift */,
 			);
 			name = MapMC;
 			sourceTree = "<group>";
@@ -279,6 +315,9 @@
 		99ED88D81AE34CA400E28BB9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9940F2911AFD22500055AF35 /* MAMapKit.framework */,
+				9940F28F1AFD22490055AF35 /* AMapSearchKit.framework */,
+				9940F28D1AFD223D0055AF35 /* AMap.bundle */,
 				99ED88FF1AE34EAF00E28BB9 /* MenuViewController.swift */,
 				99ED88DA1AE34CA400E28BB9 /* AppDelegate.swift */,
 				99ED88E11AE34CA400E28BB9 /* Images.xcassets */,
@@ -320,6 +359,14 @@
 		CA430A7B412D5EDA4F7FE4E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9940F2A11AFD22F20055AF35 /* OpenGLES.framework */,
+				9940F29F1AFD22EC0055AF35 /* QuartzCore.framework */,
+				9940F29D1AFD22E60055AF35 /* libz.dylib */,
+				9940F29B1AFD22DF0055AF35 /* SystemConfiguration.framework */,
+				9940F2991AFD22D60055AF35 /* CoreTelephony.framework */,
+				9940F2971AFD22CF0055AF35 /* CoreLocation.framework */,
+				9940F2951AFD22C80055AF35 /* Security.framework */,
+				9940F2931AFD22BF0055AF35 /* libstdc++.6.0.9.dylib */,
 				996E05471AF3B7DD00EFC93A /* libxml2.dylib */,
 				996E05451AF3B72100EFC93A /* SDWebImage.framework */,
 				996E05431AF3B6BC00EFC93A /* SDWebImage.framework */,
@@ -416,6 +463,7 @@
 			files = (
 				99A527731AF8DD7B00EA55FA /* Main.storyboard in Resources */,
 				99ED88E51AE34CA400E28BB9 /* LaunchScreen.xib in Resources */,
+				9940F28E1AFD223D0055AF35 /* AMap.bundle in Resources */,
 				99ED88E21AE34CA400E28BB9 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,6 +534,7 @@
 				995CC0971AF4F65900D2C1D7 /* lostShowView.swift in Sources */,
 				995E67D41AE7AC57006C7FD5 /* libraryExtension.swift in Sources */,
 				99B4C0BA1AF3218A00783CB0 /* bookInfo.swift in Sources */,
+				9940F2A61AFD2FEC0055AF35 /* MapTableView.swift in Sources */,
 				99E2C5E41AEE37CD00C2E77A /* Template.swift in Sources */,
 				99B4C0B01AF3190800783CB0 /* favoriteBookView.swift in Sources */,
 				995E67CD1AE7A360006C7FD5 /* TFHppleElement.m in Sources */,
@@ -512,6 +561,7 @@
 				995CC08C1AF4B93F00D2C1D7 /* newsTableView.swift in Sources */,
 				99B4C0B61AF320FC00783CB0 /* Shelves.swift in Sources */,
 				99B4C0BC1AF32BB600783CB0 /* bookInfoCell.swift in Sources */,
+				9940F2A41AFD24510055AF35 /* MapView.swift in Sources */,
 				99F837A41AE5027500835D33 /* LoginView.swift in Sources */,
 				9938F71B1AF33FDB00D2F329 /* Favorites.swift in Sources */,
 				99ED89001AE34EAF00E28BB9 /* MenuViewController.swift in Sources */,
@@ -638,14 +688,14 @@
 			baseConfigurationReference = 99F7397D2999F84292148B20 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SCUEC_info",
+				);
 				"HEADER_SEARCH_PATHS[arch=*]" = "${SDK_DIR}/usr/include/libxml2";
 				INFOPLIST_FILE = SCUEC_info/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"-force_load",
-					"$(TARGET_BUILD_DIR)/libPods.a",
-				);
+				OTHER_LDFLAGS = "-lxml2";
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = SCUEC_info/bridgeFile.h;
@@ -657,14 +707,14 @@
 			baseConfigurationReference = 46BD114A8B6FB9B4B508681D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SCUEC_info",
+				);
 				"HEADER_SEARCH_PATHS[arch=*]" = "${SDK_DIR}/usr/include/libxml2";
 				INFOPLIST_FILE = SCUEC_info/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"-force_load",
-					"$(TARGET_BUILD_DIR)/libPods.a",
-				);
+				OTHER_LDFLAGS = "-lxml2";
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = SCUEC_info/bridgeFile.h;

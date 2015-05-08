@@ -183,6 +183,13 @@
 			name = libconfig;
 			sourceTree = "<group>";
 		};
+		9955EBC11AFCBA98009670D1 /* MapMC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MapMC;
+			sourceTree = "<group>";
+		};
 		995CC08A1AF4B90700D2C1D7 /* NewsMC */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +270,7 @@
 				996F59581AE3BC83008C514C /* LibraryMC */,
 				995CC08A1AF4B90700D2C1D7 /* NewsMC */,
 				995CC0931AF4F3FC00D2C1D7 /* LostMC */,
+				9955EBC11AFCBA98009670D1 /* MapMC */,
 				99ED88D81AE34CA400E28BB9 /* Supporting Files */,
 			);
 			path = SCUEC_info;

@@ -25,9 +25,6 @@ class MapTableView: UITableViewController {
         
     }
 
-    override func prefersStatusBarHidden() -> Bool {
-        return false
-    }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.

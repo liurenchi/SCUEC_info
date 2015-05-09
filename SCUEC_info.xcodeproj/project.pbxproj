@@ -301,6 +301,7 @@
 			children = (
 				9983FEBB1AE92534001053B5 /* Model.xcdatamodeld */,
 				99A527721AF8DD7B00EA55FA /* Main.storyboard */,
+				99ED88E11AE34CA400E28BB9 /* Images.xcassets */,
 				99E2C5E31AEE37CD00C2E77A /* Template.swift */,
 				9928A7BE1AECE3370061ECFA /* CoreData */,
 				996F59581AE3BC83008C514C /* LibraryMC */,
@@ -320,7 +321,6 @@
 				9940F28D1AFD223D0055AF35 /* AMap.bundle */,
 				99ED88FF1AE34EAF00E28BB9 /* MenuViewController.swift */,
 				99ED88DA1AE34CA400E28BB9 /* AppDelegate.swift */,
-				99ED88E11AE34CA400E28BB9 /* Images.xcassets */,
 				99ED88E31AE34CA400E28BB9 /* LaunchScreen.xib */,
 				99ED88FE1AE34D0D00E28BB9 /* bridgeFile.h */,
 				99ED88D91AE34CA400E28BB9 /* Info.plist */,

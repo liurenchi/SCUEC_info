@@ -534,14 +534,16 @@
                                     <segue destination="aSw-Hn-pKo" kind="show" id="qXO-VF-nrd"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="library-1" translatesAutoresizingMaskIntoConstraints="NO" id="pDt-ub-i1l">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="libraryBG-1" translatesAutoresizingMaskIntoConstraints="NO" id="pDt-ub-i1l">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="312" id="Mrs-7q-Aoi">
-                                        <variation key="heightClass=regular-widthClass=compact" constant="197"/>
+                                        <variation key="heightClass=regular-widthClass=compact" constant="218"/>
                                     </constraint>
-                                    <constraint firstAttribute="width" constant="145" id="WS0-KQ-R8K"/>
+                                    <constraint firstAttribute="width" constant="145" id="WS0-KQ-R8K">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="400"/>
+                                    </constraint>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -2540,8 +2542,8 @@
         <image name="currbook" width="63" height="82"/>
         <image name="favbook" width="64" height="64"/>
         <image name="library" width="603" height="626"/>
-        <image name="library-1" width="546" height="720"/>
         <image name="libraryBG" width="640" height="1136"/>
+        <image name="libraryBG-1" width="500" height="350"/>
         <image name="lost" width="726" height="700"/>
         <image name="map" width="576" height="570"/>
         <image name="menu" width="22" height="22"/>

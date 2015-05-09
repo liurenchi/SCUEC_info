@@ -48,6 +48,17 @@ class newsTableView: UITableViewController, PZPullToRefreshDelegate
             if error != nil {
                 println("新闻信息请求错误")
                 self.HUD.hide(true)
+                
+                //错误提示
+                var errorHUD = MBProgressHUD()
+                errorHUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
+                errorHUD.labelText = "新闻信息请求错误"
+                self.tableView.addSubview(errorHUD)
+                errorHUD.customView = UIImageView(image: UIImage(named: "errormark"))
+                errorHUD.mode = MBProgressHUDMode.CustomView
+                errorHUD.show(true)
+                errorHUD.hide(true, afterDelay: 2)
+
             }else{
                 if data != nil {
                     var parsedata = data as! NSData
@@ -88,7 +99,17 @@ class newsTableView: UITableViewController, PZPullToRefreshDelegate
                
 
             }else{
-                println("获取新闻列表数据出错")}
+                println("获取新闻列表数据出错")
+                //错误提示
+                var errorHUD = MBProgressHUD()
+                errorHUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
+                errorHUD.labelText = "获取新闻列表数据出错"
+                self.tableView.addSubview(errorHUD)
+                errorHUD.customView = UIImageView(image: UIImage(named: "errormark"))
+                errorHUD.mode = MBProgressHUDMode.CustomView
+                errorHUD.show(true)
+                errorHUD.hide(true, afterDelay: 2)
+            }
         }
         HUD.hide(true)
         self.tableView.reloadData()
@@ -158,6 +179,16 @@ class newsTableView: UITableViewController, PZPullToRefreshDelegate
             
             if error != nil {
                 println("新闻信息请求错误")
+                //错误提示
+                var errorHUD = MBProgressHUD()
+                errorHUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
+                errorHUD.labelText = "获取新闻请求出错"
+                self.tableView.addSubview(errorHUD)
+                errorHUD.customView = UIImageView(image: UIImage(named: "errormark"))
+                errorHUD.mode = MBProgressHUDMode.CustomView
+                errorHUD.show(true)
+                errorHUD.hide(true, afterDelay: 2)
+                
                 self.refreshHeaderView?.isLoading = false
                 self.refreshHeaderView?.refreshScrollViewDataSourceDidFinishedLoading(self.tableView)
             }else{

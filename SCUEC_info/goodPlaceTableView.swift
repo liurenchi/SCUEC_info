@@ -1,5 +1,5 @@
 //
-//  MapTableView.swift
+//  goodPlaceTableView.swift
 //  SCUEC_info
 //
 //  Created by  Lrcray on 15/5/9.
@@ -8,39 +8,34 @@
 
 import UIKit
 
-class MapTableView: UITableViewController {
+class goodPlaceTableView: UITableViewController {
 
-    @IBOutlet weak var menuButton: UIBarButtonItem!
+    var goodplace = ["BH健身","东湖磨山","江滩公园","户部巷","武大","长江大桥","光谷","归元寺","昙花林","汤逊湖"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if self.revealViewController() != nil {
-            menuButton.target = self.revealViewController()
-            menuButton.action = "revealToggle:"
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
-        
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 4
+        return goodplace.count
     }
-
-    /*
+    
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
+        
+        cell.textLabel?.text = goodplace[indexPath.row]
+        
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

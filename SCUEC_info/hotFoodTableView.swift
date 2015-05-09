@@ -1,5 +1,5 @@
 //
-//  MapTableView.swift
+//  hotFoodTableView.swift
 //  SCUEC_info
 //
 //  Created by  Lrcray on 15/5/9.
@@ -8,39 +8,38 @@
 
 import UIKit
 
-class MapTableView: UITableViewController {
+class hotFoodTableView: UITableViewController {
 
-    @IBOutlet weak var menuButton: UIBarButtonItem!
-
+    var hotrestaurants = ["海底捞火锅","秀玉红茶坊","豪客来","新港代餐厅","青春餐厅","诺意餐厅","仓桥家","娘惹裙厨","得力牛排","水货海鲜","金韩宫","台湾小吃店","鹿港镇","湘菜馆","小肥羊"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        if self.revealViewController() != nil {
-            menuButton.target = self.revealViewController()
-            menuButton.action = "revealToggle:"
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
-        
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+
+    // MARK: - Table view data source
 
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 4
+        return hotrestaurants.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
+        
+        cell.textLabel?.text = hotrestaurants[indexPath.row]
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import MBProgressHUD
 class favNewsView: UITableViewController
 {
     //coreDataStack实例
@@ -81,6 +82,17 @@ class favNewsView: UITableViewController
             //store the fetched results in the venues property you defined earlier
         } else {
             println("favNews数据获取失败：Could not fetch \(error), \(error!.userInfo)")
+            
+            //错误提示
+            var errorHUD = MBProgressHUD()
+            errorHUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
+            errorHUD.labelText = "获取收藏新闻失败"
+            self.tableView.addSubview(errorHUD)
+            errorHUD.customView = UIImageView(image: UIImage(named: "errormark"))
+            errorHUD.mode = MBProgressHUDMode.CustomView
+            errorHUD.show(true)
+            errorHUD.hide(true, afterDelay: 2)
+            
             return nil
         }
         

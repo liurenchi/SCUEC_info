@@ -24,6 +24,9 @@
 		9940F2A21AFD22F20055AF35 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9940F2A11AFD22F20055AF35 /* OpenGLES.framework */; };
 		9940F2A41AFD24510055AF35 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9940F2A31AFD24510055AF35 /* MapView.swift */; };
 		9940F2A61AFD2FEC0055AF35 /* MapTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9940F2A51AFD2FEC0055AF35 /* MapTableView.swift */; };
+		9940F2AA1AFE32060055AF35 /* hotFoodTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9940F2A91AFE32060055AF35 /* hotFoodTableView.swift */; };
+		9940F2AC1AFE33C80055AF35 /* hotmovieTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9940F2AB1AFE33C80055AF35 /* hotmovieTableView.swift */; };
+		9940F2AE1AFE35790055AF35 /* goodPlaceTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9940F2AD1AFE35790055AF35 /* goodPlaceTableView.swift */; };
 		995CC08C1AF4B93F00D2C1D7 /* newsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995CC08B1AF4B93F00D2C1D7 /* newsTableView.swift */; };
 		995CC08E1AF4CD2A00D2C1D7 /* newsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995CC08D1AF4CD2A00D2C1D7 /* newsTableCell.swift */; };
 		995CC0901AF4D4CE00D2C1D7 /* newsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995CC08F1AF4D4CE00D2C1D7 /* newsDetailView.swift */; };
@@ -96,6 +99,9 @@
 		9940F2A11AFD22F20055AF35 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		9940F2A31AFD24510055AF35 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		9940F2A51AFD2FEC0055AF35 /* MapTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTableView.swift; sourceTree = "<group>"; };
+		9940F2A91AFE32060055AF35 /* hotFoodTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hotFoodTableView.swift; sourceTree = "<group>"; };
+		9940F2AB1AFE33C80055AF35 /* hotmovieTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hotmovieTableView.swift; sourceTree = "<group>"; };
+		9940F2AD1AFE35790055AF35 /* goodPlaceTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = goodPlaceTableView.swift; sourceTree = "<group>"; };
 		995CC08B1AF4B93F00D2C1D7 /* newsTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsTableView.swift; sourceTree = "<group>"; };
 		995CC08D1AF4CD2A00D2C1D7 /* newsTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsTableCell.swift; sourceTree = "<group>"; };
 		995CC08F1AF4D4CE00D2C1D7 /* newsDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsDetailView.swift; sourceTree = "<group>"; };
@@ -222,6 +228,9 @@
 			children = (
 				9940F2A31AFD24510055AF35 /* MapView.swift */,
 				9940F2A51AFD2FEC0055AF35 /* MapTableView.swift */,
+				9940F2A91AFE32060055AF35 /* hotFoodTableView.swift */,
+				9940F2AB1AFE33C80055AF35 /* hotmovieTableView.swift */,
+				9940F2AD1AFE35790055AF35 /* goodPlaceTableView.swift */,
 			);
 			name = MapMC;
 			sourceTree = "<group>";
@@ -547,6 +556,7 @@
 				99ED88DB1AE34CA400E28BB9 /* AppDelegate.swift in Sources */,
 				9983FEB81AE8E7B4001053B5 /* currentBookView.swift in Sources */,
 				9983FEBA1AE924F7001053B5 /* CoreDataStack.swift in Sources */,
+				9940F2AC1AFE33C80055AF35 /* hotmovieTableView.swift in Sources */,
 				995CC08E1AF4CD2A00D2C1D7 /* newsTableCell.swift in Sources */,
 				99A5276B1AF8D3AF00EA55FA /* Book.swift in Sources */,
 				995CC0991AF524FD00D2C1D7 /* postLostView.swift in Sources */,
@@ -557,6 +567,7 @@
 				995E67CC1AE7A360006C7FD5 /* TFHpple.m in Sources */,
 				9938F71D1AF3417800D2F329 /* bookdetailCell.swift in Sources */,
 				9929B2C91AEDED9C00695327 /* curBookCell.swift in Sources */,
+				9940F2AE1AFE35790055AF35 /* goodPlaceTableView.swift in Sources */,
 				99ED88FD1AE34CB600E28BB9 /* SWRevealViewController.m in Sources */,
 				995CC08C1AF4B93F00D2C1D7 /* newsTableView.swift in Sources */,
 				99B4C0B61AF320FC00783CB0 /* Shelves.swift in Sources */,
@@ -565,6 +576,7 @@
 				99F837A41AE5027500835D33 /* LoginView.swift in Sources */,
 				9938F71B1AF33FDB00D2F329 /* Favorites.swift in Sources */,
 				99ED89001AE34EAF00E28BB9 /* MenuViewController.swift in Sources */,
+				9940F2AA1AFE32060055AF35 /* hotFoodTableView.swift in Sources */,
 				99A527751AF8E52800EA55FA /* News.swift in Sources */,
 				9983FEB61AE8AEA8001053B5 /* userInfoView.swift in Sources */,
 			);

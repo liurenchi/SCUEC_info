@@ -83,6 +83,15 @@ class currentBookView: UITableViewController, PZPullToRefreshDelegate
            
             if self.book[indexPath.row].isfav.boolValue == true{
                  println("已经储存！")
+                //成功提示
+                var succeedHUD = MBProgressHUD()
+                succeedHUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
+                succeedHUD.labelText = "已经储存！"
+                succeedHUD.customView = UIImageView(image: UIImage(named: "Checkmark"))
+                succeedHUD.mode = MBProgressHUDMode.CustomView
+                self.view.addSubview(succeedHUD)
+                succeedHUD.show(true)
+                succeedHUD.hide(true, afterDelay: 2)
             }else{
                  self.favbook = NSEntityDescription.insertNewObjectForEntityForName("Favorites", inManagedObjectContext: self.managedObjectContext) as! Favorites
                  self.favbook.name = self.book[indexPath.row].name
@@ -92,6 +101,15 @@ class currentBookView: UITableViewController, PZPullToRefreshDelegate
                  var e: NSError?
                  if self.managedObjectContext.save(&e) != true {
                     println("curbook中存储coredata出错insert error: \(e!.localizedDescription)")
+                    //错误提示
+                    var errorHUD = MBProgressHUD()
+                    errorHUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
+                    errorHUD.labelText = "储存出错！"
+                    self.tableView.addSubview(errorHUD)
+                    errorHUD.customView = UIImageView(image: UIImage(named: "errormark"))
+                    errorHUD.mode = MBProgressHUDMode.CustomView
+                    errorHUD.show(true)
+                    errorHUD.hide(true, afterDelay: 2)
                  }
             }
              tableView.editing = false
@@ -150,6 +168,16 @@ class currentBookView: UITableViewController, PZPullToRefreshDelegate
             Alamofire.request(Router.GetCurrentBook).response({ (_, _, data, error) in
                 if error != nil {
                     println("当前借阅请求错误")
+                    //错误提示
+                    var errorHUD = MBProgressHUD()
+                    errorHUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
+                    errorHUD.labelText = "当前借阅网络请求错误"
+                    self.tableView.addSubview(errorHUD)
+                    errorHUD.customView = UIImageView(image: UIImage(named: "errormark"))
+                    errorHUD.mode = MBProgressHUDMode.CustomView
+                    errorHUD.show(true)
+                    errorHUD.hide(true, afterDelay: 2)
+                    
                     self.refreshHeaderView?.isLoading = false
                     self.refreshHeaderView?.refreshScrollViewDataSourceDidFinishedLoading(self.tableView)
 

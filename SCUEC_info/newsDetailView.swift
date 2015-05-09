@@ -10,6 +10,7 @@
 import UIKit
 import Alamofire
 import CoreData
+import MBProgressHUD
 class newsDetailView: UITableViewController
 {
 
@@ -41,6 +42,15 @@ class newsDetailView: UITableViewController
             
             if error != nil {
                 println("新闻详情请求错误")
+                //错误提示
+                var errorHUD = MBProgressHUD()
+                errorHUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
+                errorHUD.labelText = "新闻详情请求错误"
+                self.tableView.addSubview(errorHUD)
+                errorHUD.customView = UIImageView(image: UIImage(named: "errormark"))
+                errorHUD.mode = MBProgressHUDMode.CustomView
+                errorHUD.show(true)
+                errorHUD.hide(true, afterDelay: 2)
             }else{
                 if data != nil {
                     var parsedata = data as! NSData
@@ -61,9 +71,29 @@ class newsDetailView: UITableViewController
         news.title = newstitle
         news.passage = newsdetail
         news.time = newstime
+        
+        //成功提示
+        var succeedHUD = MBProgressHUD()
+        succeedHUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
+        succeedHUD.labelText = "收藏成功！"
+        succeedHUD.customView = UIImageView(image: UIImage(named: "Checkmark"))
+        succeedHUD.mode = MBProgressHUDMode.CustomView
+        self.view.addSubview(succeedHUD)
+        succeedHUD.show(true)
+        succeedHUD.hide(true, afterDelay: 2)
+        
         var e: NSError?
         if managedObjectContext.save(&e) != true {
             println("curbook中存储coredata出错insert error: \(e!.localizedDescription)")
+            //错误提示
+            var errorHUD = MBProgressHUD()
+            errorHUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
+            errorHUD.labelText = "储存出错！"
+            self.tableView.addSubview(errorHUD)
+            errorHUD.customView = UIImageView(image: UIImage(named: "errormark"))
+            errorHUD.mode = MBProgressHUDMode.CustomView
+            errorHUD.show(true)
+            errorHUD.hide(true, afterDelay: 2)
         }
 
     }
@@ -83,7 +113,18 @@ class newsDetailView: UITableViewController
                
             
             }else{
-                println("获取新闻详情数据出错")}
+                println("获取新闻详情数据出错")
+                //错误提示
+                var errorHUD = MBProgressHUD()
+                errorHUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
+                errorHUD.labelText = "获取新闻详情数据出错"
+                self.view.addSubview(errorHUD)
+                errorHUD.customView = UIImageView(image: UIImage(named: "errormark"))
+                errorHUD.mode = MBProgressHUDMode.CustomView
+                errorHUD.show(true)
+                errorHUD.hide(true, afterDelay: 3)
+        
+        }
         
         self.tableView.reloadData()
     }

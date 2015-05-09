@@ -1763,7 +1763,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="8Jz-EJ-5Zg">
                         <barButtonItem key="rightBarButtonItem" image="164-Download" id="UIr-oG-RGe">
-                            <inset key="imageInsets" minX="35" minY="23" maxX="0.0" maxY="27"/>
+                            <inset key="imageInsets" minX="35" minY="27" maxX="0.0" maxY="27"/>
                             <connections>
                                 <action selector="saveNews:" destination="iyP-Ia-ouD" id="L4i-KO-ZHL"/>
                             </connections>
@@ -2211,10 +2211,10 @@
             </objects>
             <point key="canvasLocation" x="-166.5" y="-1083"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Hot Food Table View-->
         <scene sceneID="HhS-JJ-XS7">
             <objects>
-                <tableViewController id="MX5-QY-GW6" sceneMemberID="viewController">
+                <tableViewController id="MX5-QY-GW6" customClass="hotFoodTableView" customModule="SCUEC_info" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="raW-B7-DXC">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2236,14 +2236,14 @@
             </objects>
             <point key="canvasLocation" x="-183" y="-430.5"/>
         </scene>
-        <!--Map Table View-->
+        <!--学校周边-->
         <scene sceneID="bw0-Vs-UW2">
             <objects>
                 <tableViewController id="Z0J-7F-6nx" customClass="MapTableView" customModule="SCUEC_info" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5rZ-O3-Hma">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="Rv9-5u-fO2">
                                 <cells>
@@ -2252,7 +2252,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iP4-6S-IFG" id="IX6-is-YEO">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="学校周边" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ke-V9-Nh7">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地图搜索" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ke-V9-Nh7">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="20"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -2363,6 +2363,9 @@
                                             </variation>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="onX-hk-jMO" kind="show" id="Fxu-ih-nW0"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="LfP-Bg-Ues">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -2400,6 +2403,9 @@
                                             </variation>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="RRC-SQ-vzK" kind="show" id="UAb-ko-Qze"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -2409,7 +2415,7 @@
                             <outlet property="delegate" destination="Z0J-7F-6nx" id="ZIV-7K-BjE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="1ln-GY-kgn">
+                    <navigationItem key="navigationItem" title="学校周边" id="1ln-GY-kgn">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="CbA-Vs-Ptx">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
@@ -2904,6 +2910,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m7V-El-2kP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3031.5" y="-622.5"/>
+        </scene>
+        <!--Hotmovie Table View-->
+        <scene sceneID="b7V-aK-nFx">
+            <objects>
+                <tableViewController id="onX-hk-jMO" customClass="hotmovieTableView" customModule="SCUEC_info" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4ED-U3-Mx6">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="0wc-SV-8zS">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0wc-SV-8zS" id="OFs-7v-3jR">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="onX-hk-jMO" id="IpY-1d-fwj"/>
+                            <outlet property="delegate" destination="onX-hk-jMO" id="Usg-21-6Vs"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6dx-XT-ubt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="603" y="-430.5"/>
+        </scene>
+        <!--Good Place Table View-->
+        <scene sceneID="S1P-xd-BYG">
+            <objects>
+                <tableViewController id="RRC-SQ-vzK" customClass="goodPlaceTableView" customModule="SCUEC_info" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Oxg-Ds-fPP">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="OTw-sH-nnh">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OTw-sH-nnh" id="NW7-Ha-bfJ">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="RRC-SQ-vzK" id="hl3-vP-jhf"/>
+                            <outlet property="delegate" destination="RRC-SQ-vzK" id="fT0-XH-a4d"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TOd-g4-iBP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1293" y="-430.5"/>
         </scene>
     </scenes>
     <resources>

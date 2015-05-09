@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 let APIKey = "87c029f74db9749e657c57de83d47568" //用了storyboard的原因，配置与appdelegate中
 
 class MapView: UIViewController, MAMapViewDelegate, AMapSearchDelegate, UITableViewDataSource, UITableViewDelegate
@@ -59,6 +60,15 @@ class MapView: UIViewController, MAMapViewDelegate, AMapSearchDelegate, UITableV
     @IBAction func search(sender: UIButton) {
         if userCurrentLocation == nil || search == nil{
             println("搜索错误！")
+            //错误提示
+            var errorHUD = MBProgressHUD()
+            errorHUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
+            errorHUD.labelText = "搜索错误"
+            self.view.addSubview(errorHUD)
+            errorHUD.customView = UIImageView(image: UIImage(named: "errormark"))
+            errorHUD.mode = MBProgressHUDMode.CustomView
+            errorHUD.show(true)
+            errorHUD.hide(true, afterDelay: 3)
             return
         }
         var request = AMapPlaceSearchRequest()
@@ -233,7 +243,15 @@ class MapView: UIViewController, MAMapViewDelegate, AMapSearchDelegate, UITableV
     
     // 定位失败回调
     func mapView(mapView: MAMapView!, didFailToLocateUserWithError error: NSError!) {
-        
+        //错误提示
+        var errorHUD = MBProgressHUD()
+        errorHUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
+        errorHUD.labelText = "定位失败"
+        self.view.addSubview(errorHUD)
+        errorHUD.customView = UIImageView(image: UIImage(named: "errormark"))
+        errorHUD.mode = MBProgressHUDMode.CustomView
+        errorHUD.show(true)
+        errorHUD.hide(true, afterDelay: 3)
         println(error)
     }
     // 定位回调

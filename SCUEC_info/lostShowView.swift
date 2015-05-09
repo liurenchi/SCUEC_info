@@ -155,7 +155,7 @@ class lostShowView: UITableViewController, PZPullToRefreshDelegate
     
     func pullToRefreshDidTrigger(view: PZPullToRefreshView) -> () {
         refreshHeaderView?.isLoading = true
-        println("fuck!")
+       // println("fuck!")
         var requestUrl = "http://lrc163.lofter.com"
         Alamofire.request(.GET, "\(requestUrl)").response { (_, _, data, error) in
             

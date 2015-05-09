@@ -163,7 +163,7 @@ class currentBookView: UITableViewController, PZPullToRefreshDelegate
 
     func pullToRefreshDidTrigger(view: PZPullToRefreshView) -> () {
         refreshHeaderView?.isLoading = true
-        println("fuck!")
+//        println("fuck!")
         
             Alamofire.request(Router.GetCurrentBook).response({ (_, _, data, error) in
                 if error != nil {

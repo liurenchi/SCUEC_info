@@ -174,7 +174,7 @@ class newsTableView: UITableViewController, PZPullToRefreshDelegate
     
     func pullToRefreshDidTrigger(view: PZPullToRefreshView) -> () {
         refreshHeaderView?.isLoading = true
-        println("fuck!")
+        //println("fuck!")
         Alamofire.request(.GET, "http://news.scuec.edu.cn/xww/?class-focusNews.htm").response { (_, _, data, error) in
             
             if error != nil {

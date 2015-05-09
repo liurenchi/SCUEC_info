@@ -6,6 +6,11 @@
 //  Copyright (c) 2015年  Lrcray. All rights reserved.
 //
 
+
+
+
+
+
 /*
 
 
@@ -17,6 +22,30 @@ HUD.labelText = "正在登录···"
 self.view.addSubview(HUD)
 HUD.show(true)
 HUD.hide(true)
+
+//错误提示
+var errorHUD = MBProgressHUD()
+errorHUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
+errorHUD.labelText = "error···"
+self.view.addSubview(errorHUD)
+errorHUD.customView = UIImageView(image: UIImage(named: "errormark"))
+errorHUD.mode = MBProgressHUDMode.CustomView
+errorHUD.show(true)
+errorHUD.hide(true, afterDelay: 3)
+
+
+//成功提示
+var succeedHUD = MBProgressHUD()
+succeedHUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
+succeedHUD.labelText = "用户登录成功！"
+succeedHUD.customView = UIImageView(image: UIImage(named: "Checkmark"))
+succeedHUD.mode = MBProgressHUDMode.CustomView
+self.view.addSubview(succeedHUD)
+succeedHUD.show(true)
+succeedHUD.hide(true, afterDelay: 2)
+
+
+
 
 
 "书名:","作者:","出版社:",

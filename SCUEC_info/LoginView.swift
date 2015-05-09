@@ -14,6 +14,8 @@ import Alamofire
 import MBProgressHUD
 class LoginView: UIViewController
 {
+    
+    @IBOutlet weak var libbgimg: UIImageView!
 //MARK:- 数据属性
     @IBOutlet weak var Username: UITextField!
     @IBOutlet weak var Password: UITextField!
@@ -38,9 +40,7 @@ class LoginView: UIViewController
     func netrequest(){
     
     }
-    @IBAction func cancelButton() {
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
+
         
 
 //MARK:- 具体功能实现
@@ -65,6 +65,15 @@ class LoginView: UIViewController
             }
         }else{
             println("错误的用户名或密码输入")
+            //错误提示
+            var errorHUD = MBProgressHUD()
+            errorHUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
+            errorHUD.labelText = "错误的用户名或密码输入"
+            self.view.addSubview(errorHUD)
+            errorHUD.customView = UIImageView(image: UIImage(named: "errormark"))
+            errorHUD.mode = MBProgressHUDMode.CustomView
+            errorHUD.show(true)
+            errorHUD.hide(true, afterDelay: 2)
             //保证不为空值
                     UserName = "888888"
                     PassWord = "888888"
@@ -103,16 +112,30 @@ class LoginView: UIViewController
             //测试登录情况
             if data != nil {
                 var parsedata = data as! NSData
+                HUD.hide(true)
                 self.parseData(parsedata)
-            }
+                
+            }else {
+                //错误提示
+                var errorHUD = MBProgressHUD()
+                errorHUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
+                errorHUD.labelText = "无网络或服务器抽风(｡・`ω´･)"
+                self.view.addSubview(errorHUD)
+                errorHUD.customView = UIImageView(image: UIImage(named: "errormark"))
+                errorHUD.mode = MBProgressHUDMode.CustomView
+                errorHUD.show(true)
+                errorHUD.hide(true, afterDelay: 2)
+                 HUD.hide(true)
+               
+                }
             if error != nil {
                 println("登录请求错误")
                 HUD.hide(true)
+                
             }
         }
-        HUD.hide(true)
-        self.dismissViewControllerAnimated(true, completion: nil)
         
+       
 
     }
 
@@ -125,9 +148,30 @@ class LoginView: UIViewController
         println("begin parse用户信息!")
         if var output:TFHppleElement = doc.peekAtSearchWithXPathQuery("//*[@id='mylib_content']/div[1]") {
             println("用户登录成功！！！")
+            //成功提示
+            var succeedHUD = MBProgressHUD()
+            succeedHUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
+            succeedHUD.labelText = "用户登录成功！"
+            succeedHUD.customView = UIImageView(image: UIImage(named: "Checkmark"))
+            succeedHUD.mode = MBProgressHUDMode.CustomView
+            self.view.addSubview(succeedHUD)
+            succeedHUD.show(true)
+            succeedHUD.hide(true, afterDelay: 2)
+            self.navigationController?.popToRootViewControllerAnimated(true)
+
             
         }else{
             println("用户登录失败！！！")
+            //错误提示
+            var errorHUD = MBProgressHUD()
+            errorHUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
+            errorHUD.labelText = "无网络或服务器抽风(｡・`ω´･)"
+            self.view.addSubview(errorHUD)
+            errorHUD.customView = UIImageView(image: UIImage(named: "errormark"))
+            errorHUD.mode = MBProgressHUDMode.CustomView
+            errorHUD.show(true)
+            errorHUD.hide(true, afterDelay: 2)
+           
         }
     }
 
@@ -139,8 +183,13 @@ class LoginView: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
+        // Apply blurring effect
+        var blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
+        var blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        libbgimg.addSubview(blurEffectView)
+
+        }
 
     
 

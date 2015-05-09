@@ -89,15 +89,22 @@ class bookInfo: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         //刷新数据
         self.TableView.reloadData()
-        }else{println("书籍详情没有数据")}
         HUD.hide(true)
-        
+        }else{
+            println("书籍详情没有数据")
+            HUD.hide(true)
+            //错误提示
+            var errorHUD = MBProgressHUD()
+            errorHUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
+            errorHUD.labelText = "书籍详情没有数据"
+            self.TableView.addSubview(errorHUD)
+            errorHUD.customView = UIImageView(image: UIImage(named: "errormark"))
+            errorHUD.mode = MBProgressHUDMode.CustomView
+            errorHUD.show(true)
+            errorHUD.hide(true, afterDelay: 2)
+
+            }
         }
-        
-       
-        
-      
-        
     }
 // MARK: - 配置cell数据
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

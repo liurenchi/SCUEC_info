@@ -10,6 +10,7 @@
 ———————————————————————————————————————*/
 import UIKit
 import Alamofire
+import MBProgressHUD
 class userInfoView: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
 
@@ -26,7 +27,20 @@ class userInfoView: UIViewController, UITableViewDataSource, UITableViewDelegate
             if data != nil {
                 var parsedata = data as! NSData
                  self.parseData(parsedata)
-            }else{println("用户信息获取失败")}
+            }else{
+                println("用户信息获取失败")
+                //错误提示
+                var errorHUD = MBProgressHUD()
+                errorHUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
+                errorHUD.labelText = "用户信息获取失败 (╯‵□′)╯︵┻━┻ "
+                self.Tableview.addSubview(errorHUD)
+                errorHUD.customView = UIImageView(image: UIImage(named: "errormark"))
+                errorHUD.mode = MBProgressHUDMode.CustomView
+                errorHUD.show(true)
+                errorHUD.hide(true, afterDelay: 3)
+
+                
+                }
             })
 
     }
@@ -49,6 +63,15 @@ class userInfoView: UIViewController, UITableViewDataSource, UITableViewDelegate
             self.Tableview.reloadData()
             }else{
                 println("userinfo数据解析为nil")
+                //错误提示
+                var errorHUD = MBProgressHUD()
+                errorHUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
+                errorHUD.labelText = "用户信息数据解析失败"
+                self.Tableview.addSubview(errorHUD)
+                errorHUD.customView = UIImageView(image: UIImage(named: "errormark"))
+                errorHUD.mode = MBProgressHUDMode.CustomView
+                errorHUD.show(true)
+                errorHUD.hide(true, afterDelay: 3)
             }
     }
     

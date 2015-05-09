@@ -10,7 +10,8 @@ Lib的主界面，界面ui在storyboard中实现
 ———————————————————————————————————————*/
 import UIKit
 import Alamofire
-class LibraryView: UITableViewController {
+import MBProgressHUD
+class LibraryView: UIViewController{
     var UserName: String! //用户名
     var PassWord: String! //密码
     var UserNameType: String! //用户名类型
@@ -19,11 +20,30 @@ class LibraryView: UITableViewController {
     var autologinnumeber: Bool = true //自动登录
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    @IBOutlet weak var loginButton: UIBarButtonItem!
+//    @IBOutlet weak var loginButton: UIBarButtonItem!
  
+       //功能按钮
+    @IBOutlet weak var loginBtn: UIButton!
+    @IBOutlet weak var mybookBtn: UIButton!
+    @IBOutlet weak var curbookBtn: UIButton!
+    @IBOutlet weak var infoBtn: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1)
+        // Move the buttons off screen (bottom)
+        let translateDown = CGAffineTransformMakeTranslation(0, 500)
+        loginBtn.transform = translateDown
+        curbookBtn.transform = translateDown
+        
+        // Move the buttons off screen (top)
+        let translateUp = CGAffineTransformMakeTranslation(0, -500)
+        infoBtn.transform = translateUp
+        mybookBtn.transform = translateUp
+
+        
+        
+        
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
 
@@ -56,13 +76,35 @@ class LibraryView: UITableViewController {
             UserName = defaults.stringForKey("Username")
             PassWord = defaults.stringForKey("Password")
             UserNameType =  defaults.stringForKey("UsernameType")
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         
+        let translate = CGAffineTransformMakeTranslation(0, 0)
+        loginBtn.hidden = false
+        infoBtn.hidden = false
+        mybookBtn.hidden = false
+        curbookBtn.hidden = false
+        
+        UIView.animateWithDuration(0.8, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: nil, animations: {
             
-
+            self.loginBtn.transform = translate
+            self.mybookBtn.transform = translate
+            
+            }, completion: nil)
         
-        
+        UIView.animateWithDuration(0.8, delay: 0.5, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: nil, animations: {
+            
+            self.infoBtn.transform = translate
+            self.curbookBtn.transform = translate
+            
+            }, completion: nil)
         
     }
+
+    
+    
+    
 
 // MARK: - 登录请求
     func userLogin(username:String, password:String, type:String) {
@@ -77,6 +119,8 @@ class LibraryView: UITableViewController {
 
             if error != nil {
                 println("登录请求错误")
+                
+
                 }
             self.dismissViewControllerAnimated(true, completion: nil)
 
@@ -87,12 +131,31 @@ class LibraryView: UITableViewController {
     func parseData(data:NSData){
         //解析获取的数据
         var doc:TFHpple = TFHpple(HTMLData: data, encoding: "UTF8")
-        println("begin parse用户信息!")
+       // println("begin parse用户信息!")
         if var output:TFHppleElement = doc.peekAtSearchWithXPathQuery("//*[@id='mylib_content']/div[1]") {
             println("用户登录成功！！！")
+            //成功提示
+            var succeedHUD = MBProgressHUD()
+            succeedHUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
+            succeedHUD.labelText = "用户登录成功！"
+            succeedHUD.customView = UIImageView(image: UIImage(named: "Checkmark"))
+            succeedHUD.mode = MBProgressHUDMode.CustomView
+            self.view.addSubview(succeedHUD)
+            succeedHUD.show(true)
+            succeedHUD.hide(true, afterDelay: 1)
+
           
         }else{
             println("用户登录失败！！！")
+            //错误提示
+            var errorHUD = MBProgressHUD()
+            errorHUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
+            errorHUD.labelText = "用户登录失败！请手工登录"
+            self.view.addSubview(errorHUD)
+            errorHUD.customView = UIImageView(image: UIImage(named: "errormark"))
+            errorHUD.mode = MBProgressHUDMode.CustomView
+            errorHUD.show(true)
+            errorHUD.hide(true, afterDelay: 1.5)
         }
     }
 

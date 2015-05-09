@@ -83,31 +83,43 @@ class MapView: UIViewController, MAMapViewDelegate, AMapSearchDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+              
         //初始化地图
         initMapView()
         initSearch()
         
         
     }
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 //MARK: - map delegate
     func initMapView(){
         
         mapView.delegate = self
         //指南针比例尺的x坐标
-        let compassX = mapView.compassOrigin.x
-        let scaleX = mapView.scaleOrigin.x
-        
-        mapView.compassOrigin = CGPointMake(compassX,22)
-        mapView.scaleOrigin = CGPointMake(scaleX, 21)
+//        let compassX = mapView.compassOrigin.x
+//        let compassY = mapView.frame.height - 22
+////        let scaleY = mapView.frame.height - 22
+        mapView.showsScale = false
+        mapView.showsCompass = false
+//        mapView.compassOrigin = CGPointMake(compassX,compassY)
+//        //mapView.scaleOrigin = CGPointMake(scaleX, scaleY)
         //打开用户定位
         mapView.showsUserLocation = true
-        mapView.userTrackingMode = MAUserTrackingModeNone
+        mapView.userTrackingMode = MAUserTrackingModeFollow
         
         
     }
 
+    @IBAction func quite() {
+        mapView.delegate = nil
+        //高德地图bug！！！！！
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+   
     
+
     
     // 定位失败回调
     func mapView(mapView: MAMapView!, didFailToLocateUserWithError error: NSError!) {
@@ -117,7 +129,7 @@ class MapView: UIViewController, MAMapViewDelegate, AMapSearchDelegate
     // 定位回调
     func mapView(mapView: MAMapView!, didUpdateUserLocation userLocation: MAUserLocation!, updatingLocation: Bool) {
         userCurrentLocation = userLocation.location.copy() as? CLLocation
-       // println("location:\(userLocation.location)")
+        println("location:\(userLocation.location)")
     }
     //选中图钉后的回调
     func mapView(mapView: MAMapView!, didSelectAnnotationView view: MAAnnotationView!) {

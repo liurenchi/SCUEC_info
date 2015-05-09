@@ -29,7 +29,7 @@ class LibraryView: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1)
         // Move the buttons off screen (bottom)
         let translateDown = CGAffineTransformMakeTranslation(0, 500)
         loginBtn.transform = translateDown

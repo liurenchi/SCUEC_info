@@ -73,7 +73,7 @@ class LoginView: UIViewController
             errorHUD.customView = UIImageView(image: UIImage(named: "errormark"))
             errorHUD.mode = MBProgressHUDMode.CustomView
             errorHUD.show(true)
-            errorHUD.hide(true, afterDelay: 3)
+            errorHUD.hide(true, afterDelay: 2)
             //保证不为空值
                     UserName = "888888"
                     PassWord = "888888"
@@ -119,7 +119,7 @@ class LoginView: UIViewController
                 //错误提示
                 var errorHUD = MBProgressHUD()
                 errorHUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
-                errorHUD.labelText = "用户登录失败，请检查网络"
+                errorHUD.labelText = "无网络或服务器抽风(｡・`ω´･)"
                 self.view.addSubview(errorHUD)
                 errorHUD.customView = UIImageView(image: UIImage(named: "errormark"))
                 errorHUD.mode = MBProgressHUDMode.CustomView
@@ -165,7 +165,7 @@ class LoginView: UIViewController
             //错误提示
             var errorHUD = MBProgressHUD()
             errorHUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
-            errorHUD.labelText = "用户登录失败，请检查网络"
+            errorHUD.labelText = "无网络或服务器抽风(｡・`ω´･)"
             self.view.addSubview(errorHUD)
             errorHUD.customView = UIImageView(image: UIImage(named: "errormark"))
             errorHUD.mode = MBProgressHUDMode.CustomView

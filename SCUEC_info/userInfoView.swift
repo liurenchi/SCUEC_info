@@ -32,7 +32,7 @@ class userInfoView: UIViewController, UITableViewDataSource, UITableViewDelegate
                 //错误提示
                 var errorHUD = MBProgressHUD()
                 errorHUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
-                errorHUD.labelText = "用户信息获取失败"
+                errorHUD.labelText = "用户信息获取失败 (╯‵□′)╯︵┻━┻ "
                 self.Tableview.addSubview(errorHUD)
                 errorHUD.customView = UIImageView(image: UIImage(named: "errormark"))
                 errorHUD.mode = MBProgressHUDMode.CustomView

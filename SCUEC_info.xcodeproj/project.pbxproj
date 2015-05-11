@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		991D6EF91B00EAA500E9E141 /* hotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991D6EF81B00EAA500E9E141 /* hotTableViewCell.swift */; };
 		9928A7C11AECE3C20061ECFA /* curbook_request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9928A7C01AECE3C20061ECFA /* curbook_request.swift */; };
 		9929B2C91AEDED9C00695327 /* curBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9929B2C81AEDED9C00695327 /* curBookCell.swift */; };
 		9938F71B1AF33FDB00D2F329 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9938F71A1AF33FDB00D2F329 /* Favorites.swift */; };
@@ -42,6 +43,10 @@
 		996E05461AF3B72100EFC93A /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996E05451AF3B72100EFC93A /* SDWebImage.framework */; };
 		996E05481AF3B7DD00EFC93A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 996E05471AF3B7DD00EFC93A /* libxml2.dylib */; };
 		996F59571AE3B166008C514C /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996F59561AE3B166008C514C /* LibraryView.swift */; };
+		997D97121AFE56EC004409D1 /* PZPullToRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 997D97111AFE56EC004409D1 /* PZPullToRefresh.framework */; };
+		997D97141AFE56F2004409D1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 997D97131AFE56F2004409D1 /* Alamofire.framework */; };
+		997D97161AFE5723004409D1 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 997D97151AFE5723004409D1 /* MBProgressHUD.framework */; };
+		997D97181AFE5784004409D1 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 997D97171AFE5784004409D1 /* SwiftyJSON.framework */; };
 		9983FEB61AE8AEA8001053B5 /* userInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9983FEB51AE8AEA8001053B5 /* userInfoView.swift */; };
 		9983FEB81AE8E7B4001053B5 /* currentBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9983FEB71AE8E7B4001053B5 /* currentBookView.swift */; };
 		9983FEBA1AE924F7001053B5 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9983FEB91AE924F7001053B5 /* CoreDataStack.swift */; };
@@ -82,6 +87,7 @@
 /* Begin PBXFileReference section */
 		377F3103D93A57DD76CC5B5A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46BD114A8B6FB9B4B508681D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		991D6EF81B00EAA500E9E141 /* hotTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hotTableViewCell.swift; sourceTree = "<group>"; };
 		9928A7C01AECE3C20061ECFA /* curbook_request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = curbook_request.swift; sourceTree = "<group>"; };
 		9929B2C81AEDED9C00695327 /* curBookCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = curBookCell.swift; sourceTree = "<group>"; };
 		9938F71A1AF33FDB00D2F329 /* Favorites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
@@ -121,6 +127,10 @@
 		996E05451AF3B72100EFC93A /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = "Pods/../build/Debug-iphoneos/Pods/SDWebImage.framework"; sourceTree = "<group>"; };
 		996E05471AF3B7DD00EFC93A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		996F59561AE3B166008C514C /* LibraryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		997D97111AFE56EC004409D1 /* PZPullToRefresh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PZPullToRefresh.framework; path = "Pods/../build/Debug-iphoneos/Pods/PZPullToRefresh.framework"; sourceTree = "<group>"; };
+		997D97131AFE56F2004409D1 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Pods/Alamofire.framework"; sourceTree = "<group>"; };
+		997D97151AFE5723004409D1 /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = "Pods/../build/Debug-iphoneos/Pods/MBProgressHUD.framework"; sourceTree = "<group>"; };
+		997D97171AFE5784004409D1 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/Pods/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		9983FEB51AE8AEA8001053B5 /* userInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userInfoView.swift; sourceTree = "<group>"; };
 		9983FEB71AE8E7B4001053B5 /* currentBookView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = currentBookView.swift; sourceTree = "<group>"; };
 		9983FEB91AE924F7001053B5 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -160,6 +170,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				997D97181AFE5784004409D1 /* SwiftyJSON.framework in Frameworks */,
+				997D97161AFE5723004409D1 /* MBProgressHUD.framework in Frameworks */,
+				997D97141AFE56F2004409D1 /* Alamofire.framework in Frameworks */,
+				997D97121AFE56EC004409D1 /* PZPullToRefresh.framework in Frameworks */,
 				9940F2A21AFD22F20055AF35 /* OpenGLES.framework in Frameworks */,
 				9940F2A01AFD22EC0055AF35 /* QuartzCore.framework in Frameworks */,
 				9940F29E1AFD22E60055AF35 /* libz.dylib in Frameworks */,
@@ -226,6 +240,7 @@
 		9955EBC11AFCBA98009670D1 /* MapMC */ = {
 			isa = PBXGroup;
 			children = (
+				991D6EF81B00EAA500E9E141 /* hotTableViewCell.swift */,
 				9940F2A31AFD24510055AF35 /* MapView.swift */,
 				9940F2A51AFD2FEC0055AF35 /* MapTableView.swift */,
 				9940F2A91AFE32060055AF35 /* hotFoodTableView.swift */,
@@ -368,6 +383,10 @@
 		CA430A7B412D5EDA4F7FE4E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				997D97171AFE5784004409D1 /* SwiftyJSON.framework */,
+				997D97151AFE5723004409D1 /* MBProgressHUD.framework */,
+				997D97131AFE56F2004409D1 /* Alamofire.framework */,
+				997D97111AFE56EC004409D1 /* PZPullToRefresh.framework */,
 				9940F2A11AFD22F20055AF35 /* OpenGLES.framework */,
 				9940F29F1AFD22EC0055AF35 /* QuartzCore.framework */,
 				9940F29D1AFD22E60055AF35 /* libz.dylib */,
@@ -558,6 +577,7 @@
 				9983FEBA1AE924F7001053B5 /* CoreDataStack.swift in Sources */,
 				9940F2AC1AFE33C80055AF35 /* hotmovieTableView.swift in Sources */,
 				995CC08E1AF4CD2A00D2C1D7 /* newsTableCell.swift in Sources */,
+				991D6EF91B00EAA500E9E141 /* hotTableViewCell.swift in Sources */,
 				99A5276B1AF8D3AF00EA55FA /* Book.swift in Sources */,
 				995CC0991AF524FD00D2C1D7 /* postLostView.swift in Sources */,
 				995CC0951AF4F62E00D2C1D7 /* LostthingView.swift in Sources */,
@@ -707,6 +727,7 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "${SDK_DIR}/usr/include/libxml2";
 				INFOPLIST_FILE = SCUEC_info/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "-lxml2";
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -726,6 +747,7 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "${SDK_DIR}/usr/include/libxml2";
 				INFOPLIST_FILE = SCUEC_info/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "-lxml2";
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";

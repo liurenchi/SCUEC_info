@@ -143,6 +143,7 @@ class LibraryView: UIViewController{
             self.view.addSubview(succeedHUD)
             succeedHUD.show(true)
             succeedHUD.hide(true, afterDelay: 1)
+            
 
           
         }else{

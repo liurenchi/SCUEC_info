@@ -12,7 +12,7 @@ currentBookView的的数据操作方法：
 ———————————————————————————————————————*/
 
 import Foundation
-import Alamofire
+//import Alamofire
 import CoreData
 
 

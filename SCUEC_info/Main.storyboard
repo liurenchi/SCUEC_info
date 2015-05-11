@@ -633,7 +633,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SVi-aM-QzJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2265" y="-3553.5"/>
+            <point key="canvasLocation" x="-2337" y="-3001.5"/>
         </scene>
         <!--Favorite Book View-->
         <scene sceneID="6za-cK-ndm">
@@ -751,7 +751,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ldm-Wh-M1E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1351.5" y="-3230.25"/>
+            <point key="canvasLocation" x="-979.5" y="-2996.25"/>
         </scene>
         <!--Book Info-->
         <scene sceneID="u1B-mx-GJP">
@@ -1010,7 +1010,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6xW-C6-hCO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-426" y="-3224.25"/>
+            <point key="canvasLocation" x="-54" y="-2990.25"/>
         </scene>
         <!--User Info View-->
         <scene sceneID="5sf-Ti-ppl">
@@ -1141,7 +1141,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EdP-FC-g41" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1351.5" y="-4590"/>
+            <point key="canvasLocation" x="-67.5" y="-3660"/>
         </scene>
         <!--Current Book View-->
         <scene sceneID="kW2-6M-Syz">
@@ -1260,7 +1260,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zyd-cy-DS7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1351.5" y="-3912"/>
+            <point key="canvasLocation" x="-931.5" y="-3690"/>
         </scene>
         <!--Login View-->
         <scene sceneID="CYu-YC-ErH">
@@ -1451,7 +1451,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aXw-EZ-UuF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2265" y="-4325.25"/>
+            <point key="canvasLocation" x="-1665" y="-3695.25"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BAf-Bf-99b">
@@ -1673,7 +1673,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLA-I2-Jmv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2196" y="-1394.25"/>
+            <point key="canvasLocation" x="-2212.5" y="-1538.25"/>
         </scene>
         <!--News Detail View-->
         <scene sceneID="C3a-22-eDg">
@@ -1772,7 +1772,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wwn-jM-cVK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-192" y="-1769.25"/>
+            <point key="canvasLocation" x="396" y="-2268.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rQK-iD-GMi">
@@ -1790,7 +1790,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RH4-5c-wi6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3015" y="-1394.25"/>
+            <point key="canvasLocation" x="-3031.5" y="-1538.25"/>
         </scene>
         <!--Map View-->
         <scene sceneID="WHm-E0-PmO">
@@ -2209,7 +2209,7 @@
                     <barButtonItem key="rightBarButtonItem" systemItem="add" id="7bp-o7-FK1"/>
                 </navigationItem>
             </objects>
-            <point key="canvasLocation" x="-166.5" y="-1083"/>
+            <point key="canvasLocation" x="-1435.5" y="-838.5"/>
         </scene>
         <!--Hot Food Table View-->
         <scene sceneID="HhS-JJ-XS7">
@@ -2235,7 +2235,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qMg-X7-t3p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-183" y="-430.5"/>
+            <point key="canvasLocation" x="-684" y="-838.5"/>
         </scene>
         <!--学校周边-->
         <scene sceneID="bw0-Vs-UW2">
@@ -2427,12 +2427,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mFI-lq-fy5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2265" y="-622.5"/>
+            <point key="canvasLocation" x="-2265" y="-832.5"/>
         </scene>
         <!--失物提交-->
         <scene sceneID="rgD-fA-UX9">
             <objects>
-                <tableViewController id="4b1-oe-QL8" sceneMemberID="viewController">
+                <tableViewController id="4b1-oe-QL8" customClass="postLostView" customModule="SCUEC_info" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Dzo-LH-Ami">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2694,13 +2694,17 @@
                                 <segue destination="beq-av-GKI" kind="unwind" unwindAction="close:" id="L6e-dI-Slz"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="提交" id="SHb-rw-ETN"/>
+                        <barButtonItem key="rightBarButtonItem" title="提交" id="SHb-rw-ETN">
+                            <connections>
+                                <action selector="postBtn:" destination="4b1-oe-QL8" id="hEe-wR-4wV"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Wv-hK-HpR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="beq-av-GKI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1246.5" y="-1394.25"/>
+            <point key="canvasLocation" x="-1263" y="-1538.25"/>
         </scene>
         <!--新闻收藏-->
         <scene sceneID="i55-hw-kca">
@@ -2784,7 +2788,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="veX-F5-iBP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-183" y="-2461.5"/>
+            <point key="canvasLocation" x="-1491" y="-2251.5"/>
         </scene>
         <!--Fav News Detail View-->
         <scene sceneID="Rli-iq-3mC">
@@ -2874,7 +2878,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gb3-wj-bDq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="852" y="-2453.25"/>
+            <point key="canvasLocation" x="-498" y="-2255.25"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9lV-ww-Jl6">
@@ -2892,7 +2896,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iAn-3B-JAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3069" y="-3553.5"/>
+            <point key="canvasLocation" x="-3141" y="-3007.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SVv-Su-aCe">
@@ -2910,22 +2914,121 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m7V-El-2kP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3031.5" y="-622.5"/>
+            <point key="canvasLocation" x="-3031.5" y="-832.5"/>
         </scene>
         <!--Hotmovie Table View-->
         <scene sceneID="b7V-aK-nFx">
             <objects>
                 <tableViewController id="onX-hk-jMO" customClass="hotmovieTableView" customModule="SCUEC_info" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4ED-U3-Mx6">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="140" sectionHeaderHeight="22" sectionFooterHeight="22" id="4ED-U3-Mx6">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="0wc-SV-8zS">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="140" id="0wc-SV-8zS" customClass="hotTableViewCell" customModule="SCUEC_info" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0wc-SV-8zS" id="OFs-7v-3jR">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pu4-sc-PpZ">
+                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="18"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="GP7-Fy-taD">
+                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="11"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rA8-VN-oWu">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="140" id="EiD-tE-kRB">
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="131"/>
+                                                </constraint>
+                                                <constraint firstAttribute="width" constant="120" id="wMr-HE-GO7">
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="110"/>
+                                                </constraint>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="EiD-tE-kRB"/>
+                                                    <exclude reference="wMr-HE-GO7"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="constraints">
+                                                    <exclude reference="EiD-tE-kRB"/>
+                                                    <include reference="wMr-HE-GO7"/>
+                                                </mask>
+                                            </variation>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="GP7-Fy-taD" firstAttribute="trailing" secondItem="OFs-7v-3jR" secondAttribute="trailingMargin" id="91P-YF-CAW"/>
+                                        <constraint firstItem="Pu4-sc-PpZ" firstAttribute="centerX" secondItem="GP7-Fy-taD" secondAttribute="centerX" id="ABL-Sg-TyT"/>
+                                        <constraint firstItem="rA8-VN-oWu" firstAttribute="top" secondItem="OFs-7v-3jR" secondAttribute="topMargin" constant="-8" id="JF2-Cw-7D4">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="-4"/>
+                                        </constraint>
+                                        <constraint firstAttribute="bottomMargin" secondItem="rA8-VN-oWu" secondAttribute="bottom" constant="-9" id="LHw-l7-A6Q">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="-4"/>
+                                        </constraint>
+                                        <constraint firstItem="GP7-Fy-taD" firstAttribute="leading" secondItem="rA8-VN-oWu" secondAttribute="trailing" constant="8" id="UhD-qP-wwY">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                                        </constraint>
+                                        <constraint firstItem="rA8-VN-oWu" firstAttribute="leading" secondItem="OFs-7v-3jR" secondAttribute="leadingMargin" constant="-8" id="Wxc-n3-NZ7">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                                        </constraint>
+                                        <constraint firstItem="Pu4-sc-PpZ" firstAttribute="trailing" secondItem="OFs-7v-3jR" secondAttribute="trailingMargin" id="b4e-dW-bW2"/>
+                                        <constraint firstItem="Pu4-sc-PpZ" firstAttribute="top" secondItem="OFs-7v-3jR" secondAttribute="topMargin" id="nwn-nQ-nZP"/>
+                                        <constraint firstItem="GP7-Fy-taD" firstAttribute="top" secondItem="Pu4-sc-PpZ" secondAttribute="bottom" constant="15" id="vne-c7-ro5"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="Pu4-sc-PpZ"/>
+                                            <exclude reference="GP7-Fy-taD"/>
+                                            <exclude reference="rA8-VN-oWu"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <exclude reference="JF2-Cw-7D4"/>
+                                            <exclude reference="LHw-l7-A6Q"/>
+                                            <exclude reference="Wxc-n3-NZ7"/>
+                                            <exclude reference="ABL-Sg-TyT"/>
+                                            <exclude reference="b4e-dW-bW2"/>
+                                            <exclude reference="nwn-nQ-nZP"/>
+                                            <exclude reference="91P-YF-CAW"/>
+                                            <exclude reference="UhD-qP-wwY"/>
+                                            <exclude reference="vne-c7-ro5"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=regular-widthClass=compact">
+                                        <mask key="subviews">
+                                            <include reference="Pu4-sc-PpZ"/>
+                                            <include reference="GP7-Fy-taD"/>
+                                            <include reference="rA8-VN-oWu"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <include reference="JF2-Cw-7D4"/>
+                                            <include reference="LHw-l7-A6Q"/>
+                                            <include reference="Wxc-n3-NZ7"/>
+                                            <include reference="ABL-Sg-TyT"/>
+                                            <exclude reference="b4e-dW-bW2"/>
+                                            <include reference="nwn-nQ-nZP"/>
+                                            <include reference="91P-YF-CAW"/>
+                                            <include reference="UhD-qP-wwY"/>
+                                            <include reference="vne-c7-ro5"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="detail" destination="GP7-Fy-taD" id="JBO-dn-IUy"/>
+                                    <outlet property="img" destination="rA8-VN-oWu" id="hB0-mX-p0I"/>
+                                    <outlet property="title" destination="Pu4-sc-PpZ" id="bLD-46-eHU"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -2936,7 +3039,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6dx-XT-ubt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="603" y="-430.5"/>
+            <point key="canvasLocation" x="102" y="-838.5"/>
         </scene>
         <!--Good Place Table View-->
         <scene sceneID="S1P-xd-BYG">
@@ -2962,7 +3065,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TOd-g4-iBP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1293" y="-430.5"/>
+            <point key="canvasLocation" x="792" y="-838.5"/>
         </scene>
     </scenes>
     <resources>
@@ -2988,6 +3091,6 @@
         <image name="userlogin" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VK5-3E-L1n"/>
+        <segue reference="hjP-fL-lro"/>
     </inferredMetricsTieBreakers>
 </document>

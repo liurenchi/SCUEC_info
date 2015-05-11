@@ -10,7 +10,7 @@ import UIKit
 
 class goodPlaceTableView: UITableViewController {
 
-    var goodplace = ["BH健身","东湖磨山","江滩公园","户部巷","武大","长江大桥","光谷","归元寺","昙花林","汤逊湖"]
+    var goodplace = ["东湖磨山","江滩公园","户部巷","武大","长江大桥","光谷","归元寺","昙花林","汤逊湖"]
 
     override func viewDidLoad() {
         super.viewDidLoad()

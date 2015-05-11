@@ -104,7 +104,7 @@ class newsDetailView: UITableViewController
     func parseNewsDetail(data:NSData){
         
         var doc:TFHpple = TFHpple(HTMLData: data, encoding: "UTF8")
-        println("begin newsdetailparse!")
+        //println("begin newsdetailparse!")
         var loop:Int = 1
         
             if var output:TFHppleElement = doc.peekAtSearchWithXPathQuery("//*[@id='container']/section/article/div[3]") {

@@ -17,7 +17,7 @@ class LibraryView: UIViewController{
     var UserNameType: String! //用户名类型
     //初始化 NSUserDefaults
     let defaults = NSUserDefaults.standardUserDefaults()
-    var autologinnumeber: Bool = true //自动登录
+
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
 //    @IBOutlet weak var loginButton: UIBarButtonItem!
@@ -58,16 +58,17 @@ class LibraryView: UIViewController{
         
 // MARK: -  自动登录
         
-        if autologinnumeber {
+       
             var logintype = defaults.stringForKey("auto_login")
-            
+        
             if logintype == "auto_login"{
                 var nametype = defaults.stringForKey("UsernameType")
                 getUserData() //数据处理
                 userLogin(UserName,password: PassWord,type: UserNameType) //网络请求
-                autologinnumeber = false
+              
+
             }
-        }
+        
     }
 
     
@@ -134,16 +135,7 @@ class LibraryView: UIViewController{
        // println("begin parse用户信息!")
         if var output:TFHppleElement = doc.peekAtSearchWithXPathQuery("//*[@id='mylib_content']/div[1]") {
             println("用户登录成功！！！")
-            //成功提示
-            var succeedHUD = MBProgressHUD()
-            succeedHUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
-            succeedHUD.labelText = "用户登录成功！"
-            succeedHUD.customView = UIImageView(image: UIImage(named: "Checkmark"))
-            succeedHUD.mode = MBProgressHUDMode.CustomView
-            self.view.addSubview(succeedHUD)
-            succeedHUD.show(true)
-            succeedHUD.hide(true, afterDelay: 1)
-            
+                       
 
           
         }else{

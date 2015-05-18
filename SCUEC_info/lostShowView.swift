@@ -82,7 +82,7 @@ class lostShowView: UITableViewController, PZPullToRefreshDelegate
     func parseLostDetail(data:NSData){
         
         var doc:TFHpple = TFHpple(HTMLData: data, encoding: "UTF8")
-        println("begin lostparse!")
+        //println("begin lostparse!")
         var loop:Int = 1
         for ( loop; loop <= 10; loop++){
             if var output:TFHppleElement = doc.peekAtSearchWithXPathQuery("//html/body/div[3]/div[\(loop)]/div[2]/div[1]") {

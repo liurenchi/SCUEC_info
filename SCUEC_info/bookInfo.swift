@@ -77,7 +77,7 @@ class bookInfo: UIViewController, UITableViewDataSource, UITableViewDelegate {
         if var tit = jsondata["books"][0]["title"].string{
             self.bookname.text = "书名:\(tit)"
         }else{self.bookname.text = "-"}
-        if var auth = jsondata["books"][0]["author"].string{
+        if var auth = jsondata["books"][0]["author"][0].string{
             self.bookauthor.text = "作者:\(auth)"
         }else{self.bookauthor.text = "-"}
         if var pub = jsondata["books"][0]["publisher"].string{

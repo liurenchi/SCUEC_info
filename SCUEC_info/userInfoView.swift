@@ -49,7 +49,7 @@ class userInfoView: UIViewController, UITableViewDataSource, UITableViewDelegate
     func parseData(data:NSData){
         
         var doc:TFHpple = TFHpple(HTMLData: data, encoding: "UTF8")
-        println("begin parse用户信息!")
+        //println("begin parse用户信息!")
         if var output:TFHppleElement = doc.peekAtSearchWithXPathQuery("//*[@id='mylib_content']/div[1]") {
             //字符串筛选
             var string = output.content.stringByReplacingOccurrencesOfString("\t", withString: "")
@@ -59,7 +59,7 @@ class userInfoView: UIViewController, UITableViewDataSource, UITableViewDelegate
             var infotemp = string2.componentsSeparatedByString("，") as NSArray //主要逗号的中英文
             userinfo = infotemp.mutableCopy() as! NSMutableArray
             userinfo.removeLastObject()
-            println("用户信息parse end")
+            //println("用户信息parse end")
             self.Tableview.reloadData()
             }else{
                 println("userinfo数据解析为nil")

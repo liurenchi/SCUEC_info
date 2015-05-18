@@ -1,17 +1,18 @@
 //
-//  newsTableCell.swift
+//  hotTableViewCell.swift
 //  SCUEC_info
 //
-//  Created by  Lrcray on 15/5/2.
+//  Created by  Lrcray on 15/5/11.
 //  Copyright (c) 2015年  Lrcray. All rights reserved.
 //
 
 import UIKit
 
-class newsTableCell: UITableViewCell {
+class hotTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var newstitle: UILabel!
-    @IBOutlet weak var newstime: UILabel!
+    @IBOutlet weak var img: UIImageView!
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var detail: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,6 +23,5 @@ class newsTableCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 
 }

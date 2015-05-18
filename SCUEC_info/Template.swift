@@ -45,7 +45,7 @@ succeedHUD.show(true)
 succeedHUD.hide(true, afterDelay: 2)
 
 
-
+//    var movieimg = ["","","","","","","","","","","","","",""]
 
 
 "书名:","作者:","出版社:",

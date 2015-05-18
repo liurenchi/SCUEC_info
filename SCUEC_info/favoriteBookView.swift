@@ -16,8 +16,11 @@ import MBProgressHUD
 class favoriteBookView: UITableViewController
 {
     var favbooks: [Favorites]!
-    var favbook: Favorites!
+    var book: [Book]!
     
+    var refresh: Bool!
+  
+       
  
     //coreDataStack实例
     var coreDataStack: CoreDataStack = CoreDataStack()
@@ -29,32 +32,57 @@ class favoriteBookView: UITableViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        refresh = false
+        
+        // coredata
         managedObjectContext = coreDataStack.context
         favbooks = fetchfavbookData("favor_FetchRequest") as! [Favorites]
+        book = fetchCoreData("book_FetchRequest") as! [Book]
         
-        
+              
 
     
     
     }
         
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+  
 
 // MARK: - Table view data source
 
+// MARK: -  删除cell操作
+    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath:NSIndexPath) -> [AnyObject] {
+        
 
-
+        var deleteAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default,
+            title: "删除",handler: { (action:UITableViewRowAction!, indexPath:NSIndexPath!) -> Void in
+            //fav标记取消
+            self.book[indexPath.row].isfav = 0
+                
+            //coredata操作
+            let dataToRemove = self.favbooks[indexPath.row]
+            self.managedObjectContext.deleteObject(dataToRemove)
+            //数据操作
+            self.favbooks.removeAtIndex(indexPath.row)
+                
+            var e: NSError?
+            if self.managedObjectContext.save(&e) != true {
+                println("favbook中存储coredata出错 error: \(e!.localizedDescription)")}
+            //cell的删除
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+               
+            tableView.editing = false
+        })
+        
+       
+        deleteAction.backgroundColor = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
+        return [deleteAction]
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        
+    }
+    
      override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
@@ -139,5 +167,7 @@ class favoriteBookView: UITableViewController
         
     }
 
+    
+    
 
 }

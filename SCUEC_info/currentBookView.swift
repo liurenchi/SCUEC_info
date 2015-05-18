@@ -86,7 +86,7 @@ class currentBookView: UITableViewController, PZPullToRefreshDelegate
                 //成功提示
                 var succeedHUD = MBProgressHUD()
                 succeedHUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
-                succeedHUD.labelText = "已经储存！"
+                succeedHUD.labelText = "已经储存过了！"
                 succeedHUD.customView = UIImageView(image: UIImage(named: "Checkmark"))
                 succeedHUD.mode = MBProgressHUDMode.CustomView
                 self.view.addSubview(succeedHUD)

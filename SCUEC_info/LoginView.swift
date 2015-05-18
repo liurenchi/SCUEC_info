@@ -12,6 +12,8 @@
 import UIKit
 import Alamofire
 import MBProgressHUD
+import CoreData
+
 class LoginView: UIViewController
 {
     
@@ -29,6 +31,11 @@ class LoginView: UIViewController
         case st_number = "stnumber"
     }
     
+    //coreDataStack实例
+    var coreDataStack: CoreDataStack = CoreDataStack()
+    //NSManagedObjectContext实例赋值在了savecoredata方法中
+    var managedObjectContext: NSManagedObjectContext!
+
     
 //MARK:- 功能按钮实现
     @IBAction func loginButton() {
@@ -145,7 +152,7 @@ class LoginView: UIViewController
     func parseData(data:NSData){
         //解析获取的数据
         var doc:TFHpple = TFHpple(HTMLData: data, encoding: "UTF8")
-        println("begin parse用户信息!")
+        //println("begin parse用户信息!")
         if var output:TFHppleElement = doc.peekAtSearchWithXPathQuery("//*[@id='mylib_content']/div[1]") {
             println("用户登录成功！！！")
             //成功提示
@@ -158,7 +165,11 @@ class LoginView: UIViewController
             succeedHUD.show(true)
             succeedHUD.hide(true, afterDelay: 2)
             self.navigationController?.popToRootViewControllerAnimated(true)
-
+            
+            //用于删除上一个账号留下的数据
+            if self.updataCoreData() {
+                println("删除数据")
+            }else{"fav数据删除失败"}
             
         }else{
             println("用户登录失败！！！")
@@ -188,11 +199,50 @@ class LoginView: UIViewController
         var blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = view.bounds
         libbgimg.addSubview(blurEffectView)
+        
+        Username.keyboardType = UIKeyboardType.NumberPad
+        Password.keyboardType = UIKeyboardType.ASCIICapable
 
         }
 
     
+    //MARK:更新
+    func updataCoreData() -> Bool{
+        //如果coredata中有数据就删掉
+        managedObjectContext = coreDataStack.context
+        if fetchCoreData("favor_FetchRequest") != nil{
+            //从获取favbook中的数据中删除
+            if let fetchresults = fetchCoreData("favor_FetchRequest"){
+                for book in fetchresults{
+                    managedObjectContext.deleteObject(book)
+                }
+            }
 
+            var error: NSError?
+            if !managedObjectContext.save(&error) {
+                println("更新删除失败: \(error)")
+            }
+        }
+        return true
+    }
+    
+    //MARK:获取
+    func fetchCoreData(TemplateForName: String) -> [NSManagedObject]?{
+        //获取方法初始化
+        var fetchRequest: NSFetchRequest!
+        fetchRequest = coreDataStack.model.fetchRequestTemplateForName(TemplateForName)
+        var error: NSError?
+        let results = coreDataStack.context.executeFetchRequest(fetchRequest,error: &error) as! [Favorites]?
+        if let fetchedResults = results {
+            // books = fetchedResults
+            return fetchedResults
+            //store the fetched results in the venues property you defined earlier
+        } else {
+            println("curbook数据获取失败：Could not fetch \(error), \(error!.userInfo)")
+            return nil
+        }
+        
+    }
     /*
     // MARK: - Navigation
 

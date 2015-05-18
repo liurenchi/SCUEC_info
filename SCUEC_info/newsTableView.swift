@@ -80,7 +80,7 @@ class newsTableView: UITableViewController, PZPullToRefreshDelegate
     func parseNewsTable(data:NSData){
         
         var doc:TFHpple = TFHpple(HTMLData: data, encoding: "UTF8")
-        println("begin newstableparse!")
+        //println("begin newstableparse!")
         var loop:Int = 1
         for ( loop; loop <= 12; loop++){
             if var output:TFHppleElement = doc.peekAtSearchWithXPathQuery("//*[@id='container']/section/section/div[2]/ul/li[\(loop)]") {

@@ -199,6 +199,9 @@ class LoginView: UIViewController
         var blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = view.bounds
         libbgimg.addSubview(blurEffectView)
+        
+        Username.keyboardType = UIKeyboardType.NumberPad
+        Password.keyboardType = UIKeyboardType.ASCIICapable
 
         }
 

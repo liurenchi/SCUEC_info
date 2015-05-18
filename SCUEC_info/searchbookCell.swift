@@ -1,17 +1,19 @@
 //
-//  newsTableCell.swift
+//  searchbookCell.swift
 //  SCUEC_info
 //
-//  Created by  Lrcray on 15/5/2.
+//  Created by  Lrcray on 15/5/18.
 //  Copyright (c) 2015年  Lrcray. All rights reserved.
 //
 
 import UIKit
 
-class newsTableCell: UITableViewCell {
-
-    @IBOutlet weak var newstitle: UILabel!
-    @IBOutlet weak var newstime: UILabel!
+class searchbookCell: UITableViewCell {
+    
+@IBOutlet weak var bookimg: UIImageView!
+@IBOutlet weak var bookname: UILabel!
+@IBOutlet weak var author: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,6 +24,5 @@ class newsTableCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 
 }

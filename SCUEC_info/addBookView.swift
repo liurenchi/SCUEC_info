@@ -52,7 +52,7 @@ class addBookView: UITableViewController, UISearchBarDelegate
     //进度提示
     var HUD = MBProgressHUD()
     HUD.color = UIColor(red: 62/255, green: 165/255, blue: 64/255, alpha: 1)
-    HUD.labelText = "正在登录···"
+    HUD.labelText = "努力搜索中···"
     self.view.addSubview(HUD)
     HUD.show(true)
     

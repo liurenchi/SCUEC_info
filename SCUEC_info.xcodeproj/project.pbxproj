@@ -30,6 +30,7 @@
 		9940F2AE1AFE35790055AF35 /* goodPlaceTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9940F2AD1AFE35790055AF35 /* goodPlaceTableView.swift */; };
 		9959A2E61B09B24B007A1633 /* searchresult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9959A2E51B09B24B007A1633 /* searchresult.swift */; };
 		9959A2E81B09B560007A1633 /* searchbookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9959A2E71B09B560007A1633 /* searchbookCell.swift */; };
+		995A1ACC1B60CA2D008B0AC9 /* ContactMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995A1ACB1B60CA2D008B0AC9 /* ContactMC.swift */; };
 		995CC08C1AF4B93F00D2C1D7 /* newsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995CC08B1AF4B93F00D2C1D7 /* newsTableView.swift */; };
 		995CC08E1AF4CD2A00D2C1D7 /* newsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995CC08D1AF4CD2A00D2C1D7 /* newsTableCell.swift */; };
 		995CC0901AF4D4CE00D2C1D7 /* newsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995CC08F1AF4D4CE00D2C1D7 /* newsDetailView.swift */; };
@@ -113,6 +114,7 @@
 		9940F2AD1AFE35790055AF35 /* goodPlaceTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = goodPlaceTableView.swift; sourceTree = "<group>"; };
 		9959A2E51B09B24B007A1633 /* searchresult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchresult.swift; sourceTree = "<group>"; };
 		9959A2E71B09B560007A1633 /* searchbookCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchbookCell.swift; sourceTree = "<group>"; };
+		995A1ACB1B60CA2D008B0AC9 /* ContactMC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactMC.swift; sourceTree = "<group>"; };
 		995CC08B1AF4B93F00D2C1D7 /* newsTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsTableView.swift; sourceTree = "<group>"; };
 		995CC08D1AF4CD2A00D2C1D7 /* newsTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsTableCell.swift; sourceTree = "<group>"; };
 		995CC08F1AF4D4CE00D2C1D7 /* newsDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsDetailView.swift; sourceTree = "<group>"; };
@@ -258,6 +260,14 @@
 			name = MapMC;
 			sourceTree = "<group>";
 		};
+		995A1AC61B60C8E7008B0AC9 /* ContactMC */ = {
+			isa = PBXGroup;
+			children = (
+				995A1ACB1B60CA2D008B0AC9 /* ContactMC.swift */,
+			);
+			name = ContactMC;
+			sourceTree = "<group>";
+		};
 		995CC08A1AF4B90700D2C1D7 /* NewsMC */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +351,7 @@
 				995CC08A1AF4B90700D2C1D7 /* NewsMC */,
 				995CC0931AF4F3FC00D2C1D7 /* LostMC */,
 				9955EBC11AFCBA98009670D1 /* MapMC */,
+				995A1AC61B60C8E7008B0AC9 /* ContactMC */,
 				99ED88D81AE34CA400E28BB9 /* Supporting Files */,
 			);
 			path = SCUEC_info;
@@ -467,6 +478,7 @@
 				TargetAttributes = {
 					99ED88D41AE34CA400E28BB9 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = VEPK8889X2;
 					};
 					99ED88E91AE34CA500E28BB9 = {
 						CreatedOnToolsVersion = 6.3;
@@ -610,6 +622,7 @@
 				9959A2E81B09B560007A1633 /* searchbookCell.swift in Sources */,
 				9940F2AA1AFE32060055AF35 /* hotFoodTableView.swift in Sources */,
 				99A527751AF8E52800EA55FA /* News.swift in Sources */,
+				995A1ACC1B60CA2D008B0AC9 /* ContactMC.swift in Sources */,
 				9983FEB61AE8AEA8001053B5 /* userInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -680,7 +693,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -719,7 +732,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -732,12 +745,15 @@
 			baseConfigurationReference = 99F7397D2999F84292148B20 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: NetCool Technology Company Limited (VEPK8889X2)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SCUEC_info",
 				);
 				"HEADER_SEARCH_PATHS[arch=*]" = "${SDK_DIR}/usr/include/libxml2";
 				INFOPLIST_FILE = SCUEC_info/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "-lxml2";
@@ -752,12 +768,15 @@
 			baseConfigurationReference = 46BD114A8B6FB9B4B508681D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: NetCool Technology Company Limited (VEPK8889X2)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SCUEC_info",
 				);
 				"HEADER_SEARCH_PATHS[arch=*]" = "${SDK_DIR}/usr/include/libxml2";
 				INFOPLIST_FILE = SCUEC_info/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "-lxml2";

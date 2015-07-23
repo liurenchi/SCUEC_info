@@ -12,6 +12,6 @@
 -
 
 
-使用swift语言编写 ，环境xcode6.31
+使用swift语言编写 ，环境xcode6.4
 
 使用反馈276415743@qq.com

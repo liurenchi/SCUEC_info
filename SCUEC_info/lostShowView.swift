@@ -13,7 +13,7 @@ import MBProgressHUD
 class lostShowView: UITableViewController, PZPullToRefreshDelegate
 {
     @IBOutlet weak var menuButton: UIBarButtonItem!
-     var HUD = MBProgressHUD()
+    var HUD = MBProgressHUD()
     var refreshHeaderView: PZPullToRefreshView?
     var lostImgData: NSMutableArray = []
     var lostNoteData: NSMutableArray = []

@@ -15,3 +15,5 @@
 使用swift语言编写 ，环境xcode6.4
 
 使用反馈276415743@qq.com
+
+[App演示视频](http://pan.baidu.com/s/1nt25GCT)
